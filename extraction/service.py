@@ -135,6 +135,9 @@ class ExtractionService:
             if qr_parsed and isinstance(qr_parsed, dict):
                 for k in ["ticket_id", "origin_station", "destination_station", "fare"]:
                     if qr_parsed.get(k) is not None:
+                        # If a native language station was already extracted, preserve it
+                        if k in ["origin_station", "destination_station"] and raw_fields.get(k):
+                            continue
                         raw_fields[k] = qr_parsed[k]
                         field_confidence[k] = 1.0
                         field_sources[k] = "qr_decoder"

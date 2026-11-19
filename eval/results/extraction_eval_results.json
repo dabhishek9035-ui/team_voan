@@ -1,6 +1,6 @@
 {
   "total_test_cases": 12,
-  "elapsed_seconds": 0.806,
+  "elapsed_seconds": 0.983,
   "overall_type_accuracy": 100.0,
   "unreadable_abstention_accuracy": 100.0,
   "per_type_accuracy": {
@@ -30,8 +30,8 @@
     "amount": 100.0,
     "fare": 100.0,
     "ticket_id": 100.0,
-    "origin_station": 66.7,
-    "destination_station": 33.3,
+    "origin_station": 100.0,
+    "destination_station": 100.0,
     "payee_name": 100.0,
     "utr": 100.0,
     "bank_name": 100.0,
