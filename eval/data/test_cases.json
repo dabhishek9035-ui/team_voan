@@ -1,0 +1,175 @@
+[
+  {
+    "id": "eval_01_ticket_qr_whatsapp_en",
+    "image_text": "Namma Metro WhatsApp Ticketing\nSingle Journey Ticket\nTicket ID: TKT-108920\nFrom: Indiranagar\nTo: MG Road\nFare: Rs. 40.00\nValid till end of service\nStatus: Active",
+    "has_qr": true,
+    "qr_payload": "BMRCL|TKT-108920|INDIRANAGAR|MG_ROAD|40.00|2026-11-19",
+    "expected_type": "TICKET_QR",
+    "expected_app": "WhatsApp",
+    "expected_language": "en",
+    "ground_truth_fields": {
+      "amount": 40.0,
+      "fare": 40.0,
+      "ticket_id": "TKT-108920",
+      "origin_station": "Indiranagar",
+      "destination_station": "MG Road",
+      "payee_name": "BMRCL"
+    }
+  },
+  {
+    "id": "eval_02_upi_success_gpay",
+    "image_text": "Google Pay\nPaid successfully to BMRCL Metro\n₹40.00\n19 Nov 2026, 10:14 AM\nUPI Ref No: 401928374615\nGoogle Transaction ID: CICAgOD1827419\nFrom: HDFC Bank (XX4012)",
+    "has_qr": false,
+    "qr_payload": null,
+    "expected_type": "UPI_SUCCESS",
+    "expected_app": "Google Pay",
+    "expected_language": "en",
+    "ground_truth_fields": {
+      "amount": 40.0,
+      "utr": "401928374615",
+      "payee_name": "BMRCL",
+      "bank_name": "HDFC Bank"
+    }
+  },
+  {
+    "id": "eval_03_upi_success_phonepe",
+    "image_text": "PhonePe\nPayment Successful\n₹ 35.00\nPaid to Bangalore Metro Rail Corporation\nTransaction ID: T261119102910\nUTR: 401988223344\nDebited from: State Bank of India",
+    "has_qr": false,
+    "qr_payload": null,
+    "expected_type": "UPI_SUCCESS",
+    "expected_app": "PhonePe",
+    "expected_language": "en",
+    "ground_truth_fields": {
+      "amount": 35.0,
+      "utr": "401988223344",
+      "payee_name": "BMRCL"
+    }
+  },
+  {
+    "id": "eval_04_bank_sms_hdfc",
+    "image_text": "HDFC Bank Alert: Rs. 40.00 debited from a/c **4012 on 19-Nov-26 10:14:22 towards BMRCL UPI Ref 401928374615. Avl bal: Rs. 12,450.00",
+    "has_qr": false,
+    "qr_payload": null,
+    "expected_type": "BANK_SMS",
+    "expected_app": "SMS",
+    "expected_language": "en",
+    "ground_truth_fields": {
+      "amount": 40.0,
+      "utr": "401928374615",
+      "payee_name": "BMRCL",
+      "bank_name": "HDFC Bank"
+    }
+  },
+  {
+    "id": "eval_05_ticket_qr_kannada",
+    "image_text": "ನಮ್ಮ ಮೆಟ್ರೋ WhatsApp QR ಟಿಕೆಟ್\nಟಿಕೆಟ್ ಸಂಖ್ಯೆ: TKT-KN-9921\nಪ್ರಾರಂಭ: ಇಂದಿರಾನಗರ\nಗಮ್ಯಸ್ಥಾನ: ಬೈಯಪ್ಪನಹಳ್ಳಿ\nದರ: ₹ ೩೦\nಸ್ಥಿತಿ: ಮಾನ್ಯ ಟಿಕೆಟ್",
+    "has_qr": true,
+    "qr_payload": "BMRCL|TKT-KN-9921|INDIRANAGAR|BAIYAPPANAHALLI|30.00|2026-11-19",
+    "expected_type": "TICKET_QR",
+    "expected_app": "WhatsApp",
+    "expected_language": "kn",
+    "ground_truth_fields": {
+      "amount": 30.0,
+      "fare": 30.0,
+      "ticket_id": "TKT-KN-9921",
+      "origin_station": "ಇಂದಿರಾನಗರ",
+      "destination_station": "ಬೈಯಪ್ಪನಹಳ್ಳಿ"
+    }
+  },
+  {
+    "id": "eval_06_upi_failed_paytm",
+    "image_text": "Paytm UPI\nPayment Processing / Failed\n₹ 50.00\nPaid to BMRCL\nUPI Ref No: 401977665544\nMoney debited from your bank will be refunded within 3-5 business days if ticket is not confirmed.",
+    "has_qr": false,
+    "qr_payload": null,
+    "expected_type": "UPI_FAILED_PENDING",
+    "expected_app": "Paytm",
+    "expected_language": "en",
+    "ground_truth_fields": {
+      "amount": 50.0,
+      "utr": "401977665544",
+      "payee_name": "BMRCL"
+    }
+  },
+  {
+    "id": "eval_07_bot_error_whatsapp",
+    "image_text": "Namma Metro Bot\nOops! Something went wrong.\nBooking failed.\nOrder ID: ORD-BMRCL-77189\nYour payment of Rs 50.00 has been received, but the ticket could not be booked. Failed booking amount will be refunded to source within 7 working days.",
+    "has_qr": false,
+    "qr_payload": null,
+    "expected_type": "BOT_ERROR",
+    "expected_app": "WhatsApp",
+    "expected_language": "en",
+    "ground_truth_fields": {
+      "amount": 50.0,
+      "order_id": "ORD-BMRCL-77189"
+    }
+  },
+  {
+    "id": "eval_08_refund_notice_sms",
+    "image_text": "SBI Alert: Refund of INR 50.00 credited back to your A/c XX8910 on 22-Nov-26 towards failed metro booking ORD-BMRCL-77189. UPI Ref 402288331199.",
+    "has_qr": false,
+    "qr_payload": null,
+    "expected_type": "REFUND_NOTICE",
+    "expected_app": "SMS",
+    "expected_language": "en",
+    "ground_truth_fields": {
+      "amount": 50.0,
+      "order_id": "ORD-BMRCL-77189",
+      "utr": "402288331199"
+    }
+  },
+  {
+    "id": "eval_09_suspect_notice_phishing",
+    "image_text": "WARNING: Dear customer your BMRCL metro recharge/refund failed! Download and install our secure metro-refund.apk or call helpline 9876543210 to claim your ₹50 refund immediately. Avoid cancellation.",
+    "has_qr": false,
+    "qr_payload": null,
+    "expected_type": "SUSPECT_NOTICE",
+    "expected_app": null,
+    "expected_language": "en",
+    "ground_truth_fields": {
+      "amount": 50.0
+    }
+  },
+  {
+    "id": "eval_10_claim_submission_portal",
+    "image_text": "Corporate Conveyance Reimbursement Claim\nClaim ID: CLM-991204\nEmployee: Rahul S\nAmount: Rs. 40.00\nJourney: Indiranagar to MG Road\nTicket Attached: TKT-108920\nStatus: Submitted for approval",
+    "has_qr": false,
+    "qr_payload": null,
+    "expected_type": "CLAIM_SUBMISSION",
+    "expected_app": "Portal",
+    "expected_language": "en",
+    "ground_truth_fields": {
+      "amount": 40.0,
+      "ticket_id": "TKT-108920",
+      "origin_station": "Indiranagar",
+      "destination_station": "MG Road"
+    }
+  },
+  {
+    "id": "eval_11_other_blurry_unreadable",
+    "image_text": ".... .. blur ... ### ??? random noise",
+    "has_qr": false,
+    "qr_payload": null,
+    "expected_type": "OTHER",
+    "expected_app": null,
+    "expected_language": "en",
+    "ground_truth_fields": {
+      "amount": null,
+      "utr": null,
+      "ticket_id": null
+    }
+  },
+  {
+    "id": "eval_12_ocr_confused_utr",
+    "image_text": "Payment Receipt\nPaid to BMRCL\nAmount: Rs 60.00\nUTR: 4OI9283746IO\nStatus: Payment Successful\nGoogle Pay",
+    "has_qr": false,
+    "qr_payload": null,
+    "expected_type": "UPI_SUCCESS",
+    "expected_app": "Google Pay",
+    "expected_language": "en",
+    "ground_truth_fields": {
+      "amount": 60.0,
+      "utr": "401928374610",
+      "payee_name": "BMRCL"
+    }
+  }
+]

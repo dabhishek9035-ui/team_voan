@@ -1,0 +1,40 @@
+{
+  "total_test_cases": 12,
+  "elapsed_seconds": 0.784,
+  "overall_type_accuracy": 100.0,
+  "unreadable_abstention_accuracy": 100.0,
+  "per_type_accuracy": {
+    "TICKET_QR": 100.0,
+    "UPI_SUCCESS": 100.0,
+    "BANK_SMS": 100.0,
+    "UPI_FAILED_PENDING": 100.0,
+    "BOT_ERROR": 100.0,
+    "REFUND_NOTICE": 100.0,
+    "SUSPECT_NOTICE": 100.0,
+    "CLAIM_SUBMISSION": 100.0,
+    "OTHER": 100.0
+  },
+  "per_app_accuracy": {
+    "WhatsApp": 100.0,
+    "Google Pay": 100.0,
+    "PhonePe": 100.0,
+    "SMS": 100.0,
+    "Paytm": 100.0,
+    "Portal": 100.0
+  },
+  "per_language_accuracy": {
+    "en": 100.0,
+    "kn": 100.0
+  },
+  "per_field_accuracy": {
+    "amount": 100.0,
+    "fare": 100.0,
+    "ticket_id": 100.0,
+    "origin_station": 100.0,
+    "destination_station": 100.0,
+    "payee_name": 100.0,
+    "utr": 100.0,
+    "bank_name": 100.0,
+    "order_id": 100.0
+  }
+}

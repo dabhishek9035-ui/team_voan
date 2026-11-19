@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TicketQRSchema",
+  "description": "Schema for extracting Metro QR Ticket screen fields",
+  "type": "object",
+  "properties": {
+    "ticket_id": {
+      "type": ["string", "null"],
+      "description": "Unique metro ticket identifier, e.g. TKT-892104"
+    },
+    "order_id": {
+      "type": ["string", "null"],
+      "description": "Booking or order ID from the chatbot/app"
+    },
+    "origin_station": {
+      "type": ["string", "null"],
+      "description": "Source metro station, e.g. Indiranagar, MG Road"
+    },
+    "destination_station": {
+      "type": ["string", "null"],
+      "description": "Destination metro station, e.g. Baiyappanahalli"
+    },
+    "fare": {
+      "type": ["number", "null"],
+      "description": "Ticket fare in INR"
+    },
+    "amount": {
+      "type": ["number", "null"],
+      "description": "Total amount paid"
+    },
+    "currency": {
+      "type": "string",
+      "default": "INR"
+    },
+    "timestamp": {
+      "type": ["string", "null"],
+      "description": "Booking date and time or validity timestamp"
+    },
+    "payee_name": {
+      "type": ["string", "null"],
+      "description": "Metro agency name, e.g. BMRCL or Namma Metro"
+    },
+    "status_text": {
+      "type": ["string", "null"],
+      "description": "Ticket status text, e.g. 'Valid', 'Active', 'Used'"
+    },
+    "app_name": {
+      "type": ["string", "null"],
+      "description": "Channel app: WhatsApp, Namma Metro App, Paytm, etc."
+    },
+    "language_detected": {
+      "type": ["string", "null"],
+      "description": "Language of text, e.g. en, kn, hi"
+    }
+  },
+  "required": []
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UPISuccessSchema",
+  "description": "Schema for extracting UPI payment success screen fields",
+  "type": "object",
+  "properties": {
+    "amount": {
+      "type": ["number", "null"],
+      "description": "Total amount paid in INR"
+    },
+    "currency": {
+      "type": "string",
+      "default": "INR"
+    },
+    "timestamp": {
+      "type": ["string", "null"],
+      "description": "Transaction date and time"
+    },
+    "utr": {
+      "type": ["string", "null"],
+      "description": "12-digit UPI Unique Transaction Reference (UTR) or UPI Ref No"
+    },
+    "order_id": {
+      "type": ["string", "null"],
+      "description": "Merchant order ID or transaction ID"
+    },
+    "payee_name": {
+      "type": ["string", "null"],
+      "description": "Payee name, e.g. BMRCL, Bangalore Metro Rail Corp Ltd"
+    },
+    "payer_name_masked": {
+      "type": ["string", "null"],
+      "description": "Masked or partial payer name"
+    },
+    "bank_name": {
+      "type": ["string", "null"],
+      "description": "Sender bank, e.g. HDFC, SBI, ICICI"
+    },
+    "app_name": {
+      "type": ["string", "null"],
+      "description": "UPI app: Google Pay, PhonePe, Paytm, BHIM, etc."
+    },
+    "status_text": {
+      "type": ["string", "null"],
+      "description": "Payment status text, e.g. 'Paid successfully', 'Payment Successful'"
+    },
+    "language_detected": {
+      "type": ["string", "null"],
+      "description": "Language of the screen: en, kn, hi"
+    }
+  },
+  "required": []
+}

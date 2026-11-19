@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RefundNoticeSchema",
+  "description": "Schema for extracting refund confirmation messages or bank refund credits",
+  "type": "object",
+  "properties": {
+    "amount": {
+      "type": ["number", "null"],
+      "description": "Refunded amount"
+    },
+    "currency": {
+      "type": "string",
+      "default": "INR"
+    },
+    "timestamp": {
+      "type": ["string", "null"],
+      "description": "Refund processed timestamp"
+    },
+    "utr": {
+      "type": ["string", "null"],
+      "description": "Refund UTR or original reference"
+    },
+    "order_id": {
+      "type": ["string", "null"],
+      "description": "Original order ID or ticket ID"
+    },
+    "ticket_id": {
+      "type": ["string", "null"],
+      "description": "Associated ticket ID if mentioned"
+    },
+    "payee_name": {
+      "type": ["string", "null"],
+      "description": "Refund originator, e.g. BMRCL"
+    },
+    "bank_name": {
+      "type": ["string", "null"],
+      "description": "Bank receiving credit"
+    },
+    "app_name": {
+      "type": ["string", "null"],
+      "description": "App notice channel"
+    },
+    "status_text": {
+      "type": ["string", "null"],
+      "description": "Refund status, e.g. 'Refund of ₹40 initiated to source'"
+    },
+    "language_detected": {
+      "type": ["string", "null"],
+      "description": "Language of notice"
+    }
+  },
+  "required": []
+}

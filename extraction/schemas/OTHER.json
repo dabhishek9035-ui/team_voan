@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OtherSchema",
+  "description": "Schema for extracting unclassified or generic screenshots",
+  "type": "object",
+  "properties": {
+    "amount": {
+      "type": ["number", "null"]
+    },
+    "currency": {
+      "type": "string",
+      "default": "INR"
+    },
+    "timestamp": {
+      "type": ["string", "null"]
+    },
+    "status_text": {
+      "type": ["string", "null"]
+    },
+    "language_detected": {
+      "type": ["string", "null"]
+    }
+  },
+  "required": []
+}
