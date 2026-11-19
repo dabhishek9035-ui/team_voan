@@ -6,7 +6,7 @@ Strictly adheres to Section 1 of docs/01_Member_A_Intake_and_Extraction.md.
 from __future__ import annotations
 from enum import Enum
 from typing import Optional, Dict, Any, List
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 
 
 class ScreenshotType(str, Enum):
@@ -42,6 +42,8 @@ class ExtractedFields(BaseModel):
     Standard extracted fields from screenshots.
     Nulls are valid. Invented values are bugs.
     """
+    model_config = ConfigDict(extra="forbid")
+
     amount: Optional[float] = None
     currency: Optional[str] = "INR"
     timestamp: Optional[str] = None  # ISO format string or standardized representation
@@ -58,9 +60,6 @@ class ExtractedFields(BaseModel):
     app_name: Optional[str] = None
     bank_name: Optional[str] = None
     language_detected: Optional[str] = None
-
-    class Config:
-        extra = "forbid"
 
 
 class EvidenceRecord(BaseModel):

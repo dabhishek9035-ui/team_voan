@@ -81,6 +81,6 @@ def test_normalize_order_or_ticket_id():
 
 
 def test_mask_payer_name():
-    assert mask_payer_name("Rahul Sharma") == "R***l S***a"
+    assert mask_payer_name("Rahul Sharma") == "R***l S****a"
     assert mask_payer_name("Meera") == "M***a"
     assert mask_payer_name(None) is None

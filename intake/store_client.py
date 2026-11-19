@@ -19,8 +19,15 @@ class StoreClient:
       GET /trips/{id}/summary -> trip data
     """
 
-    def __init__(self, base_url: str = "http://localhost:8000"):
-        self.base_url = base_url.rstrip("/")
+    def __init__(
+        self,
+        base_url: Optional[str] = "http://localhost:8000",
+        offline: bool = False,
+        timeout: float = 0.5,
+    ):
+        self.base_url = base_url.rstrip("/") if base_url else None
+        self.offline = offline or (base_url is None)
+        self.timeout = timeout
         # In-memory store used during offline testing or when Member B is not running
         self._in_memory_evidence: Dict[str, EvidenceRecord] = {}
         self._in_memory_interpretations: Dict[str, InterpretationRecord] = {}
@@ -28,45 +35,48 @@ class StoreClient:
 
     def add_evidence(self, evidence: EvidenceRecord) -> str:
         """Saves Evidence record to Member B's store."""
-        try:
-            with httpx.Client(timeout=5.0) as client:
-                resp = client.post(
-                    f"{self.base_url}/records/evidence",
-                    json=evidence.model_dump(),
-                )
-                if resp.status_code == 200:
-                    return resp.json().get("evidence_id", evidence.evidence_id)
-        except Exception:
-            pass
+        if not self.offline and self.base_url:
+            try:
+                with httpx.Client(timeout=self.timeout) as client:
+                    resp = client.post(
+                        f"{self.base_url}/records/evidence",
+                        json=evidence.model_dump(),
+                    )
+                    if resp.status_code == 200:
+                        return resp.json().get("evidence_id", evidence.evidence_id)
+            except Exception:
+                pass
 
-        # Fallback to in-memory store
+        # In-memory store
         self._in_memory_evidence[evidence.evidence_id] = evidence
         return evidence.evidence_id
 
     def add_interpretation(self, interpretation: InterpretationRecord) -> str:
         """Saves Interpretation record to Member B's store."""
-        try:
-            with httpx.Client(timeout=5.0) as client:
-                resp = client.post(
-                    f"{self.base_url}/records/interpretation",
-                    json=interpretation.model_dump(),
-                )
-                if resp.status_code == 200:
-                    return resp.json().get("interp_id", interpretation.interp_id)
-        except Exception:
-            pass
+        if not self.offline and self.base_url:
+            try:
+                with httpx.Client(timeout=self.timeout) as client:
+                    resp = client.post(
+                        f"{self.base_url}/records/interpretation",
+                        json=interpretation.model_dump(),
+                    )
+                    if resp.status_code == 200:
+                        return resp.json().get("interp_id", interpretation.interp_id)
+            except Exception:
+                pass
 
-        # Fallback to in-memory store
+        # In-memory store
         self._in_memory_interpretations[interpretation.interp_id] = interpretation
         return interpretation.interp_id
 
     def lookup_trip_by_join_code(self, join_code: str) -> Optional[str]:
         """Resolves trip_id from coordinator's join code."""
-        try:
-            with httpx.Client(timeout=5.0) as client:
-                resp = client.get(f"{self.base_url}/trips/lookup?join_code={join_code}")
-                if resp.status_code == 200:
-                    return resp.json().get("trip_id")
-        except Exception:
-            pass
+        if not self.offline and self.base_url:
+            try:
+                with httpx.Client(timeout=self.timeout) as client:
+                    resp = client.get(f"{self.base_url}/trips/lookup?join_code={join_code}")
+                    if resp.status_code == 200:
+                        return resp.json().get("trip_id")
+            except Exception:
+                pass
         return self._trip_join_codes.get(join_code.strip().upper())

@@ -60,7 +60,7 @@ def test_process_screenshot_pipeline():
     assert interpretation.type_confidence >= 0.85
     assert interpretation.fields.amount == 40.0
     assert interpretation.fields.ticket_id == "TKT-108920"
-    assert interpretation.fields.qr_payload_parseable is True
+    assert interpretation.qr_payload_parseable is True
 
     # Validate Field Confidences and Sources
     assert interpretation.field_confidence["amount"] > 0.8
