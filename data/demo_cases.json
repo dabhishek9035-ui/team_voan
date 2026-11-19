@@ -1,0 +1,98 @@
+[
+  {
+    "case_id": "SYN-CASE-001",
+    "title": "Pending payment; no ticket evidence",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "evidence_ids": [
+      "SYN-E-CAL-007",
+      "SYN-E-CAL-008",
+      "SYN-E-CAL-009"
+    ],
+    "relationship_type": "EXACT",
+    "machine_state": "case_opened_expected",
+    "decision_support": "needs_review",
+    "reason": "The payment attempt and failure/refund messages relate by order ID, but no ticket evidence is present.",
+    "evidence_levels": {
+      "payment_attempt": "extracted",
+      "ticket_issued": "unverified",
+      "refund_status": "extracted"
+    },
+    "coordinator_decision": null
+  },
+  {
+    "case_id": "SYN-CASE-002",
+    "title": "Contextual payment and ticket match",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "evidence_ids": [
+      "SYN-E-TEST-024",
+      "SYN-E-TEST-025"
+    ],
+    "relationship_type": "INFERRED",
+    "machine_state": "linked_needs_review",
+    "decision_support": "needs_review",
+    "reason": "Amount, time, owner and trip context align; there is no shared identifier.",
+    "evidence_levels": {
+      "amount": "corroborated",
+      "ticket_issued": "extracted",
+      "travelled": "unverified"
+    },
+    "coordinator_decision": null
+  },
+  {
+    "case_id": "SYN-CASE-003",
+    "title": "Manually linked claim with fare mismatch",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "evidence_ids": [
+      "SYN-E-TEST-026",
+      "SYN-E-TEST-016"
+    ],
+    "relationship_type": "MANUAL",
+    "machine_state": "needs_review",
+    "decision_support": "needs_review",
+    "reason": "The claim says 80.00; the referenced ticket says 60.00.",
+    "evidence_levels": {
+      "ticket_issued": "extracted",
+      "claimed_fare": "extracted",
+      "travelled": "unverified"
+    },
+    "coordinator_decision": null
+  },
+  {
+    "case_id": "SYN-CASE-004",
+    "title": "Similar amount without a reliable link",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "evidence_ids": [
+      "SYN-E-TEST-029",
+      "SYN-E-TEST-017"
+    ],
+    "relationship_type": "UNMATCHED",
+    "machine_state": "unmatched_needs_review",
+    "decision_support": "insufficient",
+    "reason": "Different synthetic senders and no shared transaction identifier.",
+    "evidence_levels": {
+      "debit": "extracted",
+      "ticket_issued": "extracted"
+    },
+    "coordinator_decision": null
+  },
+  {
+    "case_id": "SYN-CASE-005",
+    "title": "Consistent payment, bank and ticket references",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "evidence_ids": [
+      "SYN-E-CAL-001",
+      "SYN-E-CAL-002",
+      "SYN-E-CAL-003"
+    ],
+    "relationship_type": "EXACT",
+    "machine_state": "linked_exact",
+    "decision_support": "clear_candidate",
+    "reason": "Synthetic order and UTR identifiers agree across the submitted screenshots.",
+    "evidence_levels": {
+      "debit": "corroborated",
+      "ticket_issued": "extracted",
+      "travelled": "unverified"
+    },
+    "coordinator_decision": null
+  }
+]

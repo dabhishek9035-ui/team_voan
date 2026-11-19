@@ -4,7 +4,9 @@
 
 *REWIRED hackathon, Constraint B: MIRROR ("They don't write it down. They screenshot it, and they'll keep screenshotting.")*
 
-> **Status:** design frozen (v3), build not started. Everything marked **(planned)** is intended, not implemented. Everything marked **(proposed)** is an engineering target, not a measured result. Facts about the metro bot come from public sources and must be re-checked by our own Day-0 test.
+> **Status:** design frozen (v3). Member C's synthetic fixtures, local coordinator dashboard, evaluation harness, interview/timing templates and HTML pitch deck are present. Member A/B runtime services, a real coordinator interview, consented real screenshots and measured performance results are not present yet. Everything marked **(proposed)** remains an engineering target, not a measured result. Facts about the metro bot must be re-checked by our own Day-0 test.
+
+> **Member C build:** start with [synthetic data](data/README.md), [dashboard instructions](dashboard/README.md), [evaluation kit](eval/README.md), the [pitch deck](pitch/index.html) and the [handoff status](docs/member3_handoff.md). Fixture scores must not be presented as real-world performance.
 
 ---
 

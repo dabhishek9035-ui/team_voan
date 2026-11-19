@@ -1,0 +1,198 @@
+[
+  {
+    "relationship_id": "SYN-R-001",
+    "from_evidence_id": "SYN-E-CAL-002",
+    "to_evidence_id": "SYN-E-CAL-001",
+    "type": "EXACT",
+    "basis": [
+      "order_id"
+    ],
+    "auto_clear_eligible": true,
+    "reason": "The payment and ticket share SYN-ORD-CAL-001."
+  },
+  {
+    "relationship_id": "SYN-R-002",
+    "from_evidence_id": "SYN-E-CAL-003",
+    "to_evidence_id": "SYN-E-CAL-002",
+    "type": "EXACT",
+    "basis": [
+      "utr"
+    ],
+    "auto_clear_eligible": true,
+    "reason": "The bank message and payment share SYN-UTR-CAL-001."
+  },
+  {
+    "relationship_id": "SYN-R-003",
+    "from_evidence_id": "SYN-E-CAL-004",
+    "to_evidence_id": "SYN-E-CAL-001",
+    "type": "EXACT",
+    "basis": [
+      "ticket_id",
+      "order_id"
+    ],
+    "auto_clear_eligible": true,
+    "reason": "The claim repeats the ticket and order references."
+  },
+  {
+    "relationship_id": "SYN-R-004",
+    "from_evidence_id": "SYN-E-CAL-005",
+    "to_evidence_id": "SYN-E-CAL-001",
+    "type": "EXACT",
+    "basis": [
+      "ticket_id",
+      "sha256"
+    ],
+    "auto_clear_eligible": false,
+    "reason": "Same ticket and byte-for-byte image resend; do not count the duplicate twice."
+  },
+  {
+    "relationship_id": "SYN-R-005",
+    "from_evidence_id": "SYN-E-CAL-006",
+    "to_evidence_id": "SYN-E-CAL-001",
+    "type": "EXACT",
+    "basis": [
+      "ticket_id",
+      "perceptual_similarity"
+    ],
+    "auto_clear_eligible": false,
+    "reason": "Same ticket in a cropped image; perceptual similarity is a signal, not a conclusion."
+  },
+  {
+    "relationship_id": "SYN-R-006",
+    "from_evidence_id": "SYN-E-CAL-008",
+    "to_evidence_id": "SYN-E-CAL-007",
+    "type": "EXACT",
+    "basis": [
+      "order_id"
+    ],
+    "auto_clear_eligible": true,
+    "reason": "The failed booking message and pending payment share SYN-ORD-CAL-002."
+  },
+  {
+    "relationship_id": "SYN-R-007",
+    "from_evidence_id": "SYN-E-CAL-009",
+    "to_evidence_id": "SYN-E-CAL-007",
+    "type": "EXACT",
+    "basis": [
+      "order_id"
+    ],
+    "auto_clear_eligible": true,
+    "reason": "The refund notice and pending payment share SYN-ORD-CAL-002."
+  },
+  {
+    "relationship_id": "SYN-R-008",
+    "from_evidence_id": "SYN-E-CAL-010",
+    "to_evidence_id": "SYN-E-CAL-011",
+    "type": "INFERRED",
+    "basis": [
+      "amount",
+      "timestamp_window",
+      "payer_name_masked",
+      "trip_context"
+    ],
+    "auto_clear_eligible": false,
+    "reason": "Amount, time, sender and trip context align, but no shared transaction or ticket identifier exists."
+  },
+  {
+    "relationship_id": "SYN-R-009",
+    "from_evidence_id": "SYN-E-TEST-017",
+    "to_evidence_id": "SYN-E-TEST-016",
+    "type": "EXACT",
+    "basis": [
+      "order_id"
+    ],
+    "auto_clear_eligible": true,
+    "reason": "The payment and ticket share SYN-ORD-TEST-101."
+  },
+  {
+    "relationship_id": "SYN-R-010",
+    "from_evidence_id": "SYN-E-TEST-018",
+    "to_evidence_id": "SYN-E-TEST-017",
+    "type": "EXACT",
+    "basis": [
+      "utr"
+    ],
+    "auto_clear_eligible": true,
+    "reason": "The bank message and payment share SYN-UTR-TEST-101."
+  },
+  {
+    "relationship_id": "SYN-R-011",
+    "from_evidence_id": "SYN-E-TEST-019",
+    "to_evidence_id": "SYN-E-TEST-016",
+    "type": "EXACT",
+    "basis": [
+      "ticket_id",
+      "perceptual_similarity"
+    ],
+    "auto_clear_eligible": false,
+    "reason": "Same ticket in a lossy JPEG re-encoding; the image hash differs from the original."
+  },
+  {
+    "relationship_id": "SYN-R-012",
+    "from_evidence_id": "SYN-E-TEST-020",
+    "to_evidence_id": "SYN-E-TEST-016",
+    "type": "EXACT",
+    "basis": [
+      "ticket_id",
+      "perceptual_similarity"
+    ],
+    "auto_clear_eligible": false,
+    "reason": "Same ticket inside a gallery recapture; the outer screen changes the image appearance."
+  },
+  {
+    "relationship_id": "SYN-R-013",
+    "from_evidence_id": "SYN-E-TEST-022",
+    "to_evidence_id": "SYN-E-TEST-021",
+    "type": "EXACT",
+    "basis": [
+      "order_id"
+    ],
+    "auto_clear_eligible": true,
+    "reason": "The failed booking message and pending payment share SYN-ORD-TEST-202."
+  },
+  {
+    "relationship_id": "SYN-R-014",
+    "from_evidence_id": "SYN-E-TEST-023",
+    "to_evidence_id": "SYN-E-TEST-021",
+    "type": "EXACT",
+    "basis": [
+      "order_id"
+    ],
+    "auto_clear_eligible": true,
+    "reason": "The refund notice and pending payment share SYN-ORD-TEST-202."
+  },
+  {
+    "relationship_id": "SYN-R-015",
+    "from_evidence_id": "SYN-E-TEST-024",
+    "to_evidence_id": "SYN-E-TEST-025",
+    "type": "INFERRED",
+    "basis": [
+      "amount",
+      "timestamp_window",
+      "payer_name_masked",
+      "trip_context"
+    ],
+    "auto_clear_eligible": false,
+    "reason": "Amount, time, sender and trip context align; no shared identifier exists, so this needs review."
+  },
+  {
+    "relationship_id": "SYN-R-016",
+    "from_evidence_id": "SYN-E-TEST-026",
+    "to_evidence_id": "SYN-E-TEST-016",
+    "type": "MANUAL",
+    "basis": [
+      "coordinator_action"
+    ],
+    "auto_clear_eligible": false,
+    "reason": "A coordinator manually linked the claim to the ticket for review; claimed fare 80.00 conflicts with ticket fare 60.00."
+  },
+  {
+    "relationship_id": "SYN-R-017",
+    "from_evidence_id": "SYN-E-TEST-029",
+    "to_evidence_id": "SYN-E-TEST-017",
+    "type": "UNMATCHED",
+    "basis": [],
+    "auto_clear_eligible": false,
+    "reason": "Same amount and minute are insufficient; sender differs and no transaction identifier is shared."
+  }
+]

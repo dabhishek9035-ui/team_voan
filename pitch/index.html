@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17283f">
+  <title>Pratibimb · Hackathon pitch</title>
+  <link rel="stylesheet" href="deck.css">
+</head>
+<body>
+  <main class="deck" aria-label="Pratibimb pitch deck">
+    <section class="slide cover active" data-title="Pratibimb">
+      <div class="cover-copy">
+        <p class="kicker">MIRROR · MEMBER C PITCH</p>
+        <h1>Pratibimb</h1>
+        <p class="cover-lede">Every screenshot gets an owner, a trail and an honest label for how well it is supported.</p>
+        <p class="cover-note">A coordinator view for travel evidence shared in chats</p>
+        <span class="synthetic-stamp">SYNTHETIC DEMO</span>
+      </div>
+      <figure class="cover-image"><img src="../data/screenshots/SYN-E-CAL-001.png" alt="Synthetic Metro Demo ticket screenshot"><figcaption>Hand-authored sample · not a real ticket</figcaption></figure>
+      <span class="slide-number">01 / 08</span>
+    </section>
+
+    <section class="slide" data-title="The coordination gap">
+      <header class="slide-head"><p class="kicker">THE COORDINATION GAP</p><h2>The screenshots arrive. The record does not.</h2></header>
+      <div class="moments">
+        <article><span>01</span><h3>Before travel</h3><p>Who has a ticket? A coordinator searches the chat and counts by hand.</p></article>
+        <article><span>02</span><h3>When payment fails</h3><p>Money may appear pending while a ticket is missing. Follow-ups get scattered.</p></article>
+        <article><span>03</span><h3>After the trip</h3><p>Claims and duplicates are checked against screenshots one at a time.</p></article>
+      </div>
+      <p class="evidence-note"><strong>Problem evidence is pending.</strong> No coordinator interview or manual baseline has been recorded yet.</p>
+      <span class="slide-number">02 / 08</span>
+    </section>
+
+    <section class="slide" data-title="The input constraint">
+      <header class="slide-head"><p class="kicker">THE INPUT CONSTRAINT</p><h2>Keep the screenshot habit</h2></header>
+      <div class="two-sides">
+        <div class="big-statement"><p>Traveller</p><strong>Send the screenshot they already have.</strong><span>No form. No new app. No typing the claim.</span></div>
+        <div class="connection"><div class="node">Chat<br><small>the door</small></div><div class="connector"><span>image in</span><i></i><span>reply card out</span></div><div class="node node-dark">Pratibimb<br><small>the record</small></div></div>
+      </div>
+      <p class="bottom-line">The chat carries the image. The coordinator works from a structured trail.</p>
+      <span class="slide-number">03 / 08</span>
+    </section>
+
+    <section class="slide" data-title="Four separate records">
+      <header class="slide-head"><p class="kicker">THE EVIDENCE MODEL</p><h2>Four records answer four questions</h2></header>
+      <div class="record-flow">
+        <article><span class="record-index">01</span><h3>Evidence</h3><p>What did the traveller submit?</p><small>Sender · time · image fingerprints</small></article>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article><span class="record-index">02</span><h3>Interpretation</h3><p>What did the system read?</p><small>Fields · confidence · model version</small></article>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article><span class="record-index">03</span><h3>Relationship</h3><p>Why are two items connected?</p><small>EXACT · INFERRED · MANUAL · UNMATCHED</small></article>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article><span class="record-index">04</span><h3>Decision</h3><p>What did a coordinator decide?</p><small>Person · reason · snapshot hash</small></article>
+      </div>
+      <div class="level-band"><strong>Support is attribute-specific</strong><span>Extracted</span><b>→</b><span>Corroborated</span><b>→</b><span>Confirmed by an independent source</span></div>
+      <p class="bottom-line">A matching payment can support the debit. It does not establish that travel occurred.</p>
+      <span class="slide-number">04 / 08</span>
+    </section>
+
+    <section class="slide" data-title="How the system works">
+      <header class="slide-head"><p class="kicker">SYSTEM DESIGN</p><h2>AI reads. Deterministic code links. A person decides.</h2></header>
+      <div class="pipeline">
+        <div class="pipeline-row"><span class="owner owner-a">A · INTAKE</span><p>Receive a screenshot, fingerprint it and extract fields; decode QR locally.</p></div>
+        <div class="pipeline-row"><span class="owner owner-b">B · CORE</span><p>Keep the append-only trail; link evidence with a reason; abstain when uncertain.</p></div>
+        <div class="pipeline-row"><span class="owner owner-c">C · REVIEW</span><p>Show exceptions, the four records, claim exports and audit status to the coordinator.</p></div>
+      </div>
+      <figure class="side-sample"><img src="../data/screenshots/SYN-E-TEST-025.png" alt="Synthetic Kannada ticket screenshot"><figcaption>Kannada fixture · authored for the demo</figcaption></figure>
+      <p class="bottom-line">Sarvam is planned for extraction and translation. It does not create relationships or coordinator decisions.</p>
+      <span class="slide-number">05 / 08</span>
+    </section>
+
+    <section class="slide" data-title="Evaluation status">
+      <header class="slide-head"><p class="kicker">EVALUATION STATUS</p><h2>Fixtures are ready. Product performance is not measured.</h2></header>
+      <div class="fixture-summary"><strong>30</strong><div><b>synthetic screenshots</b><span>15 calibration · 15 held-out · all nine screenshot classes</span></div></div>
+      <div class="metric-status">
+        <article><span>01 · EXTRACTION + LINKING</span><strong>Not measured</strong><p>Per type, app, language and relationship type</p></article>
+        <article><span>02 · FALSE ACCEPT + COVERAGE</span><strong>Not measured</strong><p>Report both at the chosen calibration threshold</p></article>
+        <article><span>03 · COORDINATOR TIME</span><strong>Not measured</strong><p>Same cases, manual review versus dashboard review</p></article>
+      </div>
+      <p class="evidence-note"><strong>Use the synthetic set for plumbing and rehearsal only.</strong> It is curated and does not estimate performance on real screenshots.</p>
+      <span class="slide-number">06 / 08</span>
+    </section>
+
+    <section class="slide" data-title="Limits and threat model">
+      <header class="slide-head"><p class="kicker">LIMITS TO SAY OUT LOUD</p><h2>Consistency is useful. It is not the same as truth.</h2></header>
+      <div class="limits-layout">
+        <ul class="limits-list">
+          <li>A screenshot is a claim; the system cannot see gate scans.</li>
+          <li>Two fabricated items can agree. Corroboration means consistency.</li>
+          <li>INFERRED and UNMATCHED items stay with a human reviewer.</li>
+          <li>No operator record is connected to confirm ticket issuance.</li>
+          <li>The fake-like fixtures are hand-authored, not generated by two image models.</li>
+          <li>Results must be checked again on consented, real, masked examples.</li>
+        </ul>
+        <figure class="limit-image"><img src="../data/screenshots/SYN-E-CAL-012.png" alt="Synthetic suspicious refund message screenshot"><figcaption>Suspicious-message fixture · .invalid domain</figcaption></figure>
+      </div>
+      <span class="slide-number">07 / 08</span>
+    </section>
+
+    <section class="slide final-slide" data-title="Demo and next evidence">
+      <header class="slide-head"><p class="kicker">THREE-MINUTE DEMO</p><h2>Show the trail. Let the limits stay visible.</h2></header>
+      <div class="demo-steps">
+        <p><b>01</b><span>Open the roster and show the synthetic trip state.</span></p>
+        <p><b>02</b><span>Review the pending payment and missing-ticket case.</span></p>
+        <p><b>03</b><span>Open the four-record trail and the claim export.</span></p>
+        <p><b>04</b><span>Try the duplicate and out-of-window fixture; show the audit chain break.</span></p>
+      </div>
+      <div class="closing-line">Pratibimb gives each screenshot an owner, a trail and an honest label for how well it is supported.</div>
+      <p class="next-evidence">Next evidence needed: one coordinator interview, a timed manual baseline and real masked screenshots with consent.</p>
+      <span class="slide-number">08 / 08</span>
+    </section>
+  </main>
+  <nav class="deck-controls" aria-label="Slide controls"><button id="prev" aria-label="Previous slide">←</button><span id="position">01 / 08</span><button id="next" aria-label="Next slide">→</button><button id="fullscreen" aria-label="Toggle full screen">⛶</button></nav>
+  <script src="deck.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+[
+  {
+    "claim_case_id": "SYN-CLAIM-CAL-001",
+    "split": "calibration",
+    "evidence_ids": [
+      "SYN-E-CAL-001",
+      "SYN-E-CAL-002",
+      "SYN-E-CAL-003"
+    ],
+    "label": "clean_exact",
+    "is_bad": false,
+    "auto_clear_eligible": true
+  },
+  {
+    "claim_case_id": "SYN-CLAIM-CAL-002",
+    "split": "calibration",
+    "evidence_ids": [
+      "SYN-E-CAL-001",
+      "SYN-E-CAL-005",
+      "SYN-E-CAL-006"
+    ],
+    "label": "duplicate_ticket",
+    "is_bad": true,
+    "auto_clear_eligible": false
+  },
+  {
+    "claim_case_id": "SYN-CLAIM-CAL-003",
+    "split": "calibration",
+    "evidence_ids": [
+      "SYN-E-CAL-010",
+      "SYN-E-CAL-011"
+    ],
+    "label": "inferred_pair",
+    "is_bad": false,
+    "auto_clear_eligible": false
+  },
+  {
+    "claim_case_id": "SYN-CLAIM-CAL-004",
+    "split": "calibration",
+    "evidence_ids": [
+      "SYN-E-CAL-007",
+      "SYN-E-CAL-008",
+      "SYN-E-CAL-009"
+    ],
+    "label": "payment_without_ticket",
+    "is_bad": true,
+    "auto_clear_eligible": false
+  },
+  {
+    "claim_case_id": "SYN-CLAIM-CAL-005",
+    "split": "calibration",
+    "evidence_ids": [
+      "SYN-E-CAL-012"
+    ],
+    "label": "suspect_notice",
+    "is_bad": true,
+    "auto_clear_eligible": false
+  },
+  {
+    "claim_case_id": "SYN-CLAIM-CAL-006",
+    "split": "calibration",
+    "evidence_ids": [
+      "SYN-E-CAL-014"
+    ],
+    "label": "out_of_window",
+    "is_bad": true,
+    "auto_clear_eligible": false
+  },
+  {
+    "claim_case_id": "SYN-CLAIM-TEST-001",
+    "split": "heldout",
+    "evidence_ids": [
+      "SYN-E-TEST-016",
+      "SYN-E-TEST-017",
+      "SYN-E-TEST-018"
+    ],
+    "label": "clean_exact",
+    "is_bad": false,
+    "auto_clear_eligible": true
+  },
+  {
+    "claim_case_id": "SYN-CLAIM-TEST-002",
+    "split": "heldout",
+    "evidence_ids": [
+      "SYN-E-TEST-016",
+      "SYN-E-TEST-019",
+      "SYN-E-TEST-020"
+    ],
+    "label": "duplicate_ticket",
+    "is_bad": true,
+    "auto_clear_eligible": false
+  },
+  {
+    "claim_case_id": "SYN-CLAIM-TEST-003",
+    "split": "heldout",
+    "evidence_ids": [
+      "SYN-E-TEST-021",
+      "SYN-E-TEST-022",
+      "SYN-E-TEST-023"
+    ],
+    "label": "payment_without_ticket",
+    "is_bad": true,
+    "auto_clear_eligible": false
+  },
+  {
+    "claim_case_id": "SYN-CLAIM-TEST-004",
+    "split": "heldout",
+    "evidence_ids": [
+      "SYN-E-TEST-024",
+      "SYN-E-TEST-025"
+    ],
+    "label": "inferred_pair",
+    "is_bad": false,
+    "auto_clear_eligible": false
+  },
+  {
+    "claim_case_id": "SYN-CLAIM-TEST-005",
+    "split": "heldout",
+    "evidence_ids": [
+      "SYN-E-TEST-016",
+      "SYN-E-TEST-026"
+    ],
+    "label": "manual_claim_mismatch",
+    "is_bad": true,
+    "auto_clear_eligible": false
+  },
+  {
+    "claim_case_id": "SYN-CLAIM-TEST-006",
+    "split": "heldout",
+    "evidence_ids": [
+      "SYN-E-TEST-027"
+    ],
+    "label": "suspect_notice",
+    "is_bad": true,
+    "auto_clear_eligible": false
+  },
+  {
+    "claim_case_id": "SYN-CLAIM-TEST-007",
+    "split": "heldout",
+    "evidence_ids": [
+      "SYN-E-TEST-028"
+    ],
+    "label": "fabricated_out_of_window",
+    "is_bad": true,
+    "auto_clear_eligible": false
+  },
+  {
+    "claim_case_id": "SYN-CLAIM-TEST-008",
+    "split": "heldout",
+    "evidence_ids": [
+      "SYN-E-TEST-017",
+      "SYN-E-TEST-029"
+    ],
+    "label": "unmatched_owner_conflict",
+    "is_bad": true,
+    "auto_clear_eligible": false
+  }
+]

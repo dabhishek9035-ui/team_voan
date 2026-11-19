@@ -1,0 +1,38 @@
+{
+  "split_method": "Group split by separate synthetic trip windows; no relationship crosses splits.",
+  "calibration_evidence_ids": [
+    "SYN-E-CAL-001",
+    "SYN-E-CAL-002",
+    "SYN-E-CAL-003",
+    "SYN-E-CAL-004",
+    "SYN-E-CAL-005",
+    "SYN-E-CAL-006",
+    "SYN-E-CAL-007",
+    "SYN-E-CAL-008",
+    "SYN-E-CAL-009",
+    "SYN-E-CAL-010",
+    "SYN-E-CAL-011",
+    "SYN-E-CAL-012",
+    "SYN-E-CAL-013",
+    "SYN-E-CAL-014",
+    "SYN-E-CAL-015"
+  ],
+  "heldout_evidence_ids": [
+    "SYN-E-TEST-016",
+    "SYN-E-TEST-017",
+    "SYN-E-TEST-018",
+    "SYN-E-TEST-019",
+    "SYN-E-TEST-020",
+    "SYN-E-TEST-021",
+    "SYN-E-TEST-022",
+    "SYN-E-TEST-023",
+    "SYN-E-TEST-024",
+    "SYN-E-TEST-025",
+    "SYN-E-TEST-026",
+    "SYN-E-TEST-027",
+    "SYN-E-TEST-028",
+    "SYN-E-TEST-029",
+    "SYN-E-TEST-030"
+  ],
+  "use": "Use heldout only for evaluator plumbing until real labelled data exists; never present its scores as real-world results."
+}
