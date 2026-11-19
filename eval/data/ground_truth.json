@@ -1,0 +1,1007 @@
+[
+  {
+    "item_id": "SYN-E-CAL-001",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Metro Demo",
+    "language": "en",
+    "fields": {
+      "amount": "40.00",
+      "currency": "INR",
+      "timestamp": "2026-10-21T08:31:00+05:30",
+      "order_id": "SYN-ORD-CAL-001",
+      "ticket_id": "SYN-TKT-CAL-001",
+      "qr_payload": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-001",
+      "origin_station": "Indiranagar",
+      "destination_station": "MG Road",
+      "fare": "40.00",
+      "payer_name_masked": "S*** 01",
+      "payee_name": "METRO DEMO",
+      "status_text": "Ticket issued",
+      "app_name": "Metro Demo"
+    },
+    "journey_id": "SYN-J-CAL-01",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "clean",
+    "labels_raw": [
+      "clean"
+    ],
+    "variant": "base",
+    "should_clear": true,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-CAL-002",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_SUCCESS",
+    "app": "Pay Demo",
+    "language": "en",
+    "fields": {
+      "amount": "40.00",
+      "currency": "INR",
+      "timestamp": "2026-10-21T08:29:00+05:30",
+      "utr": "SYN-UTR-CAL-001",
+      "order_id": "SYN-ORD-CAL-001",
+      "payer_name_masked": "S*** 01",
+      "payee_name": "METRO DEMO",
+      "status_text": "Payment successful",
+      "app_name": "Pay Demo"
+    },
+    "journey_id": "SYN-J-CAL-01",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": "SYN-E-CAL-001",
+      "type": "EXACT"
+    },
+    "label": "clean",
+    "labels_raw": [
+      "clean"
+    ],
+    "variant": "base",
+    "should_clear": true,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-CAL-003",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "BANK_SMS",
+    "app": "Sample Bank SMS",
+    "language": "en",
+    "fields": {
+      "amount": "40.00",
+      "currency": "INR",
+      "timestamp": "2026-10-21T08:30:00+05:30",
+      "utr": "SYN-UTR-CAL-001",
+      "payer_name_masked": "S*** 01",
+      "status_text": "Debited",
+      "app_name": "Sample Bank SMS",
+      "bank_name": "Sample Bank"
+    },
+    "journey_id": "SYN-J-CAL-01",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": "SYN-E-CAL-002",
+      "type": "EXACT"
+    },
+    "label": "clean",
+    "labels_raw": [
+      "clean"
+    ],
+    "variant": "base",
+    "should_clear": true,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-CAL-004",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "CLAIM_SUBMISSION",
+    "app": "Claim Desk Demo",
+    "language": "en",
+    "fields": {
+      "amount": "40.00",
+      "currency": "INR",
+      "timestamp": "2026-10-21T09:05:00+05:30",
+      "order_id": "SYN-ORD-CAL-001",
+      "ticket_id": "SYN-TKT-CAL-001",
+      "origin_station": "Indiranagar",
+      "destination_station": "MG Road",
+      "fare": "40.00",
+      "payer_name_masked": "S*** 01",
+      "status_text": "Claim submitted",
+      "app_name": "Claim Desk Demo"
+    },
+    "journey_id": "SYN-J-CAL-01",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": "SYN-E-CAL-001",
+      "type": "EXACT"
+    },
+    "label": "clean",
+    "labels_raw": [
+      "clean"
+    ],
+    "variant": "base",
+    "should_clear": true,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-CAL-005",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Metro Demo",
+    "language": "en",
+    "fields": {
+      "amount": "40.00",
+      "currency": "INR",
+      "timestamp": "2026-10-21T08:31:00+05:30",
+      "order_id": "SYN-ORD-CAL-001",
+      "ticket_id": "SYN-TKT-CAL-001",
+      "qr_payload": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-001",
+      "origin_station": "Indiranagar",
+      "destination_station": "MG Road",
+      "fare": "40.00",
+      "payer_name_masked": "S*** 01",
+      "payee_name": "METRO DEMO",
+      "status_text": "Ticket issued",
+      "app_name": "Metro Demo"
+    },
+    "journey_id": "SYN-J-CAL-01",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": "SYN-E-CAL-001",
+      "type": "EXACT"
+    },
+    "label": "duplicate",
+    "labels_raw": [
+      "duplicate",
+      "exact_duplicate"
+    ],
+    "variant": "exact_copy",
+    "should_clear": false,
+    "dup_of": "SYN-E-CAL-001"
+  },
+  {
+    "item_id": "SYN-E-CAL-006",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Metro Demo",
+    "language": "en",
+    "fields": {
+      "amount": "40.00",
+      "currency": "INR",
+      "timestamp": "2026-10-21T08:31:00+05:30",
+      "order_id": "SYN-ORD-CAL-001",
+      "ticket_id": "SYN-TKT-CAL-001",
+      "qr_payload": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-001",
+      "origin_station": "Indiranagar",
+      "destination_station": "MG Road",
+      "fare": "40.00",
+      "payer_name_masked": "S*** 01",
+      "payee_name": "METRO DEMO",
+      "status_text": "Ticket issued",
+      "app_name": "Metro Demo"
+    },
+    "journey_id": "SYN-J-CAL-01",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": "SYN-E-CAL-001",
+      "type": "EXACT"
+    },
+    "label": "cropped",
+    "labels_raw": [
+      "duplicate",
+      "cropped"
+    ],
+    "variant": "cropped",
+    "should_clear": false,
+    "dup_of": "SYN-E-CAL-001"
+  },
+  {
+    "item_id": "SYN-E-CAL-007",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_FAILED_PENDING",
+    "app": "Pay Demo",
+    "language": "en",
+    "fields": {
+      "amount": "60.00",
+      "currency": "INR",
+      "timestamp": "2026-10-21T08:40:00+05:30",
+      "order_id": "SYN-ORD-CAL-002",
+      "payer_name_masked": "S*** 02",
+      "payee_name": "METRO DEMO",
+      "status_text": "Pending",
+      "app_name": "Pay Demo"
+    },
+    "journey_id": "SYN-J-CAL-02",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "no_ticket",
+    "labels_raw": [
+      "no_ticket",
+      "pending"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-CAL-008",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "BOT_ERROR",
+    "app": "Metro Demo",
+    "language": "en",
+    "fields": {
+      "amount": "60.00",
+      "currency": "INR",
+      "timestamp": "2026-10-21T08:41:00+05:30",
+      "order_id": "SYN-ORD-CAL-002",
+      "payer_name_masked": "S*** 02",
+      "status_text": "Booking failed; no ticket issued",
+      "app_name": "Metro Demo"
+    },
+    "journey_id": "SYN-J-CAL-02",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": "SYN-E-CAL-007",
+      "type": "EXACT"
+    },
+    "label": "no_ticket",
+    "labels_raw": [
+      "no_ticket"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-CAL-009",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "REFUND_NOTICE",
+    "app": "Metro Demo",
+    "language": "en",
+    "fields": {
+      "amount": "60.00",
+      "currency": "INR",
+      "timestamp": "2026-10-21T08:43:00+05:30",
+      "order_id": "SYN-ORD-CAL-002",
+      "payer_name_masked": "S*** 02",
+      "payee_name": "METRO DEMO",
+      "status_text": "Refund initiated",
+      "app_name": "Metro Demo"
+    },
+    "journey_id": "SYN-J-CAL-02",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": "SYN-E-CAL-007",
+      "type": "EXACT"
+    },
+    "label": "no_ticket",
+    "labels_raw": [
+      "refund_notice",
+      "no_ticket"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-CAL-010",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_SUCCESS",
+    "app": "Pay Demo",
+    "language": "kn",
+    "fields": {
+      "amount": "50.00",
+      "currency": "INR",
+      "timestamp": "2026-10-21T08:35:00+05:30",
+      "utr": "SYN-UTR-CAL-003",
+      "payer_name_masked": "S*** 03",
+      "payee_name": "METRO DEMO",
+      "status_text": "ಪಾವತಿ ಯಶಸ್ವಿ",
+      "app_name": "Pay Demo"
+    },
+    "journey_id": "SYN-J-CAL-03",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": "SYN-E-CAL-011",
+      "type": "INFERRED"
+    },
+    "label": "inferred",
+    "labels_raw": [
+      "clean",
+      "inferred_pair"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-CAL-011",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Metro Demo",
+    "language": "en",
+    "fields": {
+      "amount": "50.00",
+      "currency": "INR",
+      "timestamp": "2026-10-21T08:38:00+05:30",
+      "ticket_id": "SYN-TKT-CAL-003",
+      "qr_payload": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-003",
+      "origin_station": "Indiranagar",
+      "destination_station": "MG Road",
+      "fare": "50.00",
+      "payer_name_masked": "S*** 03",
+      "payee_name": "METRO DEMO",
+      "status_text": "Ticket issued",
+      "app_name": "Metro Demo"
+    },
+    "journey_id": "SYN-J-CAL-03",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "inferred",
+    "labels_raw": [
+      "clean",
+      "inferred_pair"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-CAL-012",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "SUSPECT_NOTICE",
+    "app": "Message Demo",
+    "language": "en",
+    "fields": {
+      "timestamp": "2026-10-21T10:59:00+05:30",
+      "status_text": "Your refund is blocked. Pay a release fee and share your KYC details at metro-refund.sample.invalid.",
+      "app_name": "Message Demo"
+    },
+    "journey_id": "SYN-SENDER-04:cal_notice_types",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "suspect_notice",
+    "labels_raw": [
+      "suspect_notice"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-CAL-013",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "OTHER",
+    "app": "Gallery Demo",
+    "language": "en",
+    "fields": {
+      "status_text": "Photo backup complete",
+      "app_name": "Gallery Demo"
+    },
+    "journey_id": "SYN-SENDER-05:cal_notice_types",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "other",
+    "labels_raw": [
+      "other"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-CAL-014",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Metro Demo",
+    "language": "en",
+    "fields": {
+      "amount": "40.00",
+      "currency": "INR",
+      "timestamp": "2026-10-04T08:31:00+05:30",
+      "ticket_id": "SYN-TKT-CAL-004",
+      "qr_payload": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-004",
+      "origin_station": "Indiranagar",
+      "destination_station": "MG Road",
+      "fare": "40.00",
+      "payer_name_masked": "S*** 06",
+      "payee_name": "METRO DEMO",
+      "status_text": "Ticket issued",
+      "app_name": "Metro Demo"
+    },
+    "journey_id": "SYN-J-CAL-05",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "out_of_window",
+    "labels_raw": [
+      "out_of_window"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-CAL-015",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "BANK_SMS",
+    "app": "Sample Bank SMS",
+    "language": "en",
+    "fields": {
+      "amount": "115.00",
+      "currency": "INR",
+      "timestamp": "2026-10-21T11:12:00+05:30",
+      "payer_name_masked": "S*** 07",
+      "status_text": "Credit received; reference unavailable",
+      "app_name": "Sample Bank SMS",
+      "bank_name": "Sample Bank"
+    },
+    "journey_id": "SYN-J-CAL-06",
+    "trip_id": "SYN-TRIP-CAL-01",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "unmatched",
+    "labels_raw": [
+      "unmatched"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-TEST-016",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Metro Demo",
+    "language": "en",
+    "fields": {
+      "amount": "60.00",
+      "currency": "INR",
+      "timestamp": "2026-10-30T09:01:00+05:30",
+      "order_id": "SYN-ORD-TEST-101",
+      "ticket_id": "SYN-TKT-TEST-101",
+      "qr_payload": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-101",
+      "origin_station": "MG Road",
+      "destination_station": "Cubbon Park",
+      "fare": "60.00",
+      "payer_name_masked": "S*** 08",
+      "payee_name": "METRO DEMO",
+      "status_text": "Ticket issued",
+      "app_name": "Metro Demo"
+    },
+    "journey_id": "SYN-J-TEST-01",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "clean",
+    "labels_raw": [
+      "clean"
+    ],
+    "variant": "base",
+    "should_clear": true,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-TEST-017",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_SUCCESS",
+    "app": "Pay Demo",
+    "language": "en",
+    "fields": {
+      "amount": "60.00",
+      "currency": "INR",
+      "timestamp": "2026-10-30T08:59:00+05:30",
+      "utr": "SYN-UTR-TEST-101",
+      "order_id": "SYN-ORD-TEST-101",
+      "payer_name_masked": "S*** 08",
+      "payee_name": "METRO DEMO",
+      "status_text": "Payment successful",
+      "app_name": "Pay Demo"
+    },
+    "journey_id": "SYN-J-TEST-01",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": "SYN-E-TEST-016",
+      "type": "EXACT"
+    },
+    "label": "clean",
+    "labels_raw": [
+      "clean"
+    ],
+    "variant": "base",
+    "should_clear": true,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-TEST-018",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "BANK_SMS",
+    "app": "Sample Bank SMS",
+    "language": "en",
+    "fields": {
+      "amount": "60.00",
+      "currency": "INR",
+      "timestamp": "2026-10-30T09:00:00+05:30",
+      "utr": "SYN-UTR-TEST-101",
+      "payer_name_masked": "S*** 08",
+      "status_text": "Debited",
+      "app_name": "Sample Bank SMS",
+      "bank_name": "Sample Bank"
+    },
+    "journey_id": "SYN-J-TEST-01",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": "SYN-E-TEST-017",
+      "type": "EXACT"
+    },
+    "label": "clean",
+    "labels_raw": [
+      "clean"
+    ],
+    "variant": "base",
+    "should_clear": true,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-TEST-019",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Metro Demo",
+    "language": "en",
+    "fields": {
+      "amount": "60.00",
+      "currency": "INR",
+      "timestamp": "2026-10-30T09:01:00+05:30",
+      "order_id": "SYN-ORD-TEST-101",
+      "ticket_id": "SYN-TKT-TEST-101",
+      "qr_payload": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-101",
+      "origin_station": "MG Road",
+      "destination_station": "Cubbon Park",
+      "fare": "60.00",
+      "payer_name_masked": "S*** 08",
+      "payee_name": "METRO DEMO",
+      "status_text": "Ticket issued",
+      "app_name": "Metro Demo"
+    },
+    "journey_id": "SYN-J-TEST-01",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": "SYN-E-TEST-016",
+      "type": "EXACT"
+    },
+    "label": "duplicate",
+    "labels_raw": [
+      "duplicate",
+      "recompressed"
+    ],
+    "variant": "recompressed",
+    "should_clear": false,
+    "dup_of": "SYN-E-TEST-016"
+  },
+  {
+    "item_id": "SYN-E-TEST-020",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Metro Demo",
+    "language": "en",
+    "fields": {
+      "amount": "60.00",
+      "currency": "INR",
+      "timestamp": "2026-10-30T09:01:00+05:30",
+      "order_id": "SYN-ORD-TEST-101",
+      "ticket_id": "SYN-TKT-TEST-101",
+      "qr_payload": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-101",
+      "origin_station": "MG Road",
+      "destination_station": "Cubbon Park",
+      "fare": "60.00",
+      "payer_name_masked": "S*** 08",
+      "payee_name": "METRO DEMO",
+      "status_text": "Ticket issued",
+      "app_name": "Metro Demo"
+    },
+    "journey_id": "SYN-J-TEST-01",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": "SYN-E-TEST-016",
+      "type": "EXACT"
+    },
+    "label": "duplicate",
+    "labels_raw": [
+      "duplicate",
+      "screenshot_of_screenshot"
+    ],
+    "variant": "screenshot_of_screenshot",
+    "should_clear": false,
+    "dup_of": "SYN-E-TEST-016"
+  },
+  {
+    "item_id": "SYN-E-TEST-021",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_FAILED_PENDING",
+    "app": "Pay Demo",
+    "language": "en",
+    "fields": {
+      "amount": "80.00",
+      "currency": "INR",
+      "timestamp": "2026-10-30T09:11:00+05:30",
+      "order_id": "SYN-ORD-TEST-202",
+      "payer_name_masked": "S*** 09",
+      "payee_name": "METRO DEMO",
+      "status_text": "Pending",
+      "app_name": "Pay Demo"
+    },
+    "journey_id": "SYN-J-TEST-02",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "no_ticket",
+    "labels_raw": [
+      "no_ticket",
+      "pending"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-TEST-022",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "BOT_ERROR",
+    "app": "Metro Demo",
+    "language": "en",
+    "fields": {
+      "amount": "80.00",
+      "currency": "INR",
+      "timestamp": "2026-10-30T09:12:00+05:30",
+      "order_id": "SYN-ORD-TEST-202",
+      "payer_name_masked": "S*** 09",
+      "status_text": "Booking failed; no ticket issued",
+      "app_name": "Metro Demo"
+    },
+    "journey_id": "SYN-J-TEST-02",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": "SYN-E-TEST-021",
+      "type": "EXACT"
+    },
+    "label": "no_ticket",
+    "labels_raw": [
+      "no_ticket"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-TEST-023",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "REFUND_NOTICE",
+    "app": "Metro Demo",
+    "language": "en",
+    "fields": {
+      "amount": "80.00",
+      "currency": "INR",
+      "timestamp": "2026-10-30T09:14:00+05:30",
+      "order_id": "SYN-ORD-TEST-202",
+      "payer_name_masked": "S*** 09",
+      "payee_name": "METRO DEMO",
+      "status_text": "Refund initiated",
+      "app_name": "Metro Demo"
+    },
+    "journey_id": "SYN-J-TEST-02",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": "SYN-E-TEST-021",
+      "type": "EXACT"
+    },
+    "label": "no_ticket",
+    "labels_raw": [
+      "refund_notice",
+      "no_ticket"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-TEST-024",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_SUCCESS",
+    "app": "Pay Demo",
+    "language": "kn",
+    "fields": {
+      "amount": "45.00",
+      "currency": "INR",
+      "timestamp": "2026-10-30T09:20:00+05:30",
+      "utr": "SYN-UTR-TEST-303",
+      "payer_name_masked": "S*** 10",
+      "payee_name": "METRO DEMO",
+      "status_text": "ಪಾವತಿ ಯಶಸ್ವಿ",
+      "app_name": "Pay Demo"
+    },
+    "journey_id": "SYN-J-TEST-03",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": "SYN-E-TEST-025",
+      "type": "INFERRED"
+    },
+    "label": "inferred",
+    "labels_raw": [
+      "clean",
+      "inferred_pair"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-TEST-025",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Metro Demo",
+    "language": "kn",
+    "fields": {
+      "amount": "45.00",
+      "currency": "INR",
+      "timestamp": "2026-10-30T09:23:00+05:30",
+      "ticket_id": "SYN-TKT-TEST-303",
+      "qr_payload": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-303",
+      "origin_station": "Cubbon Park",
+      "destination_station": "Vidhana Soudha",
+      "fare": "45.00",
+      "payer_name_masked": "S*** 10",
+      "payee_name": "METRO DEMO",
+      "status_text": "ಟಿಕೆಟ್ ನೀಡಲಾಗಿದೆ",
+      "app_name": "Metro Demo"
+    },
+    "journey_id": "SYN-J-TEST-03",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "inferred",
+    "labels_raw": [
+      "clean",
+      "inferred_pair"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-TEST-026",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "CLAIM_SUBMISSION",
+    "app": "Claim Desk Demo",
+    "language": "en",
+    "fields": {
+      "amount": "80.00",
+      "currency": "INR",
+      "timestamp": "2026-10-30T10:30:00+05:30",
+      "ticket_id": "SYN-TKT-TEST-101",
+      "origin_station": "MG Road",
+      "destination_station": "Cubbon Park",
+      "fare": "80.00",
+      "payer_name_masked": "S*** 08",
+      "status_text": "Claim submitted",
+      "app_name": "Claim Desk Demo"
+    },
+    "journey_id": "SYN-J-TEST-01",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": "SYN-E-TEST-016",
+      "type": "MANUAL"
+    },
+    "label": "fake",
+    "labels_raw": [
+      "fake",
+      "claim_mismatch",
+      "manual_review"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-TEST-027",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "SUSPECT_NOTICE",
+    "app": "Message Demo",
+    "language": "en",
+    "fields": {
+      "timestamp": "2026-10-30T10:59:00+05:30",
+      "status_text": "Refund expires today. Share your UPI PIN to receive it at metro-refund.sample.invalid.",
+      "app_name": "Message Demo"
+    },
+    "journey_id": "SYN-SENDER-11:test_notice_types",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "suspect_notice",
+    "labels_raw": [
+      "suspect_notice"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-TEST-028",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Metro Demo",
+    "language": "en",
+    "fields": {
+      "amount": "70.00",
+      "currency": "INR",
+      "timestamp": "2026-10-11T08:10:00+05:30",
+      "order_id": "SYN-ORD-TEST-404",
+      "ticket_id": "SYN-TKT-TEST-404",
+      "qr_payload": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-404",
+      "origin_station": "MG Road",
+      "destination_station": "Cubbon Park",
+      "fare": "70.00",
+      "payer_name_masked": "S*** 12",
+      "payee_name": "METRO DEMO",
+      "status_text": "Ticket issued",
+      "app_name": "Metro Demo"
+    },
+    "journey_id": "SYN-J-TEST-04",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "fake",
+    "labels_raw": [
+      "fake",
+      "out_of_window",
+      "fabricated_sample"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-TEST-029",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "BANK_SMS",
+    "app": "Sample Bank SMS",
+    "language": "en",
+    "fields": {
+      "amount": "60.00",
+      "currency": "INR",
+      "timestamp": "2026-10-30T09:00:00+05:30",
+      "payer_name_masked": "S*** 13",
+      "status_text": "Debited; reference unavailable",
+      "app_name": "Sample Bank SMS",
+      "bank_name": "Sample Bank"
+    },
+    "journey_id": "SYN-J-TEST-05",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": "SYN-E-TEST-017",
+      "type": "NONE"
+    },
+    "label": "unmatched",
+    "labels_raw": [
+      "unmatched",
+      "ambiguous_candidate"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "SYN-E-TEST-030",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "OTHER",
+    "app": "Gallery Demo",
+    "language": "en",
+    "fields": {
+      "status_text": "Cloud sync complete",
+      "app_name": "Gallery Demo"
+    },
+    "journey_id": "SYN-SENDER-14:test_notice_types",
+    "trip_id": "SYN-TRIP-HELDOUT-01",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "other",
+    "labels_raw": [
+      "other"
+    ],
+    "variant": "base",
+    "should_clear": false,
+    "dup_of": null
+  }
+]

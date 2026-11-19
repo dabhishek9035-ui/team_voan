@@ -4,9 +4,9 @@
 
 *REWIRED hackathon, Constraint B: MIRROR ("They don't write it down. They screenshot it, and they'll keep screenshotting.")*
 
-> **Status:** design frozen (v3). Member C's synthetic fixtures, local coordinator dashboard, evaluation harness, interview/timing templates and HTML pitch deck are present. Member A/B runtime services, a real coordinator interview, consented real screenshots and measured performance results are not present yet. Everything marked **(proposed)** remains an engineering target, not a measured result. Facts about the metro bot must be re-checked by our own Day-0 test.
+> **Status:** design frozen (v3). Member C's synthetic corpus, Streamlit coordinator dashboard, stand-in evaluation pipeline, claim export, break-me/tamper demos and HTML pitch deck are present. Saved scores are synthetic plumbing results only. Member A/B runtime services, a real coordinator interview, consented real screenshots and real-system performance results are not present yet. Everything marked **(proposed)** remains an engineering target, not a measured result. Facts about the metro bot must be re-checked by our own Day-0 test.
 
-> **Member C build:** start with [synthetic data](data/README.md), [dashboard instructions](dashboard/README.md), [evaluation kit](eval/README.md), the [pitch deck](pitch/index.html) and the [handoff status](docs/member3_handoff.md). Fixture scores must not be presented as real-world performance.
+> **Member C build:** start with the [package guide](docs/member_c_readme.md), [synthetic data](data/README.md), [dashboard](dashboard/app.py), [evaluation pipeline](eval/run_eval.py), [checklist](docs/checklist.md) and [pitch deck](pitch/index.html). Stand-in scores must not be presented as real-system performance.
 
 ---
 

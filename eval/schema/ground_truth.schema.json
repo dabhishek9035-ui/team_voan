@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Pratibimb eval ground-truth item",
+  "type": "object",
+  "required": ["item_id", "split", "source", "screenshot_type", "app", "language", "fields", "journey_id", "true_relationship", "label", "should_clear"],
+  "properties": {
+    "item_id": {"type": "string", "description": "Same id the system assigns (evidence_id) so predictions join on it"},
+    "split": {"enum": ["calibration", "heldout"], "description": "Split BY JOURNEY. Never tune on heldout."},
+    "source": {"type": "string", "description": "real | synthetic | ai_fake:<generator name>"},
+    "context": {"type": "string", "description": "e.g. metro_group_trip (20-30 real items per context)"},
+    "screenshot_type": {"enum": ["TICKET_QR", "UPI_SUCCESS", "UPI_FAILED_PENDING", "BANK_SMS", "REFUND_NOTICE", "BOT_ERROR", "CLAIM_SUBMISSION", "SUSPECT_NOTICE", "OTHER"]},
+    "app": {"type": "string"},
+    "language": {"type": "string", "description": "en | kn | hi ..."},
+    "fields": {"type": "object", "description": "Correct values for fields that are present on screen; omit absent ones"},
+    "journey_id": {"type": "string", "description": "Items of one journey share this"},
+    "true_relationship": {"type": "object", "required": ["type"], "properties": {"to": {"type": ["string", "null"]}, "type": {"enum": ["EXACT", "INFERRED", "MANUAL", "NONE"]}}},
+    "label": {"enum": ["clean", "duplicate", "cropped", "out_of_window", "no_ticket", "fake", "suspect_notice", "unmatched", "ambiguous", "inferred", "other"]},
+    "labels_raw": {"type": "array", "items": {"type": "string"}, "description": "All labels from the source manifest"},
+    "variant": {"type": "string", "description": "base | exact_copy | cropped | recompressed | screenshot_of_screenshot"},
+    "trip_id": {"type": ["string", "null"]},
+    "should_clear": {"type": "boolean", "description": "False for anything that must NOT be auto-cleared. Used for false-accept."},
+    "dup_of": {"type": ["string", "null"]}
+  }
+}

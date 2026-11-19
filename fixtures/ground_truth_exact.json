@@ -1,0 +1,256 @@
+{
+  "ev_001": {
+    "scenario": "clean_journey",
+    "interp_id": "in_001",
+    "expected_type": "UPI_SUCCESS",
+    "sender_id": "tg_1001"
+  },
+  "ev_002": {
+    "scenario": "clean_journey",
+    "interp_id": "in_002",
+    "expected_type": "TICKET_QR",
+    "sender_id": "tg_1001",
+    "expected_rels": [
+      {
+        "to": "ev_001",
+        "type": "EXACT"
+      }
+    ],
+    "expected_decision_support": "clear",
+    "expected_evidence_level": "corroborated"
+  },
+  "ev_003": {
+    "scenario": "clean_journey",
+    "interp_id": "in_003",
+    "expected_type": "BANK_SMS",
+    "sender_id": "tg_1001",
+    "expected_rels": [
+      {
+        "to": "ev_001",
+        "type": "EXACT"
+      }
+    ]
+  },
+  "ev_004": {
+    "scenario": "clean_journey",
+    "interp_id": "in_004",
+    "expected_type": "UPI_SUCCESS",
+    "sender_id": "tg_1002"
+  },
+  "ev_005": {
+    "scenario": "clean_journey",
+    "interp_id": "in_005",
+    "expected_type": "TICKET_QR",
+    "sender_id": "tg_1002",
+    "expected_rels": [
+      {
+        "to": "ev_004",
+        "type": "EXACT"
+      }
+    ],
+    "expected_decision_support": "clear",
+    "expected_evidence_level": "extracted"
+  },
+  "ev_006": {
+    "scenario": "clean_journey",
+    "interp_id": "in_006",
+    "expected_type": "UPI_SUCCESS",
+    "sender_id": "tg_1003"
+  },
+  "ev_007": {
+    "scenario": "clean_journey",
+    "interp_id": "in_007",
+    "expected_type": "TICKET_QR",
+    "sender_id": "tg_1003",
+    "expected_rels": [
+      {
+        "to": "ev_006",
+        "type": "EXACT"
+      }
+    ],
+    "expected_decision_support": "clear",
+    "expected_evidence_level": "extracted"
+  },
+  "ev_008": {
+    "scenario": "clean_journey",
+    "interp_id": "in_008",
+    "expected_type": "UPI_SUCCESS",
+    "sender_id": "tg_1004"
+  },
+  "ev_009": {
+    "scenario": "clean_journey",
+    "interp_id": "in_009",
+    "expected_type": "TICKET_QR",
+    "sender_id": "tg_1004",
+    "expected_rels": [
+      {
+        "to": "ev_008",
+        "type": "EXACT"
+      }
+    ],
+    "expected_decision_support": "clear",
+    "expected_evidence_level": "extracted"
+  },
+  "ev_010": {
+    "scenario": "payment_no_ticket",
+    "interp_id": "in_010",
+    "expected_type": "UPI_SUCCESS",
+    "sender_id": "tg_1005",
+    "expected_case": "CASE-0001",
+    "expected_decision_support": "needs_review"
+  },
+  "ev_011": {
+    "scenario": "payment_no_ticket",
+    "interp_id": "in_011",
+    "expected_type": "BOT_ERROR",
+    "sender_id": "tg_1005",
+    "expected_decision_support": "needs_review"
+  },
+  "ev_012": {
+    "scenario": "refund_seen",
+    "interp_id": "in_012",
+    "expected_type": "UPI_SUCCESS",
+    "sender_id": "tg_1006"
+  },
+  "ev_013": {
+    "scenario": "refund_seen",
+    "interp_id": "in_013",
+    "expected_type": "BOT_ERROR",
+    "sender_id": "tg_1006"
+  },
+  "ev_014": {
+    "scenario": "refund_seen",
+    "interp_id": "in_014",
+    "expected_type": "REFUND_NOTICE",
+    "sender_id": "tg_1006",
+    "expected_rels": [
+      {
+        "to": "ev_012",
+        "type": "EXACT"
+      }
+    ],
+    "expected_case": "CASE-0002"
+  },
+  "ev_015": {
+    "scenario": "exact_resend_same_sender",
+    "interp_id": "in_015",
+    "expected_type": "TICKET_QR",
+    "sender_id": "tg_1002",
+    "expected_flags": [
+      "exact_file_dup",
+      "same_sender_resend"
+    ],
+    "dup_of": "ev_005",
+    "expected_decision_support": "clear"
+  },
+  "ev_016": {
+    "scenario": "cross_sender_reuse",
+    "interp_id": "in_016",
+    "expected_type": "CLAIM_SUBMISSION",
+    "sender_id": "tg_1007",
+    "expected_flags": [
+      "earlier_sighting_other_sender"
+    ],
+    "dup_of": "ev_007",
+    "expected_decision_support": "needs_review"
+  },
+  "ev_017": {
+    "scenario": "cropped_duplicate",
+    "interp_id": "in_017",
+    "expected_type": "TICKET_QR",
+    "sender_id": "tg_1008",
+    "expected_flags": [
+      "perceptual_similar_other_sender",
+      "unreadable_key_field"
+    ],
+    "dup_of": "ev_009",
+    "phash_hamming": 4,
+    "expected_decision_support": "needs_review"
+  },
+  "ev_018": {
+    "scenario": "out_of_window",
+    "interp_id": "in_018",
+    "expected_type": "UPI_SUCCESS",
+    "sender_id": "tg_1001"
+  },
+  "ev_019": {
+    "scenario": "out_of_window",
+    "interp_id": "in_019",
+    "expected_type": "TICKET_QR",
+    "sender_id": "tg_1001",
+    "expected_flags": [
+      "date_outside_window"
+    ],
+    "expected_decision_support": "needs_review"
+  },
+  "ev_020": {
+    "scenario": "inferred_only",
+    "interp_id": "in_020",
+    "expected_type": "UPI_SUCCESS",
+    "sender_id": "tg_1009"
+  },
+  "ev_021": {
+    "scenario": "inferred_only",
+    "interp_id": "in_021",
+    "expected_type": "TICKET_QR",
+    "sender_id": "tg_1009",
+    "expected_rels": [
+      {
+        "to": "ev_020",
+        "type": "INFERRED"
+      }
+    ],
+    "expected_decision_support": "needs_review"
+  },
+  "ev_022": {
+    "scenario": "unmatched_refund",
+    "interp_id": "in_022",
+    "expected_type": "REFUND_NOTICE",
+    "sender_id": "tg_1010",
+    "expected_rels": [
+      {
+        "type": "UNMATCHED"
+      }
+    ],
+    "expected_decision_support": "insufficient"
+  },
+  "ev_023": {
+    "scenario": "suspect_notice",
+    "interp_id": "in_023",
+    "expected_type": "SUSPECT_NOTICE",
+    "sender_id": "tg_1005",
+    "expected_flags": [
+      "suspect_notice_class"
+    ],
+    "expected_decision_support": "needs_review"
+  },
+  "ev_024": {
+    "scenario": "ambiguous_two_candidates",
+    "interp_id": "in_024",
+    "expected_type": "UPI_SUCCESS",
+    "sender_id": "tg_1010"
+  },
+  "ev_025": {
+    "scenario": "ambiguous_two_candidates",
+    "interp_id": "in_025",
+    "expected_type": "UPI_SUCCESS",
+    "sender_id": "tg_1010"
+  },
+  "ev_026": {
+    "scenario": "ambiguous_two_candidates",
+    "interp_id": "in_026",
+    "expected_type": "TICKET_QR",
+    "sender_id": "tg_1010",
+    "expected_rels": [
+      {
+        "type": "UNMATCHED",
+        "candidates": [
+          "ev_024",
+          "ev_025"
+        ]
+      }
+    ],
+    "expected_decision_support": "needs_review",
+    "note": "Kannada + low-confidence origin_station"
+  }
+}
