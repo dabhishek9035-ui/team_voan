@@ -126,8 +126,8 @@ class QRDecoder:
                 parsed = {
                     "operator": parts[0],
                     "ticket_id": parts[1] if len(parts) > 1 else None,
-                    "origin_station": parts[2] if len(parts) > 2 else None,
-                    "destination_station": parts[3] if len(parts) > 3 else None,
+                    "origin_station": parts[2].replace("_", " ").strip() if len(parts) > 2 else None,
+                    "destination_station": parts[3].replace("_", " ").strip() if len(parts) > 3 else None,
                     "fare": float(parts[4]) if len(parts) > 4 and parts[4].replace('.', '', 1).isdigit() else None,
                     "validity": parts[5] if len(parts) > 5 else None,
                 }

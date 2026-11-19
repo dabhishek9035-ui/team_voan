@@ -126,7 +126,7 @@ class ExtractionService:
         field_sources = ext_res.get("field_sources", {})
         corrections_log = []
 
-        # 6. Merge local QR findings if present
+        # 6. Merge local QR findings if present (authoritative payload from barcode)
         if qr_raw:
             raw_fields["qr_payload"] = qr_raw
             field_confidence["qr_payload"] = 1.0
@@ -134,7 +134,7 @@ class ExtractionService:
 
             if qr_parsed and isinstance(qr_parsed, dict):
                 for k in ["ticket_id", "origin_station", "destination_station", "fare"]:
-                    if qr_parsed.get(k) is not None and not raw_fields.get(k):
+                    if qr_parsed.get(k) is not None:
                         raw_fields[k] = qr_parsed[k]
                         field_confidence[k] = 1.0
                         field_sources[k] = "qr_decoder"
