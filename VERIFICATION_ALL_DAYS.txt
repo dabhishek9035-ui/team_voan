@@ -1,0 +1,22 @@
+Pratibimb Member B verification
+Verified on 2026-11-19 on Windows with the repository Python interpreter.
+
+Passed:
+- Python compilation for pratibimb/ and scripts/
+- 111 unit and integration tests
+- B1/B2 append-only ledger and tamper-evident audit chain
+- B3 duplicate detection and B4 relationship linking
+- B5 claim/case state logic
+- B6 structured trust assessment and abstention
+- B7 adaptive challenge request, response and no-response paths
+- B8 masking, coordinator access logging and retention sweep
+- B9 dependency-free WSGI API smoke flow and OpenAPI route coverage
+- B10 calibration utility and drift-report tests
+- Day 1 end-to-end demo and mutation checks
+
+Honest limitation:
+- B10 has no real labelled evaluation dataset in this repository. The calibration
+  code is executable and tested, but no production false-accept guarantee can be
+  claimed until Member C supplies labelled data.
+- The API uses the project's standard-library WSGI adapter rather than FastAPI,
+  so no third-party server dependency is required.

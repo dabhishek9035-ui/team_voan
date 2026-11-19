@@ -1,0 +1,17 @@
+{
+  "openapi": "3.0.3",
+  "info": {"title": "Pratibimb Member B API", "version": "0.2.0"},
+  "paths": {
+    "/trips": {"post": {"responses": {"201": {"description": "Trip created"}}}},
+    "/trips/{trip_id}/join-code": {"post": {"responses": {"201": {"description": "Join code created"}}}},
+    "/audit/verify": {"get": {"responses": {"200": {"description": "Chain verification result"}}}},
+    "/trips/{trip_id}/summary": {"get": {"parameters": [{"name": "trip_id", "in": "path", "required": true, "schema": {"type": "string"}}], "responses": {"200": {"description": "Trip state summary"}}}},
+    "/trips/{trip_id}/inbox": {"get": {"responses": {"200": {"description": "Exceptions requiring review"}}}},
+    "/records/{record_id}/trail": {"get": {"parameters": [{"name": "record_id", "in": "path", "required": true, "schema": {"type": "string"}}], "responses": {"200": {"description": "Record trail"}}}},
+    "/decisions": {"post": {"responses": {"201": {"description": "Decision recorded"}}}},
+    "/challenge/{claim_ref}": {"post": {"responses": {"201": {"description": "Challenge issued"}}}},
+    "/challenge-response/{challenge_id}": {"post": {"responses": {"200": {"description": "Challenge response recorded"}}}},
+    "/raw-image/{evidence_id}": {"post": {"responses": {"200": {"description": "Logged raw-image access"}}}},
+    "/export/claims": {"get": {"parameters": [{"name": "trip_id", "in": "query", "schema": {"type": "string"}}], "responses": {"200": {"description": "Masked claim export"}}}}
+  }
+}

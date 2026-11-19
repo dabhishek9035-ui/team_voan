@@ -1,0 +1,1855 @@
+{
+ "fixture_version": "1",
+ "note": "Hand-made and synthetic. Replace with masked real shapes from Member A's Day-0 report.",
+ "scenarios": [
+  {
+   "decisions": [],
+   "description": "UPI success, bank SMS and metro ticket share UTR / order id. All links EXACT.",
+   "expect": {
+    "case_expected": false,
+    "dup_flags": [],
+    "relationship_types": [
+     "EXACT",
+     "EXACT"
+    ]
+   },
+   "items": [
+    {
+     "ahash": "a74dbe28e4b0229b",
+     "channel": "telegram",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.0,
+       "fare": 0.0,
+       "language_detected": 0.95,
+       "order_id": 0.95,
+       "origin_station": 0.0,
+       "payee_name": 0.95,
+       "payer_name_masked": 0.95,
+       "qr_payload": 0.0,
+       "status_text": 0.95,
+       "ticket_id": 0.0,
+       "timestamp": 0.95,
+       "utr": 0.95
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "sarvam_extract",
+       "order_id": "sarvam_extract",
+       "origin_station": null,
+       "payee_name": "sarvam_extract",
+       "payer_name_masked": "sarvam_extract",
+       "qr_payload": null,
+       "status_text": "sarvam_extract",
+       "ticket_id": null,
+       "timestamp": "sarvam_extract",
+       "utr": "sarvam_extract"
+      },
+      "fields": {
+       "amount": "40.00",
+       "app_name": "PhonePe",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "en",
+       "order_id": "NMB-ORD-90417",
+       "origin_station": null,
+       "payee_name": "BMRCL Namma Metro",
+       "payer_name_masked": "A**a K.",
+       "qr_payload": null,
+       "status_text": "Payment successful",
+       "ticket_id": null,
+       "timestamp": "2026-11-18T08:41:12+05:30",
+       "utr": "631912345678"
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "UPI_SUCCESS",
+      "type_confidence": 0.98
+     },
+     "key": "pay",
+     "phash": "6afa07dc95fa65b4",
+     "received_at": "2026-11-18T08:41:30+05:30",
+     "sender_id": "s_asha",
+     "sha256": "2481388ec09e4e591f38ca6b4fdb70728028730659bf3011b2622e2b828b25ee"
+    },
+    {
+     "ahash": "bae99b8814db6ae9",
+     "channel": "telegram",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.0,
+       "bank_name": 0.95,
+       "currency": 0.95,
+       "destination_station": 0.0,
+       "fare": 0.0,
+       "language_detected": 0.95,
+       "order_id": 0.0,
+       "origin_station": 0.0,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.0,
+       "qr_payload": 0.0,
+       "status_text": 0.95,
+       "ticket_id": 0.0,
+       "timestamp": 0.95,
+       "utr": 0.95
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": null,
+       "bank_name": "sarvam_extract",
+       "currency": "sarvam_extract",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "sarvam_extract",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": null,
+       "status_text": "sarvam_extract",
+       "ticket_id": null,
+       "timestamp": "sarvam_extract",
+       "utr": "sarvam_extract"
+      },
+      "fields": {
+       "amount": "40.00",
+       "app_name": null,
+       "bank_name": "HDFC Bank",
+       "currency": "INR",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "en",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": null,
+       "status_text": "debited",
+       "ticket_id": null,
+       "timestamp": "2026-11-18T08:41:50+05:30",
+       "utr": "631912345678"
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "BANK_SMS",
+      "type_confidence": 0.97
+     },
+     "key": "sms",
+     "phash": "ee405142fe93005d",
+     "received_at": "2026-11-18T08:43:05+05:30",
+     "sender_id": "s_asha",
+     "sha256": "5dd4b7c008fa19377bd73381e9e24363e637590adc7584a71d0ee6591dc7f1e3"
+    },
+    {
+     "ahash": "fee3bf4219c7d192",
+     "channel": "telegram",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.95,
+       "fare": 0.95,
+       "language_detected": 0.95,
+       "order_id": 0.95,
+       "origin_station": 0.95,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.0,
+       "qr_payload": 0.95,
+       "status_text": 0.0,
+       "ticket_id": 0.95,
+       "timestamp": 0.95,
+       "utr": 0.0
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": "sarvam_extract",
+       "fare": "sarvam_extract",
+       "language_detected": "sarvam_extract",
+       "order_id": "sarvam_extract",
+       "origin_station": "sarvam_extract",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "qr_decoder",
+       "status_text": null,
+       "ticket_id": "sarvam_extract",
+       "timestamp": "sarvam_extract",
+       "utr": null
+      },
+      "fields": {
+       "amount": "40.00",
+       "app_name": "Namma Metro WhatsApp bot",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": "MG Road",
+       "fare": "40.00",
+       "language_detected": "en",
+       "order_id": "NMB-ORD-90417",
+       "origin_station": "Majestic",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "NMB|26111800417|MAJ|MGR|40.00",
+       "status_text": null,
+       "ticket_id": "NMB26111800417",
+       "timestamp": "2026-11-18T08:41:40+05:30",
+       "utr": null
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "TICKET_QR",
+      "type_confidence": 0.99
+     },
+     "key": "tkt",
+     "phash": "f6d74f89075c8cb6",
+     "received_at": "2026-11-18T08:42:10+05:30",
+     "sender_id": "s_asha",
+     "sha256": "262ae0d958c6f798f3c6e2fa31bd24b5259d42201d8b7682bff458c6b5990172"
+    }
+   ],
+   "name": "clean_linked_journey",
+   "relationships": [
+    {
+     "basis": [
+      "utr"
+     ],
+     "created_by": "system:linker",
+     "from": "pay",
+     "reason": "Same UTR 631912345678 on payment screen and bank SMS.",
+     "score": 0.99,
+     "to": "sms",
+     "type": "EXACT"
+    },
+    {
+     "basis": [
+      "order_id"
+     ],
+     "created_by": "system:linker",
+     "from": "pay",
+     "reason": "Same order id NMB-ORD-90417 on payment screen and ticket.",
+     "score": 0.98,
+     "to": "tkt",
+     "type": "EXACT"
+    }
+   ]
+  },
+  {
+   "decisions": [],
+   "description": "Money left the account, the bot reported failure (in Kannada), no ticket ever arrived.",
+   "expect": {
+    "case_expected": true,
+    "dup_flags": [],
+    "relationship_types": [
+     "UNMATCHED"
+    ]
+   },
+   "items": [
+    {
+     "ahash": "53f2c308d59515a9",
+     "channel": "telegram",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.0,
+       "fare": 0.0,
+       "language_detected": 0.95,
+       "order_id": 0.0,
+       "origin_station": 0.0,
+       "payee_name": 0.95,
+       "payer_name_masked": 0.95,
+       "qr_payload": 0.0,
+       "status_text": 0.95,
+       "ticket_id": 0.0,
+       "timestamp": 0.95,
+       "utr": 0.95
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "sarvam_extract",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": "sarvam_extract",
+       "payer_name_masked": "sarvam_extract",
+       "qr_payload": null,
+       "status_text": "sarvam_extract",
+       "ticket_id": null,
+       "timestamp": "sarvam_extract",
+       "utr": "sarvam_extract"
+      },
+      "fields": {
+       "amount": "30.00",
+       "app_name": "Google Pay",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "en",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": "BMRCL Namma Metro",
+       "payer_name_masked": "R**i S.",
+       "qr_payload": null,
+       "status_text": "Payment successful",
+       "ticket_id": null,
+       "timestamp": "2026-11-18T09:10:22+05:30",
+       "utr": "631912349901"
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "UPI_SUCCESS",
+      "type_confidence": 0.97
+     },
+     "key": "pay",
+     "phash": "99e0129078a30dc9",
+     "received_at": "2026-11-18T09:10:40+05:30",
+     "sender_id": "s_ravi",
+     "sha256": "12af1280e143835715e94d5076ae478d64982aae9a55edb8ee7fd7096bd8d05b"
+    },
+    {
+     "ahash": "2c8d7eee4724f2b8",
+     "channel": "telegram",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.0,
+       "app_name": 0.82,
+       "bank_name": 0.0,
+       "currency": 0.0,
+       "destination_station": 0.0,
+       "fare": 0.0,
+       "language_detected": 0.82,
+       "order_id": 0.0,
+       "origin_station": 0.0,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.0,
+       "qr_payload": 0.0,
+       "status_text": 0.82,
+       "ticket_id": 0.0,
+       "timestamp": 0.82,
+       "utr": 0.0
+      },
+      "field_source": {
+       "amount": null,
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": null,
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "sarvam_extract",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": null,
+       "status_text": "sarvam_extract",
+       "ticket_id": null,
+       "timestamp": "sarvam_extract",
+       "utr": null
+      },
+      "fields": {
+       "amount": null,
+       "app_name": "Namma Metro WhatsApp bot",
+       "bank_name": null,
+       "currency": null,
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "kn",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": null,
+       "status_text": "ಬುಕಿಂಗ್ ವಿಫಲವಾಗಿದೆ",
+       "ticket_id": null,
+       "timestamp": "2026-11-18T09:10:50+05:30",
+       "utr": null
+      },
+      "language_detected": "kn",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "BOT_ERROR",
+      "type_confidence": 0.9
+     },
+     "key": "err",
+     "phash": "928c5b1b37567ada",
+     "received_at": "2026-11-18T09:12:00+05:30",
+     "sender_id": "s_ravi",
+     "sha256": "d737f5d3827aa782a13d7beef025e53ea332244ef7b2eb06799ce8f8b437cb64"
+    }
+   ],
+   "name": "payment_no_ticket",
+   "relationships": [
+    {
+     "basis": [],
+     "created_by": "system:linker",
+     "from": "pay",
+     "reason": "Payment seen; no ticket evidence with a shared identifier or matching amount/time.",
+     "score": null,
+     "to": null,
+     "type": "UNMATCHED"
+    }
+   ]
+  },
+  {
+   "decisions": [],
+   "description": "Same file sent twice by the same traveller: identical sha256, phash and ticket id.",
+   "expect": {
+    "case_expected": false,
+    "dup_flags": [
+     {
+      "earlier": "first",
+      "item": "resend",
+      "layers": [
+       "semantic",
+       "exact_file",
+       "perceptual"
+      ],
+      "same_sender": true
+     }
+    ],
+    "relationship_types": []
+   },
+   "items": [
+    {
+     "ahash": "4bd6b6630f701574",
+     "channel": "whatsapp",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.95,
+       "fare": 0.95,
+       "language_detected": 0.95,
+       "order_id": 0.95,
+       "origin_station": 0.95,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.0,
+       "qr_payload": 0.95,
+       "status_text": 0.0,
+       "ticket_id": 0.95,
+       "timestamp": 0.95,
+       "utr": 0.0
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": "sarvam_extract",
+       "fare": "sarvam_extract",
+       "language_detected": "sarvam_extract",
+       "order_id": "sarvam_extract",
+       "origin_station": "sarvam_extract",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "qr_decoder",
+       "status_text": null,
+       "ticket_id": "sarvam_extract",
+       "timestamp": "sarvam_extract",
+       "utr": null
+      },
+      "fields": {
+       "amount": "50.00",
+       "app_name": "Namma Metro app",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": "Majestic",
+       "fare": "50.00",
+       "language_detected": "en",
+       "order_id": "NMB-ORD-90555",
+       "origin_station": "Indiranagar",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "NMB|26111800555|IND|MAJ|50.00",
+       "status_text": null,
+       "ticket_id": "NMB26111800555",
+       "timestamp": "2026-11-18T18:02:10+05:30",
+       "utr": null
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "TICKET_QR",
+      "type_confidence": 0.99
+     },
+     "key": "first",
+     "phash": "76dca959ac682d39",
+     "received_at": "2026-11-18T18:03:00+05:30",
+     "sender_id": "s_meera",
+     "sha256": "3dbda65809398a499064022f1044c0e370ae6ba4a05609acefa238f6458ada96"
+    },
+    {
+     "ahash": "4bd6b6630f701574",
+     "channel": "whatsapp",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.95,
+       "fare": 0.95,
+       "language_detected": 0.95,
+       "order_id": 0.95,
+       "origin_station": 0.95,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.0,
+       "qr_payload": 0.95,
+       "status_text": 0.0,
+       "ticket_id": 0.95,
+       "timestamp": 0.95,
+       "utr": 0.0
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": "sarvam_extract",
+       "fare": "sarvam_extract",
+       "language_detected": "sarvam_extract",
+       "order_id": "sarvam_extract",
+       "origin_station": "sarvam_extract",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "qr_decoder",
+       "status_text": null,
+       "ticket_id": "sarvam_extract",
+       "timestamp": "sarvam_extract",
+       "utr": null
+      },
+      "fields": {
+       "amount": "50.00",
+       "app_name": "Namma Metro app",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": "Majestic",
+       "fare": "50.00",
+       "language_detected": "en",
+       "order_id": "NMB-ORD-90555",
+       "origin_station": "Indiranagar",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "NMB|26111800555|IND|MAJ|50.00",
+       "status_text": null,
+       "ticket_id": "NMB26111800555",
+       "timestamp": "2026-11-18T18:02:10+05:30",
+       "utr": null
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "TICKET_QR",
+      "type_confidence": 0.99
+     },
+     "key": "resend",
+     "phash": "76dca959ac682d39",
+     "received_at": "2026-11-18T18:09:00+05:30",
+     "sender_id": "s_meera",
+     "sha256": "3dbda65809398a499064022f1044c0e370ae6ba4a05609acefa238f6458ada96"
+    }
+   ],
+   "name": "exact_duplicate_same_sender",
+   "relationships": []
+  },
+  {
+   "decisions": [],
+   "description": "Same ticket, cropped and recompressed: different sha256, phash 4 bits away, ticket id cut off, QR intact.",
+   "expect": {
+    "case_expected": false,
+    "dup_flags": [
+     {
+      "earlier": "first",
+      "item": "cropped",
+      "layers": [
+       "semantic",
+       "perceptual"
+      ],
+      "same_sender": true
+     }
+    ],
+    "phash_distance": 4,
+    "relationship_types": []
+   },
+   "items": [
+    {
+     "ahash": "4bd6b6630f701574",
+     "channel": "whatsapp",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.95,
+       "fare": 0.95,
+       "language_detected": 0.95,
+       "order_id": 0.95,
+       "origin_station": 0.95,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.0,
+       "qr_payload": 0.95,
+       "status_text": 0.0,
+       "ticket_id": 0.95,
+       "timestamp": 0.95,
+       "utr": 0.0
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": "sarvam_extract",
+       "fare": "sarvam_extract",
+       "language_detected": "sarvam_extract",
+       "order_id": "sarvam_extract",
+       "origin_station": "sarvam_extract",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "qr_decoder",
+       "status_text": null,
+       "ticket_id": "sarvam_extract",
+       "timestamp": "sarvam_extract",
+       "utr": null
+      },
+      "fields": {
+       "amount": "50.00",
+       "app_name": "Namma Metro app",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": "Majestic",
+       "fare": "50.00",
+       "language_detected": "en",
+       "order_id": "NMB-ORD-90555",
+       "origin_station": "Indiranagar",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "NMB|26111800555|IND|MAJ|50.00",
+       "status_text": null,
+       "ticket_id": "NMB26111800555",
+       "timestamp": "2026-11-18T18:02:10+05:30",
+       "utr": null
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "TICKET_QR",
+      "type_confidence": 0.99
+     },
+     "key": "first",
+     "phash": "76dca959ac682d39",
+     "received_at": "2026-11-18T18:03:00+05:30",
+     "sender_id": "s_meera",
+     "sha256": "3dbda65809398a499064022f1044c0e370ae6ba4a05609acefa238f6458ada96"
+    },
+    {
+     "ahash": "e28e52b09e5eafd3",
+     "channel": "whatsapp",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.9,
+       "app_name": 0.9,
+       "bank_name": 0.0,
+       "currency": 0.9,
+       "destination_station": 0.9,
+       "fare": 0.9,
+       "language_detected": 0.95,
+       "order_id": 0.9,
+       "origin_station": 0.9,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.0,
+       "qr_payload": 0.97,
+       "status_text": 0.0,
+       "ticket_id": 0.0,
+       "timestamp": 0.9,
+       "utr": 0.0
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": "sarvam_extract",
+       "fare": "sarvam_extract",
+       "language_detected": "sarvam_extract",
+       "order_id": "sarvam_extract",
+       "origin_station": "sarvam_extract",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "qr_decoder",
+       "status_text": null,
+       "ticket_id": null,
+       "timestamp": "sarvam_extract",
+       "utr": null
+      },
+      "fields": {
+       "amount": "50.00",
+       "app_name": "Namma Metro app",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": "Majestic",
+       "fare": "50.00",
+       "language_detected": "en",
+       "order_id": "NMB-ORD-90555",
+       "origin_station": "Indiranagar",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "NMB|26111800555|IND|MAJ|50.00",
+       "status_text": null,
+       "ticket_id": null,
+       "timestamp": "2026-11-18T18:02:10+05:30",
+       "utr": null
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "TICKET_QR",
+      "type_confidence": 0.93
+     },
+     "key": "cropped",
+     "phash": "76dca959ac486db8",
+     "received_at": "2026-11-18T18:20:00+05:30",
+     "sender_id": "s_meera",
+     "sha256": "8bee8353e32ba4b00efeb8d5ee473e4ed74b2074db03943264ebf77b764a64f6"
+    }
+   ],
+   "name": "cropped_duplicate",
+   "relationships": []
+  },
+  {
+   "decisions": [],
+   "description": "A different traveller submits Meera's exact ticket as their own claim. Must be distinguishable from a resend.",
+   "expect": {
+    "case_expected": false,
+    "dup_flags": [
+     {
+      "earlier": "original",
+      "item": "other_sender",
+      "layers": [
+       "semantic",
+       "exact_file",
+       "perceptual"
+      ],
+      "same_sender": false
+     }
+    ],
+    "relationship_types": []
+   },
+   "items": [
+    {
+     "ahash": "4bd6b6630f701574",
+     "channel": "whatsapp",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.95,
+       "fare": 0.95,
+       "language_detected": 0.95,
+       "order_id": 0.95,
+       "origin_station": 0.95,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.0,
+       "qr_payload": 0.95,
+       "status_text": 0.0,
+       "ticket_id": 0.95,
+       "timestamp": 0.95,
+       "utr": 0.0
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": "sarvam_extract",
+       "fare": "sarvam_extract",
+       "language_detected": "sarvam_extract",
+       "order_id": "sarvam_extract",
+       "origin_station": "sarvam_extract",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "qr_decoder",
+       "status_text": null,
+       "ticket_id": "sarvam_extract",
+       "timestamp": "sarvam_extract",
+       "utr": null
+      },
+      "fields": {
+       "amount": "50.00",
+       "app_name": "Namma Metro app",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": "Majestic",
+       "fare": "50.00",
+       "language_detected": "en",
+       "order_id": "NMB-ORD-90555",
+       "origin_station": "Indiranagar",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "NMB|26111800555|IND|MAJ|50.00",
+       "status_text": null,
+       "ticket_id": "NMB26111800555",
+       "timestamp": "2026-11-18T18:02:10+05:30",
+       "utr": null
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "TICKET_QR",
+      "type_confidence": 0.99
+     },
+     "key": "original",
+     "phash": "76dca959ac682d39",
+     "received_at": "2026-11-18T18:03:00+05:30",
+     "sender_id": "s_meera",
+     "sha256": "3dbda65809398a499064022f1044c0e370ae6ba4a05609acefa238f6458ada96"
+    },
+    {
+     "ahash": "4bd6b6630f701574",
+     "channel": "telegram",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.95,
+       "fare": 0.95,
+       "language_detected": 0.95,
+       "order_id": 0.95,
+       "origin_station": 0.95,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.0,
+       "qr_payload": 0.95,
+       "status_text": 0.0,
+       "ticket_id": 0.95,
+       "timestamp": 0.95,
+       "utr": 0.0
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": "sarvam_extract",
+       "fare": "sarvam_extract",
+       "language_detected": "sarvam_extract",
+       "order_id": "sarvam_extract",
+       "origin_station": "sarvam_extract",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "qr_decoder",
+       "status_text": null,
+       "ticket_id": "sarvam_extract",
+       "timestamp": "sarvam_extract",
+       "utr": null
+      },
+      "fields": {
+       "amount": "50.00",
+       "app_name": "Namma Metro app",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": "Majestic",
+       "fare": "50.00",
+       "language_detected": "en",
+       "order_id": "NMB-ORD-90555",
+       "origin_station": "Indiranagar",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "NMB|26111800555|IND|MAJ|50.00",
+       "status_text": null,
+       "ticket_id": "NMB26111800555",
+       "timestamp": "2026-11-18T18:02:10+05:30",
+       "utr": null
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "CLAIM_SUBMISSION",
+      "type_confidence": 0.9
+     },
+     "key": "other_sender",
+     "phash": "76dca959ac682d39",
+     "received_at": "2026-11-19T09:30:00+05:30",
+     "sender_id": "s_kiran",
+     "sha256": "3dbda65809398a499064022f1044c0e370ae6ba4a05609acefa238f6458ada96"
+    }
+   ],
+   "name": "cross_sender_duplicate",
+   "relationships": []
+  },
+  {
+   "decisions": [
+    {
+     "action": "proof_requested",
+     "decided_by": "coordinator:c_priya",
+     "reason": "Ticket date is outside the trip window. Asked traveller for bank SMS.",
+     "subject": "claim"
+    }
+   ],
+   "description": "Claim for the 18 Nov trip, but the ticket is dated 2 Oct 2026.",
+   "expect": {
+    "case_expected": false,
+    "dup_flags": [],
+    "relationship_types": [
+     "UNMATCHED"
+    ],
+    "signals": [
+     "date_outside_window"
+    ]
+   },
+   "items": [
+    {
+     "ahash": "c28e940c84568a02",
+     "channel": "telegram",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.95,
+       "fare": 0.95,
+       "language_detected": 0.95,
+       "order_id": 0.0,
+       "origin_station": 0.95,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.95,
+       "qr_payload": 0.95,
+       "status_text": 0.0,
+       "ticket_id": 0.95,
+       "timestamp": 0.95,
+       "utr": 0.0
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": "sarvam_extract",
+       "fare": "sarvam_extract",
+       "language_detected": "sarvam_extract",
+       "order_id": null,
+       "origin_station": "sarvam_extract",
+       "payee_name": null,
+       "payer_name_masked": "sarvam_extract",
+       "qr_payload": "qr_decoder",
+       "status_text": null,
+       "ticket_id": "sarvam_extract",
+       "timestamp": "sarvam_extract",
+       "utr": null
+      },
+      "fields": {
+       "amount": "35.00",
+       "app_name": "Namma Metro app",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": "Majestic",
+       "fare": "35.00",
+       "language_detected": "en",
+       "order_id": null,
+       "origin_station": "Trinity",
+       "payee_name": null,
+       "payer_name_masked": "D**a P.",
+       "qr_payload": "NMB|26100200133|TRI|MAJ|35.00",
+       "status_text": null,
+       "ticket_id": "NMB26100200133",
+       "timestamp": "2026-10-02T08:15:00+05:30",
+       "utr": null
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "CLAIM_SUBMISSION",
+      "type_confidence": 0.92
+     },
+     "key": "claim",
+     "phash": "5c5cf26a96518728",
+     "received_at": "2026-11-19T10:00:00+05:30",
+     "sender_id": "s_divya",
+     "sha256": "474812f9a3c286bae0ae72db39899205a36c328f8c5905d29137bb788e08671e"
+    }
+   ],
+   "name": "out_of_window_ride",
+   "relationships": [
+    {
+     "basis": [],
+     "created_by": "system:linker",
+     "from": "claim",
+     "reason": "Ticket dated 2026-10-02 is outside the trip window; no payment evidence for it.",
+     "score": null,
+     "to": null,
+     "type": "UNMATCHED"
+    }
+   ]
+  },
+  {
+   "decisions": [],
+   "description": "Payment and ticket share no identifier. Amount, time (2 min) and payer agree, so INFERRED, never auto-cleared.",
+   "expect": {
+    "case_expected": false,
+    "dup_flags": [],
+    "relationship_types": [
+     "INFERRED"
+    ]
+   },
+   "items": [
+    {
+     "ahash": "2fc07679603031ff",
+     "channel": "telegram",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.0,
+       "fare": 0.0,
+       "language_detected": 0.95,
+       "order_id": 0.0,
+       "origin_station": 0.0,
+       "payee_name": 0.95,
+       "payer_name_masked": 0.95,
+       "qr_payload": 0.0,
+       "status_text": 0.0,
+       "ticket_id": 0.0,
+       "timestamp": 0.95,
+       "utr": 0.95
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "sarvam_extract",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": "sarvam_extract",
+       "payer_name_masked": "sarvam_extract",
+       "qr_payload": null,
+       "status_text": null,
+       "ticket_id": null,
+       "timestamp": "sarvam_extract",
+       "utr": "sarvam_extract"
+      },
+      "fields": {
+       "amount": "25.00",
+       "app_name": "Paytm",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "en",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": "BMRCL Namma Metro",
+       "payer_name_masked": "N**r A.",
+       "qr_payload": null,
+       "status_text": null,
+       "ticket_id": null,
+       "timestamp": "2026-11-18T07:55:10+05:30",
+       "utr": "631912340022"
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "UPI_SUCCESS",
+      "type_confidence": 0.96
+     },
+     "key": "pay",
+     "phash": "101fdc57e82ebe00",
+     "received_at": "2026-11-18T07:55:30+05:30",
+     "sender_id": "s_noor",
+     "sha256": "a61f4ecc9a7dd7a33ba6f41b22cb7c0c3599c0471abdfea47cf622c77da59937"
+    },
+    {
+     "ahash": "c79dc464671bb9d6",
+     "channel": "telegram",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.95,
+       "fare": 0.95,
+       "language_detected": 0.95,
+       "order_id": 0.0,
+       "origin_station": 0.95,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.95,
+       "qr_payload": 0.95,
+       "status_text": 0.0,
+       "ticket_id": 0.95,
+       "timestamp": 0.95,
+       "utr": 0.0
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": "sarvam_extract",
+       "fare": "sarvam_extract",
+       "language_detected": "sarvam_extract",
+       "order_id": null,
+       "origin_station": "sarvam_extract",
+       "payee_name": null,
+       "payer_name_masked": "sarvam_extract",
+       "qr_payload": "qr_decoder",
+       "status_text": null,
+       "ticket_id": "sarvam_extract",
+       "timestamp": "sarvam_extract",
+       "utr": null
+      },
+      "fields": {
+       "amount": "25.00",
+       "app_name": "Namma Metro app",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": "Indiranagar",
+       "fare": "25.00",
+       "language_detected": "en",
+       "order_id": null,
+       "origin_station": "Baiyappanahalli",
+       "payee_name": null,
+       "payer_name_masked": "N**r A.",
+       "qr_payload": "NMB|26111800210|BYP|IND|25.00",
+       "status_text": null,
+       "ticket_id": "NMB26111800210",
+       "timestamp": "2026-11-18T07:57:02+05:30",
+       "utr": null
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "TICKET_QR",
+      "type_confidence": 0.97
+     },
+     "key": "tkt",
+     "phash": "5866e58d097c57bc",
+     "received_at": "2026-11-18T07:57:20+05:30",
+     "sender_id": "s_noor",
+     "sha256": "f71557e9299b49ab2a397bfe8a086e0cf2835fe4fd85443e64a403d1576da931"
+    }
+   ],
+   "name": "inferred_only_link",
+   "relationships": [
+    {
+     "basis": [
+      "amount",
+      "timestamp_window",
+      "payer_name_masked"
+     ],
+     "created_by": "system:linker",
+     "from": "pay",
+     "reason": "Amount 25.00 equal; ticket 112 seconds after payment; payer matches. No shared identifier.",
+     "score": 0.7,
+     "to": "tkt",
+     "type": "INFERRED"
+    }
+   ]
+  },
+  {
+   "decisions": [],
+   "description": "Refund credit with a reference that matches no payment seen on this trip.",
+   "expect": {
+    "case_expected": false,
+    "dup_flags": [],
+    "relationship_types": [
+     "UNMATCHED"
+    ]
+   },
+   "items": [
+    {
+     "ahash": "b8a51e0a8ebeb60e",
+     "channel": "telegram",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.0,
+       "bank_name": 0.95,
+       "currency": 0.95,
+       "destination_station": 0.0,
+       "fare": 0.0,
+       "language_detected": 0.95,
+       "order_id": 0.0,
+       "origin_station": 0.0,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.0,
+       "qr_payload": 0.0,
+       "status_text": 0.95,
+       "ticket_id": 0.0,
+       "timestamp": 0.95,
+       "utr": 0.95
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": null,
+       "bank_name": "sarvam_extract",
+       "currency": "sarvam_extract",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "sarvam_extract",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": null,
+       "status_text": "sarvam_extract",
+       "ticket_id": null,
+       "timestamp": "sarvam_extract",
+       "utr": "sarvam_extract"
+      },
+      "fields": {
+       "amount": "30.00",
+       "app_name": null,
+       "bank_name": "ICICI Bank",
+       "currency": "INR",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "en",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": null,
+       "status_text": "credited: refund",
+       "ticket_id": null,
+       "timestamp": "2026-11-24T10:41:00+05:30",
+       "utr": "631912999999"
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "REFUND_NOTICE",
+      "type_confidence": 0.94
+     },
+     "key": "refund",
+     "phash": "72af68a345ebc3b4",
+     "received_at": "2026-11-24T11:00:00+05:30",
+     "sender_id": "s_ravi",
+     "sha256": "03fb1020f5c169bc0725dfffaa106ada1ba2b577ad42af87acbbdd739a004c7a"
+    }
+   ],
+   "name": "unmatched_refund",
+   "relationships": [
+    {
+     "basis": [],
+     "created_by": "system:linker",
+     "from": "refund",
+     "reason": "Refund reference 631912999999 matches no payment UTR; amount-only match would be ambiguous.",
+     "score": null,
+     "to": null,
+     "type": "UNMATCHED"
+    }
+   ]
+  },
+  {
+   "decisions": [],
+   "description": "Two 25.00 payments minutes apart and one 25.00 refund with no reference: UNMATCHED listing both candidates, no coin flip.",
+   "expect": {
+    "candidates": 2,
+    "case_expected": false,
+    "dup_flags": [],
+    "relationship_types": [
+     "UNMATCHED"
+    ]
+   },
+   "items": [
+    {
+     "ahash": "1dfbed8b7a7bff68",
+     "channel": "telegram",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.0,
+       "fare": 0.0,
+       "language_detected": 0.95,
+       "order_id": 0.0,
+       "origin_station": 0.0,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.95,
+       "qr_payload": 0.0,
+       "status_text": 0.0,
+       "ticket_id": 0.0,
+       "timestamp": 0.95,
+       "utr": 0.95
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "sarvam_extract",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": "sarvam_extract",
+       "qr_payload": null,
+       "status_text": null,
+       "ticket_id": null,
+       "timestamp": "sarvam_extract",
+       "utr": "sarvam_extract"
+      },
+      "fields": {
+       "amount": "25.00",
+       "app_name": "PhonePe",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "en",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": "K**n R.",
+       "qr_payload": null,
+       "status_text": null,
+       "ticket_id": null,
+       "timestamp": "2026-11-18T07:59:40+05:30",
+       "utr": "631912340101"
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "UPI_SUCCESS",
+      "type_confidence": 0.96
+     },
+     "key": "payA",
+     "phash": "5e6c0a9f0e2e4c5c",
+     "received_at": "2026-11-18T08:00:00+05:30",
+     "sender_id": "s_kiran",
+     "sha256": "32169fe4a1b5f31af667b3a230d1b4fe1f0373b4d5486216ab5bb0648728ec61"
+    },
+    {
+     "ahash": "4a7c470332ccef77",
+     "channel": "telegram",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.0,
+       "fare": 0.0,
+       "language_detected": 0.95,
+       "order_id": 0.0,
+       "origin_station": 0.0,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.95,
+       "qr_payload": 0.0,
+       "status_text": 0.0,
+       "ticket_id": 0.0,
+       "timestamp": 0.95,
+       "utr": 0.95
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "sarvam_extract",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": "sarvam_extract",
+       "qr_payload": null,
+       "status_text": null,
+       "ticket_id": null,
+       "timestamp": "sarvam_extract",
+       "utr": "sarvam_extract"
+      },
+      "fields": {
+       "amount": "25.00",
+       "app_name": "PhonePe",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "en",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": "K**n R.",
+       "qr_payload": null,
+       "status_text": null,
+       "ticket_id": null,
+       "timestamp": "2026-11-18T08:02:40+05:30",
+       "utr": "631912340102"
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "UPI_SUCCESS",
+      "type_confidence": 0.96
+     },
+     "key": "payB",
+     "phash": "7cbc6248c96e0834",
+     "received_at": "2026-11-18T08:03:00+05:30",
+     "sender_id": "s_kiran",
+     "sha256": "2bbdc23bac437d98750dead3334ff0186f4e4f60b668f0034a6b9afcb956eb66"
+    },
+    {
+     "ahash": "f034b54c463f73ef",
+     "channel": "telegram",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.0,
+       "bank_name": 0.95,
+       "currency": 0.95,
+       "destination_station": 0.0,
+       "fare": 0.0,
+       "language_detected": 0.95,
+       "order_id": 0.0,
+       "origin_station": 0.0,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.0,
+       "qr_payload": 0.0,
+       "status_text": 0.95,
+       "ticket_id": 0.0,
+       "timestamp": 0.95,
+       "utr": 0.0
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": null,
+       "bank_name": "sarvam_extract",
+       "currency": "sarvam_extract",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "sarvam_extract",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": null,
+       "status_text": "sarvam_extract",
+       "ticket_id": null,
+       "timestamp": "sarvam_extract",
+       "utr": null
+      },
+      "fields": {
+       "amount": "25.00",
+       "app_name": null,
+       "bank_name": "SBI",
+       "currency": "INR",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "en",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": null,
+       "status_text": "credited: refund",
+       "ticket_id": null,
+       "timestamp": "2026-11-26T11:50:00+05:30",
+       "utr": null
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "REFUND_NOTICE",
+      "type_confidence": 0.9
+     },
+     "key": "refund",
+     "phash": "0142b688246f15d0",
+     "received_at": "2026-11-26T12:00:00+05:30",
+     "sender_id": "s_kiran",
+     "sha256": "cec53be633a322f14b6c75c1c5b91de7d48e387f69f33820325702fbf7c3c012"
+    }
+   ],
+   "name": "ambiguous_two_candidates",
+   "relationships": [
+    {
+     "basis": [
+      {
+       "candidate": "payA"
+      },
+      {
+       "candidate": "payB"
+      }
+     ],
+     "created_by": "system:linker",
+     "from": "refund",
+     "reason": "Two payments of 25.00 are equally plausible; no reference on the refund. Candidates listed for the coordinator.",
+     "score": null,
+     "to": null,
+     "type": "UNMATCHED"
+    }
+   ]
+  },
+  {
+   "decisions": [],
+   "description": "A refund-looking message asking to click a link and update KYC. Classed SUSPECT_NOTICE, never linked.",
+   "expect": {
+    "case_expected": false,
+    "dup_flags": [],
+    "relationship_types": [
+     "UNMATCHED"
+    ],
+    "signals": [
+     "suspect_notice_class"
+    ]
+   },
+   "items": [
+    {
+     "ahash": "fd52b8b7212f19a0",
+     "channel": "telegram",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.85,
+       "app_name": 0.85,
+       "bank_name": 0.0,
+       "currency": 0.85,
+       "destination_station": 0.0,
+       "fare": 0.0,
+       "language_detected": 0.85,
+       "order_id": 0.0,
+       "origin_station": 0.0,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.0,
+       "qr_payload": 0.0,
+       "status_text": 0.85,
+       "ticket_id": 0.0,
+       "timestamp": 0.0,
+       "utr": 0.0
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "sarvam_extract",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": null,
+       "status_text": "sarvam_extract",
+       "ticket_id": null,
+       "timestamp": null,
+       "utr": null
+      },
+      "fields": {
+       "amount": "30.00",
+       "app_name": "SMS",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "en",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": null,
+       "status_text": "Your metro refund of Rs 30 is pending. Update KYC at the link within 2 hours.",
+       "ticket_id": null,
+       "timestamp": null,
+       "utr": null
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "SUSPECT_NOTICE",
+      "type_confidence": 0.88
+     },
+     "key": "scam",
+     "phash": "d7cdaac01a63c961",
+     "received_at": "2026-11-25T14:00:00+05:30",
+     "sender_id": "s_ravi",
+     "sha256": "a51be7168eca893c5f3a488ad6fe194429c46afe04edcf8c75a5dbbb425ca8b2"
+    }
+   ],
+   "name": "suspect_notice",
+   "relationships": [
+    {
+     "basis": [],
+     "created_by": "system:linker",
+     "from": "scam",
+     "reason": "Classified as a suspect notice; not related to any payment.",
+     "score": null,
+     "to": null,
+     "type": "UNMATCHED"
+    }
+   ]
+  },
+  {
+   "decisions": [
+    {
+     "action": "manual_link",
+     "decided_by": "coordinator:c_priya",
+     "reason": "Linked payment to ticket after speaking to the traveller.",
+     "subject": "tkt"
+    }
+   ],
+   "description": "No shared id and amounts differ (fare changed). Coordinator links them explicitly: MANUAL + manual_link decision.",
+   "expect": {
+    "case_expected": false,
+    "dup_flags": [],
+    "relationship_types": [
+     "MANUAL"
+    ]
+   },
+   "items": [
+    {
+     "ahash": "5aacb111f7fa2481",
+     "channel": "whatsapp",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.0,
+       "fare": 0.0,
+       "language_detected": 0.95,
+       "order_id": 0.0,
+       "origin_station": 0.0,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.95,
+       "qr_payload": 0.0,
+       "status_text": 0.0,
+       "ticket_id": 0.0,
+       "timestamp": 0.95,
+       "utr": 0.95
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "sarvam_extract",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": "sarvam_extract",
+       "qr_payload": null,
+       "status_text": null,
+       "ticket_id": null,
+       "timestamp": "sarvam_extract",
+       "utr": "sarvam_extract"
+      },
+      "fields": {
+       "amount": "60.00",
+       "app_name": "BHIM",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": null,
+       "fare": null,
+       "language_detected": "en",
+       "order_id": null,
+       "origin_station": null,
+       "payee_name": null,
+       "payer_name_masked": "A**n M.",
+       "qr_payload": null,
+       "status_text": null,
+       "ticket_id": null,
+       "timestamp": "2026-11-18T19:29:40+05:30",
+       "utr": "631912340777"
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "UPI_SUCCESS",
+      "type_confidence": 0.95
+     },
+     "key": "pay",
+     "phash": "d52151d48e10e161",
+     "received_at": "2026-11-18T19:30:00+05:30",
+     "sender_id": "s_arjun",
+     "sha256": "cb62a01445e6ff2149850de4fec9715e4cb036145f803725d2933bde819d47d4"
+    },
+    {
+     "ahash": "21a2223040273d36",
+     "channel": "whatsapp",
+     "interpretation": {
+      "field_confidence": {
+       "amount": 0.95,
+       "app_name": 0.95,
+       "bank_name": 0.0,
+       "currency": 0.95,
+       "destination_station": 0.95,
+       "fare": 0.95,
+       "language_detected": 0.95,
+       "order_id": 0.0,
+       "origin_station": 0.95,
+       "payee_name": 0.0,
+       "payer_name_masked": 0.0,
+       "qr_payload": 0.95,
+       "status_text": 0.0,
+       "ticket_id": 0.95,
+       "timestamp": 0.95,
+       "utr": 0.0
+      },
+      "field_source": {
+       "amount": "sarvam_extract",
+       "app_name": "sarvam_extract",
+       "bank_name": null,
+       "currency": "sarvam_extract",
+       "destination_station": "sarvam_extract",
+       "fare": "sarvam_extract",
+       "language_detected": "sarvam_extract",
+       "order_id": null,
+       "origin_station": "sarvam_extract",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "qr_decoder",
+       "status_text": null,
+       "ticket_id": "sarvam_extract",
+       "timestamp": "sarvam_extract",
+       "utr": null
+      },
+      "fields": {
+       "amount": "55.00",
+       "app_name": "Namma Metro app",
+       "bank_name": null,
+       "currency": "INR",
+       "destination_station": "Majestic",
+       "fare": "55.00",
+       "language_detected": "en",
+       "order_id": null,
+       "origin_station": "Whitefield (Kadugodi)",
+       "payee_name": null,
+       "payer_name_masked": null,
+       "qr_payload": "NMB|26111800777|WHT|MAJ|55.00",
+       "status_text": null,
+       "ticket_id": "NMB26111800777",
+       "timestamp": "2026-11-18T19:40:10+05:30",
+       "utr": null
+      },
+      "language_detected": "en",
+      "model_version": "fixtures-v1",
+      "producer": "fixture:hand-written",
+      "sarvam_job_id": null,
+      "screenshot_type": "TICKET_QR",
+      "type_confidence": 0.95
+     },
+     "key": "tkt",
+     "phash": "5ae9e6a6368ea12f",
+     "received_at": "2026-11-18T19:41:00+05:30",
+     "sender_id": "s_arjun",
+     "sha256": "d600b689d2ba51a9d10870929e842bd8755c1ae20c106978f08781538fef984d"
+    }
+   ],
+   "name": "manual_link",
+   "relationships": [
+    {
+     "basis": [
+      "coordinator_judgement"
+     ],
+     "created_by": "coordinator:c_priya",
+     "from": "pay",
+     "reason": "Coordinator linked the payment to the ticket after speaking to the traveller (Rs 5 difference explained).",
+     "score": null,
+     "to": "tkt",
+     "type": "MANUAL"
+    }
+   ]
+  }
+ ],
+ "synthetic": true,
+ "travellers": [
+  {
+   "label": "s_asha",
+   "sender_id": "s_asha"
+  },
+  {
+   "label": "s_ravi",
+   "sender_id": "s_ravi"
+  },
+  {
+   "label": "s_meera",
+   "sender_id": "s_meera"
+  },
+  {
+   "label": "s_kiran",
+   "sender_id": "s_kiran"
+  },
+  {
+   "label": "s_divya",
+   "sender_id": "s_divya"
+  },
+  {
+   "label": "s_noor",
+   "sender_id": "s_noor"
+  },
+  {
+   "label": "s_arjun",
+   "sender_id": "s_arjun"
+  }
+ ],
+ "trip": {
+  "coordinator_id": "c_priya",
+  "name": "Bengaluru offsite commute reimbursement, Nov 2026",
+  "trip_id": "trip_demo",
+  "window_end": "2026-11-19T23:59:59+05:30",
+  "window_start": "2026-11-18T00:00:00+05:30"
+ }
+}
