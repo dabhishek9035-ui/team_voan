@@ -143,6 +143,7 @@ def assess(store, claim, cfg, trip=None):
             sig.append(_sig("second_source_agrees", attr="debit"))
         if auth(pay + sms):
             lv["debit"] = "independently_verified"
+        lv["payment_debit"] = lv["debit"]
     if tick:
         lv["ticket_issued"] = "extracted"
         if (pay or sms) and any(linked(t, p) for t in tick for p in pay + sms):

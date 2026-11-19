@@ -134,19 +134,34 @@ class ScreenshotClassifier:
                 )
 
         # Check 4: TICKET_QR (Metro QR ticket screen)
-        # Distinct presence of QR code + metro transit keywords
-        metro_transit_cues = any(w in t for w in ["namma metro", "bmrcl", "bengaluru metro", "single journey", "entry station", "exit station", "valid till"])
+        # Distinct presence of QR code + metro transit keywords (including BMRCL WhatsApp QR tickets)
+        bmrcl_ticket_id = bool(re.search(r"\b\d{12,14}t\d{6,14}\b", t))
+        metro_transit_cues = any(
+            w in t
+            for w in [
+                "namma metro",
+                "bmrcl",
+                "bengaluru metro",
+                "single journey",
+                "entry station",
+                "exit station",
+                "valid till",
+                "passenger count",
+                "ನಮ್ಮ ಮೆಟ್ರೋ",
+                "ಮೆಟ್ರೋ",
+            ]
+        ) or bmrcl_ticket_id
         if has_qr_code and (metro_transit_cues or "ticket" in t or "fare" in t or (qr_payload and "BMRCL" in qr_payload)):
             return (
                 ScreenshotType.TICKET_QR,
                 0.98,
                 "Decoded transit QR code with metro travel markers",
             )
-        if not has_qr_code and metro_transit_cues and ("ticket id" in t or "qr ticket" in t):
-            # Even if local QR wasn't decoded (e.g. low res), text clearly confirms it's a ticket screen
+        if metro_transit_cues and ("ticket id" in t or "qr ticket" in t or "passenger count" in t or bmrcl_ticket_id):
+            # Even if local QR wasn't decoded (e.g. low res or compressed photo), text clearly confirms it's a ticket screen
             return (
                 ScreenshotType.TICKET_QR,
-                0.86,
+                0.92 if bmrcl_ticket_id else 0.86,
                 "Metro ticket layout markers identified from text",
             )
 

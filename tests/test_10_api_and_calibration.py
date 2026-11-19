@@ -24,6 +24,11 @@ class TestApiAndCalibration(unittest.TestCase):
         return status[0], json.loads(response)
 
     def test_api_trip_summary_and_audit(self):
+        st_root, root = self.call("GET", "/")
+        self.assertEqual(st_root, "200 OK")
+        self.assertEqual(root["status"], "ok")
+        self.assertEqual(self.call("GET", "/health")[0], "200 OK")
+        self.assertEqual(self.call("GET", "/records/ev_missing999/trail")[0], "404 Not Found")
         status, trip = self.call("POST", "/trips",
                                  {"name": "API trip", "coordinator_id": "coordinator:c"})
         self.assertEqual(status, "201 Created")

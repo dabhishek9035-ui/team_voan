@@ -200,7 +200,10 @@ class ReplyCardGenerator:
 
         # Line 2: Route / Stations
         y += 50
-        route_str = f"{origin_station or 'Origin'}  →  {destination_station or 'Destination'}"
+        if origin_station or destination_station:
+            route_str = f"{origin_station or 'Origin'} -> {destination_station or 'Destination'}"
+        else:
+            route_str = "Namma Metro QR Ticket"
         draw.text((50, y), f"{t['stations_label']}:", fill=text_secondary, font=font_body)
         draw.text((160, y), route_str, fill=text_primary, font=font_body)
 

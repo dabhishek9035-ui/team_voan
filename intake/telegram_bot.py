@@ -1,17 +1,24 @@
 """
 Telegram Bot Interface for Pratibimb Member A.
 Primary demo channel for live travellers sending transit screenshots.
-Uses direct asynchronous HTTP calls via httpx to the Telegram Bot API.
+Uses HTTP calls via httpx to the Telegram Bot API with polling support.
 Includes a simulation/test mode when TELEGRAM_BOT_TOKEN is not configured.
 """
 
 from __future__ import annotations
 import os
 import io
-from typing import Optional, Dict, Any, List
+import sys
+import time
+from pathlib import Path
+from typing import Optional, Dict, Any
 import httpx
 from PIL import Image
 from dotenv import load_dotenv
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 load_dotenv()
 
@@ -46,17 +53,35 @@ class TelegramChannelBot:
 
         chat_id = str(message.get("chat", {}).get("id"))
         sender_id = f"tg_{chat_id}"
-        caption = message.get("caption", "") or message.get("text", "")
+        caption = (message.get("caption", "") or message.get("text", "")).strip()
+
+        # Check for start/help commands
+        if caption.startswith(("/start", "/help")):
+            welcome = (
+                "Welcome to Pratibimb!\n"
+                "Send any Namma Metro ticket QR, UPI payment receipt, bank SMS, or refund screenshot.\n"
+                "Optional commands: /en (English), /kn (Kannada), /hi (Hindi).\n"
+                "Include a join code (e.g. METRO2026) in your caption to link a trip."
+            )
+            if self.is_live:
+                self.send_text(chat_id, welcome)
+            return {"status": "help", "chat_id": chat_id, "message": welcome}
 
         # Check for language switch commands: /en, /kn, /hi
         if caption.startswith("/en"):
             self.channel_handler.set_sender_language(sender_id, "en")
+            if self.is_live:
+                self.send_text(chat_id, "Language set to English.")
             return {"status": "language_updated", "lang": "en", "chat_id": chat_id}
         elif caption.startswith("/kn"):
             self.channel_handler.set_sender_language(sender_id, "kn")
+            if self.is_live:
+                self.send_text(chat_id, "ಭಾಷೆಯನ್ನು ಕನ್ನಡಕ್ಕೆ ಬದಲಾಯಿಸಲಾಗಿದೆ.")
             return {"status": "language_updated", "lang": "kn", "chat_id": chat_id}
         elif caption.startswith("/hi"):
             self.channel_handler.set_sender_language(sender_id, "hi")
+            if self.is_live:
+                self.send_text(chat_id, "भाषा हिन्दी में सेट की गई है।")
             return {"status": "language_updated", "lang": "hi", "chat_id": chat_id}
 
         # Check for photo array (Telegram sends multiple resolutions; highest is last)
@@ -70,17 +95,22 @@ class TelegramChannelBot:
             file_id = doc.get("file_id")
 
         if not file_id:
-            # Message without an image
+            prompt = "Please send a metro ticket or payment screenshot to Pratibimb."
+            if self.is_live:
+                self.send_text(chat_id, prompt)
             return {
                 "status": "text_only",
                 "chat_id": chat_id,
-                "message": "Please send a metro ticket or payment screenshot to Pratibimb.",
+                "message": prompt,
             }
 
         # Download image bytes from Telegram API (or mock in test mode)
         image_bytes = self._download_file(file_id)
         if not image_bytes:
             return {"status": "error", "error": "Could not download image from Telegram"}
+
+        if self.is_live:
+            self.send_text(chat_id, "Received, processing screenshot...")
 
         # Process through ChannelHandler
         result = self.channel_handler.handle_incoming_screenshot(
@@ -90,12 +120,22 @@ class TelegramChannelBot:
             caption=caption,
         )
         result["chat_id"] = chat_id
+
+        if self.is_live:
+            if result.get("status") == "success" and result.get("final_card_png"):
+                reply_caption = (
+                    f"Type: {result.get('screenshot_type')} "
+                    f"| Evidence: {result.get('evidence_id')}"
+                )
+                self.send_card(chat_id, result["final_card_png"], caption=reply_caption)
+            elif result.get("error"):
+                self.send_text(chat_id, result["error"])
+
         return result
 
     def _download_file(self, file_id: str) -> Optional[bytes]:
         """Downloads file bytes via Telegram getFile API, with mock fallback."""
         if not self.is_live:
-            # In simulation mode, generate a synthetic PNG ticket for testing
             img = Image.new("RGB", (300, 300), "#FFFFFF")
             buf = io.BytesIO()
             img.save(buf, format="PNG")
@@ -115,10 +155,23 @@ class TelegramChannelBot:
         except Exception:
             return None
 
+    def send_text(self, chat_id: str, text: str) -> bool:
+        """Sends a text message back to user's Telegram chat."""
+        if not self.is_live:
+            return True
+        try:
+            with httpx.Client(timeout=10.0) as client:
+                res = client.post(
+                    f"{self.API_BASE}{self.bot_token}/sendMessage",
+                    json={"chat_id": chat_id, "text": text},
+                )
+                return res.status_code == 200
+        except Exception:
+            return False
+
     def send_card(self, chat_id: str, card_png_bytes: bytes, caption: Optional[str] = None) -> bool:
         """Sends reply card PNG back to user's Telegram chat."""
         if not self.is_live:
-            # Simulated send
             return True
 
         try:
@@ -135,3 +188,50 @@ class TelegramChannelBot:
                 return res.status_code == 200
         except Exception:
             return False
+
+    def get_me(self) -> Dict[str, Any]:
+        """Verifies the Telegram bot token via getMe."""
+        if not self.is_live:
+            raise RuntimeError("TELEGRAM_BOT_TOKEN is not set in environment or .env")
+        with httpx.Client(timeout=10.0) as client:
+            res = client.get(f"{self.API_BASE}{self.bot_token}/getMe")
+            res.raise_for_status()
+            return res.json()
+
+    def run_polling(self, poll_interval: float = 1.0) -> None:
+        """Long-polls Telegram Bot API getUpdates and routes incoming screenshots to Member B."""
+        with httpx.Client(timeout=10.0) as client:
+            client.post(f"{self.API_BASE}{self.bot_token}/deleteWebhook", json={"drop_pending_updates": False})
+        me = self.get_me()
+        username = me.get("result", {}).get("username", "unknown_bot")
+        core_url = self.channel_handler.store_client.base_url
+        print(f"Telegram bot @{username} connected and polling (Core API: {core_url})", flush=True)
+
+        while True:
+            try:
+                with httpx.Client(timeout=30.0) as client:
+                    res = client.get(
+                        f"{self.API_BASE}{self.bot_token}/getUpdates",
+                        params={"offset": self.last_update_id + 1, "timeout": 20},
+                    )
+                    res.raise_for_status()
+                    updates = res.json().get("result", [])
+                for upd in updates:
+                    self.last_update_id = max(self.last_update_id, int(upd["update_id"]))
+                    outcome = self.process_raw_telegram_update(upd)
+                    if outcome:
+                        print(
+                            f"[telegram] update={upd['update_id']} status={outcome.get('status')} "
+                            f"type={outcome.get('screenshot_type', '-')} ev={outcome.get('evidence_id', '-')}",
+                            flush=True,
+                        )
+            except KeyboardInterrupt:
+                print("Telegram polling stopped.", flush=True)
+                break
+            except Exception as exc:
+                print(f"[telegram] polling error: {exc}", flush=True)
+                time.sleep(poll_interval)
+
+
+if __name__ == "__main__":
+    TelegramChannelBot().run_polling()

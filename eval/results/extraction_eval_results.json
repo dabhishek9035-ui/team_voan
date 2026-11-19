@@ -1,6 +1,6 @@
 {
   "total_test_cases": 12,
-  "elapsed_seconds": 0.379,
+  "elapsed_seconds": 2.514,
   "overall_type_accuracy": 100.0,
   "unreadable_abstention_accuracy": 100.0,
   "per_type_accuracy": {

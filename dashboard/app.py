@@ -120,10 +120,14 @@ elif view == "Exceptions inbox":
 # ---------------- Trail ----------------
 elif view == "Trail":
     ib = c.inbox(trip_id)
-    ids = [i["evidence_id"] for i in ib["items"]] or ["ev_001"]
-    eid = st.text_input("Evidence id", ids[0])
+    ids = [i["evidence_id"] for i in ib["items"]] or [r["evidence_id"] for r in c.claims(trip_id) if r.get("evidence_id")] or ["ev_001"]
+    eid = st.text_input("Evidence id", ids[0], key=f"trail_eid_{src}_{trip_id}")
     st.write("Quick pick:", ", ".join(ids[:8]))
-    t = c.trail(eid)
+    try:
+        t = c.trail(eid)
+    except Exception as e:
+        st.warning(f"Could not load trail for {eid}: {e}")
+        st.stop()
     st.header(f"Trail for {eid}")
     p1, p2 = st.columns(2)
     p1.subheader("1 · Evidence (what was sent)")

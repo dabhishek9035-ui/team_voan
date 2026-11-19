@@ -1,10 +1,12 @@
 """Unified WSGI HTTP API for Pratibimb (Members A, B, and C)."""
 import json
+from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 from . import cases, challenge, claims, linking, privacy, trust, views as vw
 from .config import load_config
 from .enums import FIELD_SOURCES
+from .errors import NotFoundError, PratibimbError
 
 _REL_ORDER = {"EXACT": 0, "MANUAL": 1, "INFERRED": 2, "UNMATCHED": 3}
 
@@ -200,6 +202,26 @@ def create_app(store, config=None):
         raw = environ.get("wsgi.input")
         payload = json.loads(raw.read(length) or b"{}") if length and raw else {}
         try:
+            if method == "GET" and parts in ([], ["health"]):
+                return _reply(start_response, "200 OK", {
+                    "service": "Pratibimb Core Engine API",
+                    "status": "ok",
+                    "version": "0.3.0",
+                    "endpoints": [
+                        "/trips",
+                        "/trips/{id}/summary",
+                        "/trips/{id}/inbox",
+                        "/records/{id}/trail",
+                        "/decisions",
+                        "/audit/verify",
+                        "/export/claims",
+                        "/openapi.json",
+                    ],
+                })
+            if method == "GET" and parts == ["openapi.json"]:
+                spec_path = Path(__file__).resolve().parents[1] / "openapi.json"
+                if spec_path.exists():
+                    return _reply(start_response, "200 OK", json.loads(spec_path.read_text(encoding="utf-8")))
             if method == "GET" and parts == ["trips"]:
                 rows = store.conn.execute("SELECT * FROM trips ORDER BY rowid").fetchall()
                 trips = [{
@@ -225,7 +247,12 @@ def create_app(store, config=None):
                                              code=payload.get("code"))
                 return _reply(start_response, "201 Created", result)
             if method == "POST" and parts == ["records", "evidence"]:
-                _ensure_trip_and_traveller(store, payload.get("trip_id"), payload["sender_id"])
+                trip_id = payload.get("trip_id")
+                if trip_id is None:
+                    row = store.conn.execute("SELECT trip_id FROM trips ORDER BY rowid LIMIT 1").fetchone()
+                    if row:
+                        trip_id = row["trip_id"]
+                _ensure_trip_and_traveller(store, trip_id, payload["sender_id"])
                 status = payload.get("status", "received")
                 if status not in ("received", "quarantined"):
                     status = "received"
@@ -237,7 +264,7 @@ def create_app(store, config=None):
                     phash=payload.get("phash"),
                     ahash=payload.get("ahash"),
                     file_ref=payload.get("file_ref"),
-                    trip_id=payload.get("trip_id"),
+                    trip_id=trip_id,
                     status=status,
                     supersedes=payload.get("supersedes"),
                     evidence_id=payload.get("evidence_id"),
@@ -378,6 +405,8 @@ def create_app(store, config=None):
                 rows = _build_export_rows(store, trip_id, built)
                 return _reply(start_response, "200 OK", {"claims": public_claims, "rows": rows})
             return _reply(start_response, "404 Not Found", {"error": "not_found"})
-        except (KeyError, ValueError, TypeError) as exc:
+        except NotFoundError as exc:
+            return _reply(start_response, "404 Not Found", {"error": str(exc)})
+        except (PratibimbError, KeyError, ValueError, TypeError) as exc:
             return _reply(start_response, "400 Bad Request", {"error": str(exc)})
     return app

@@ -1,14 +1,21 @@
 """
 Store Client Interface for Pratibimb Member A.
 Abstracts communication with Member B's append-only store.
-Supports direct in-process `pratibimb.Store`, HTTP API calls, and an in-memory test store.
+Supports direct in-process `pratibimb.Store`, HTTP API calls, and an in-memory fallback store.
 """
 
 from __future__ import annotations
 import os
-from typing import Optional, Dict, Any, List
+import sys
+from pathlib import Path
+from typing import Optional, Dict, Any
 import httpx
 from dotenv import load_dotenv
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from intake.models import EvidenceRecord, InterpretationRecord
 
 load_dotenv()
@@ -73,7 +80,7 @@ class StoreClient:
         self.base_url = resolved_url.rstrip("/") if resolved_url else None
         self.store = store
         self.config = config
-        self.offline = offline or (base_url is None and store is None)
+        self.offline = offline
         self.timeout = timeout
         # In-memory store used during offline testing or when Member B is not running
         self._in_memory_evidence: Dict[str, EvidenceRecord] = {}
@@ -121,7 +128,7 @@ class StoreClient:
             except Exception:
                 pass
 
-        # In-memory store
+        # In-memory fallback store
         self._in_memory_evidence[evidence.evidence_id] = evidence
         return evidence.evidence_id
 
@@ -170,7 +177,7 @@ class StoreClient:
             except Exception:
                 pass
 
-        # In-memory store
+        # In-memory fallback store
         self._in_memory_interpretations[interpretation.interp_id] = interpretation
         return interpretation.interp_id
 
