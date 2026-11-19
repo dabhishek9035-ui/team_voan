@@ -28,7 +28,7 @@ def test_qr_decode_bmrcl_structured_payload():
     assert parsed["operator"] == "BMRCL"
     assert parsed["ticket_id"] == "TKT-892104"
     assert parsed["origin_station"] == "INDIRANAGAR"
-    assert parsed["destination_station"] == "MG_ROAD"
+    assert parsed["destination_station"] == "MG ROAD"
     assert parsed["fare"] == 40.0
 
 
