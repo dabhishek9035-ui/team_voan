@@ -11,6 +11,9 @@ import io
 from typing import Optional, Dict, Any, List
 import httpx
 from PIL import Image
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from intake.channel import ChannelHandler
 

@@ -5,9 +5,13 @@ Supports both direct HTTP API calls and an in-memory test store.
 """
 
 from __future__ import annotations
+import os
 from typing import Optional, Dict, Any, List
 import httpx
+from dotenv import load_dotenv
 from intake.models import EvidenceRecord, InterpretationRecord
+
+load_dotenv()
 
 
 class StoreClient:
@@ -21,11 +25,12 @@ class StoreClient:
 
     def __init__(
         self,
-        base_url: Optional[str] = "http://localhost:8000",
+        base_url: Optional[str] = None,
         offline: bool = False,
         timeout: float = 0.5,
     ):
-        self.base_url = base_url.rstrip("/") if base_url else None
+        resolved_url = base_url if base_url is not None else os.getenv("CORE_API_URL", "http://localhost:8000")
+        self.base_url = resolved_url.rstrip("/") if resolved_url else None
         self.offline = offline or (base_url is None)
         self.timeout = timeout
         # In-memory store used during offline testing or when Member B is not running

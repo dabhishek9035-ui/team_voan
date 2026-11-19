@@ -15,6 +15,9 @@ from pathlib import Path
 from typing import Optional, Dict, Any, Tuple, Union, List
 import httpx
 from PIL import Image
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from intake.models import ScreenshotType
 
