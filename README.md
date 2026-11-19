@@ -4,7 +4,17 @@
 
 *REWIRED hackathon, Constraint B: MIRROR ("They don't write it down. They screenshot it, and they'll keep screenshotting.")*
 
-> **Status:** design frozen (v3), build not started. Everything marked **(planned)** is intended, not implemented. Everything marked **(proposed)** is an engineering target, not a measured result. Facts about the metro bot come from public sources and must be re-checked by our own Day-0 test.
+> **Status:** integrated build on `main` combining Member A (`Person-1`: `intake/`, `extraction/`, `cards/`), Member B (`member2`: `pratibimb/`, `scripts/`, `openapi.json`), and Member C (`member-3`: `dashboard/`, `data/`, `eval/`, `export/`, `breakme/`, `tamper/`, `pitch/`, `standin/`). Synthetic corpus and fixture outputs are plumbing/demo baselines, not measured real-world rates. Everything marked **(proposed)** remains an engineering target, not a measured result. Facts about the metro bot come from public sources and must be re-checked by our own Day-0 test.
+
+### Quickstart (integrated repository)
+
+```bash
+pip install -r requirements.txt          # optional if packages are already present
+python run_all.py                        # compile all modules + unittest + pytest + forbidden-words lint
+streamlit run dashboard/app.py           # Member C coordinator dashboard (synthetic/fixture/live API)
+python eval/run_eval.py --split heldout  # Member C held-out evaluation pipeline
+python eval/extraction_eval.py           # Member A extraction accuracy check
+```
 
 ---
 
@@ -27,7 +37,7 @@
 15. [Day-0 feasibility gate](#15-day-0-feasibility-gate)
 16. [API surface](#16-api-surface)
 17. [Tech stack (suggested)](#17-tech-stack-suggested)
-18. [Repository layout (proposed)](#18-repository-layout-proposed)
+18. [Repository layout (integrated)](#18-repository-layout-integrated)
 19. [Evaluation plan](#19-evaluation-plan)
 20. [Demo flow](#20-demo-flow)
 21. [Limits and threat model](#21-limits-and-threat-model)
@@ -305,27 +315,36 @@ The biggest untested assumption: can we obtain, read and link the screenshots of
 | Dashboard | React or Streamlit against the API |
 | Export | CSV and XLSX |
 
-## 18. Repository layout (proposed)
+## 18. Repository layout (integrated)
 
 ```text
-pratibimb/
+team_voan/
 ├── README.md
-├── docs/
-│   ├── day0_feasibility_report.md
-│   ├── privacy_and_retention.md
-│   └── threat_model.md
-├── intake/                # Member A: channel, hashing, QR, fingerprints
-├── extraction/            # Member A: Sarvam clients, schemas, classifier
-│   └── schemas/           # one JSON schema per screenshot type
-├── cards/                 # Member A: reply-card generator, translations
-├── core/                  # Member B: store, chain, linking, duplicates, trust
-├── api/                   # Member B: FastAPI endpoints
-├── dashboard/             # Member C: coordinator UI
-├── eval/                  # Member C: dataset, scorer, harness
-│   ├── data/              # masked screenshots + ground truth (not committed if sensitive)
+├── requirements.txt
+├── Makefile
+├── openapi.json
+├── run_all.py
+├── run_tests.sh
+├── docs/                  # v3 specs, work-distribution files, Day-0 report, privacy, threat model, deck/demo guides
+├── intake/                # Member A: channel, store_client, hashing, QR decoder, normalisers, lifecycle
+├── extraction/            # Member A: Sarvam client, JSON schemas per screenshot type, classifier, pipeline service
+│   └── schemas/
+├── cards/                 # Member A: reply-card PNG generator and localisation
+├── pratibimb/             # Member B: append-only SQLite store, hash chain, duplicates, linking, trust, challenge, privacy, WSGI API
+├── scripts/               # Member B: fixture loader, chain verifier, tamper script, calibration, Day-1 demo
+├── dashboard/             # Member C: Streamlit coordinator UI + FixtureClient / SyntheticClient / ApiClient
+├── data/                  # Member C: deterministic synthetic screenshots, manifest, relationships, demo cases
+├── standin/               # Member C: rule-based stand-in engine and dataset loader
+├── eval/                  # Member A & C: extraction eval, fingerprint/QR checks, held-out evaluation harness
+│   ├── data/
 │   └── results/
-├── fixtures/              # shared fixture Interpretations
-└── tests/
+├── export/                # Member C: CSV and XLSX claim sheet exporter
+├── breakme/               # Member C: break-me station scoreboard and safe test items
+├── tamper/                # Member C: ledger tamper demonstration
+├── pitch/                 # Member C: HTML/CSS/JS pitch deck
+├── fixtures/              # Shared fixture Interpretations and scenarios
+├── tools/                 # Forbidden-words lint (check_forbidden.py)
+└── tests/                 # Member A, Member B, Member C, and end-to-end integration tests
 ```
 
 ## 19. Evaluation plan

@@ -1,0 +1,163 @@
+### Python: Python 3.12.3 | SQLite: 3.45.1
+
+### 1/3 Unit and integration tests
+test_canonical_json_is_sorted_compact_unicode (test_01_hashing_and_schema.TestHashing.test_canonical_json_is_sorted_compact_unicode) ... ok
+test_key_order_does_not_change_hash (test_01_hashing_and_schema.TestHashing.test_key_order_does_not_change_hash) ... ok
+test_known_answer_pins_the_format (test_01_hashing_and_schema.TestHashing.test_known_answer_pins_the_format) ... ok
+test_nan_rejected (test_01_hashing_and_schema.TestHashing.test_nan_rejected) ... ok
+test_prev_hash_changes_hash (test_01_hashing_and_schema.TestHashing.test_prev_hash_changes_hash) ... ok
+test_all_tables_exist (test_01_hashing_and_schema.TestSchema.test_all_tables_exist) ... ok
+test_one_update_and_one_delete_trigger_per_table (test_01_hashing_and_schema.TestSchema.test_one_update_and_one_delete_trigger_per_table) ... ok
+test_reopening_a_database_is_idempotent (test_01_hashing_and_schema.TestSchema.test_reopening_a_database_is_idempotent) ... ok
+test_schema_version_recorded (test_01_hashing_and_schema.TestSchema.test_schema_version_recorded) ... ok
+test_spec_columns_match_database_columns (test_01_hashing_and_schema.TestSchema.test_spec_columns_match_database_columns) ... ok
+test_every_table_refuses_delete (test_02_append_only.TestAppendOnly.test_every_table_refuses_delete) ... ok
+test_every_table_refuses_update (test_02_append_only.TestAppendOnly.test_every_table_refuses_update) ... ok
+test_insert_or_replace_is_also_refused (test_02_append_only.TestAppendOnly.test_insert_or_replace_is_also_refused) ... ok
+test_no_update_or_delete_sql_in_store_source (test_02_append_only.TestAppendOnly.test_no_update_or_delete_sql_in_store_source) ... ok
+test_refused_raw_writes_leave_chain_intact (test_02_append_only.TestAppendOnly.test_refused_raw_writes_leave_chain_intact) ... ok
+test_store_has_no_mutating_methods (test_02_append_only.TestAppendOnly.test_store_has_no_mutating_methods) ... ok
+test_logged_and_validated (test_03_validation.TestAccessLog.test_logged_and_validated) ... ok
+test_failure_after_the_record_insert_rolls_the_record_back (test_03_validation.TestAtomicity.test_failure_after_the_record_insert_rolls_the_record_back)
+Force the chain insert (the second statement) to fail and check the record row vanishes. ... ok
+test_decision_can_target_evidence_relationship_or_decision (test_03_validation.TestDecisionValidation.test_decision_can_target_evidence_relationship_or_decision) ... ok
+test_rejections (test_03_validation.TestDecisionValidation.test_rejections) ... ok
+test_snapshot_hash_changes_when_subject_is_corrected (test_03_validation.TestDecisionValidation.test_snapshot_hash_changes_when_subject_is_corrected) ... ok
+test_valid (test_03_validation.TestDecisionValidation.test_valid) ... ok
+test_accepts_z_and_offset_timestamps (test_03_validation.TestEvidenceValidation.test_accepts_z_and_offset_timestamps) ... ok
+test_id_prefix_enforced_and_duplicate_id_rejected (test_03_validation.TestEvidenceValidation.test_id_prefix_enforced_and_duplicate_id_rejected) ... ok
+test_rejections (test_03_validation.TestEvidenceValidation.test_rejections) ... ok
+test_unknown_trip_rejected (test_03_validation.TestEvidenceValidation.test_unknown_trip_rejected) ... ok
+test_bad_value_types (test_03_validation.TestInterpretationValidation.test_bad_value_types) ... ok
+test_int_confidence_hashes_stably (test_03_validation.TestInterpretationValidation.test_int_confidence_hashes_stably) ... ok
+test_kannada_round_trips_and_verifies (test_03_validation.TestInterpretationValidation.test_kannada_round_trips_and_verifies) ... ok
+test_model_upgrade_is_a_new_interpretation (test_03_validation.TestInterpretationValidation.test_model_upgrade_is_a_new_interpretation) ... ok
+test_normalised_to_all_sixteen_keys (test_03_validation.TestInterpretationValidation.test_normalised_to_all_sixteen_keys) ... ok
+test_null_must_have_zero_confidence (test_03_validation.TestInterpretationValidation.test_null_must_have_zero_confidence) ... ok
+test_numbers_allowed_in_fields (test_03_validation.TestInterpretationValidation.test_numbers_allowed_in_fields) ... ok
+test_type_and_confidence (test_03_validation.TestInterpretationValidation.test_type_and_confidence) ... ok
+test_unknown_evidence (test_03_validation.TestInterpretationValidation.test_unknown_evidence) ... ok
+test_unknown_field_key_rejected (test_03_validation.TestInterpretationValidation.test_unknown_field_key_rejected) ... ok
+test_value_needs_confidence_source_and_nonzero (test_03_validation.TestInterpretationValidation.test_value_needs_confidence_source_and_nonzero) ... ok
+test_exact_and_inferred_need_basis_score_and_target (test_03_validation.TestRelationshipValidation.test_exact_and_inferred_need_basis_score_and_target) ... ok
+test_machine_cannot_create_manual_and_human_cannot_create_exact (test_03_validation.TestRelationshipValidation.test_machine_cannot_create_manual_and_human_cannot_create_exact) ... ok
+test_other_rejections (test_03_validation.TestRelationshipValidation.test_other_rejections) ... ok
+test_unknown_endpoint (test_03_validation.TestRelationshipValidation.test_unknown_endpoint) ... ok
+test_valid_each_type (test_03_validation.TestRelationshipValidation.test_valid_each_type) ... ok
+test_trip_and_traveller (test_03_validation.TestTripsAndTravellers.test_trip_and_traveller) ... ok
+test_cannot_branch (test_04_supersedes.TestSupersedes.test_cannot_branch) ... ok
+test_chain_of_corrections_and_history (test_04_supersedes.TestSupersedes.test_chain_of_corrections_and_history) ... ok
+test_evidence_relationship_decision_corrections (test_04_supersedes.TestSupersedes.test_evidence_relationship_decision_corrections) ... ok
+test_list_filters_validated (test_04_supersedes.TestSupersedes.test_list_filters_validated) ... ok
+test_old_record_is_never_altered_by_a_correction (test_04_supersedes.TestSupersedes.test_old_record_is_never_altered_by_a_correction) ... ok
+test_reextraction_must_stay_on_the_same_evidence (test_04_supersedes.TestSupersedes.test_reextraction_must_stay_on_the_same_evidence) ... ok
+test_unknown_and_wrong_table_targets (test_04_supersedes.TestSupersedes.test_unknown_and_wrong_table_targets) ... ok
+test_changing_any_input_changes_the_head (test_05_chain.TestChainStructure.test_changing_any_input_changes_the_head) ... ok
+test_deterministic_with_fixed_clock_and_ids (test_05_chain.TestChainStructure.test_deterministic_with_fixed_clock_and_ids) ... ok
+test_every_record_hash_recomputes_independently (test_05_chain.TestChainStructure.test_every_record_hash_recomputes_independently) ... ok
+test_first_link_points_at_genesis_and_links_are_contiguous (test_05_chain.TestChainStructure.test_first_link_points_at_genesis_and_links_are_contiguous) ... ok
+test_one_link_per_record_and_no_orphans (test_05_chain.TestChainStructure.test_one_link_per_record_and_no_orphans) ... ok
+test_reopen_and_continue_chain (test_05_chain.TestChainStructure.test_reopen_and_continue_chain) ... ok
+test_parallel_writers_keep_one_valid_chain (test_05_chain.TestConcurrency.test_parallel_writers_keep_one_valid_chain) ... ok
+test_two_processes_style_writers_on_a_file_db (test_05_chain.TestConcurrency.test_two_processes_style_writers_on_a_file_db) ... ok
+test_deleting_a_chain_row_is_a_gap (test_05_chain.TestTamperDetection.test_deleting_a_chain_row_is_a_gap) ... ok
+test_deleting_a_record_row (test_05_chain.TestTamperDetection.test_deleting_a_record_row) ... ok
+test_edit_and_fix_both_hashes_is_caught_at_the_next_link (test_05_chain.TestTamperDetection.test_edit_and_fix_both_hashes_is_caught_at_the_next_link) ... ok
+test_edit_and_fix_record_hash_is_caught_by_chain_hash (test_05_chain.TestTamperDetection.test_edit_and_fix_record_hash_is_caught_by_chain_hash) ... ok
+test_edit_any_record_table_is_caught_at_exactly_that_link (test_05_chain.TestTamperDetection.test_edit_any_record_table_is_caught_at_exactly_that_link) ... ok
+test_edit_inside_json_column (test_05_chain.TestTamperDetection.test_edit_inside_json_column) ... ok
+test_first_break_is_reported_when_there_are_several (test_05_chain.TestTamperDetection.test_first_break_is_reported_when_there_are_several) ... ok
+test_full_rewrite_passes_verify_but_not_the_anchor (test_05_chain.TestTamperDetection.test_full_rewrite_passes_verify_but_not_the_anchor) ... ok
+test_record_inserted_around_the_store_is_an_orphan (test_05_chain.TestTamperDetection.test_record_inserted_around_the_store_is_an_orphan) ... ok
+test_swapping_two_chain_rows_is_caught (test_05_chain.TestTamperDetection.test_swapping_two_chain_rows_is_caught) ... ok
+test_tail_truncation_needs_the_anchor (test_05_chain.TestTamperDetection.test_tail_truncation_needs_the_anchor) ... ok
+test_write_after_tail_truncation_exposes_a_gap (test_05_chain.TestTamperDetection.test_write_after_tail_truncation_exposes_a_gap) ... ok
+test_all_eight_required_scenarios_present_plus_extras (test_06_fixtures.TestFixtures.test_all_eight_required_scenarios_present_plus_extras) ... ok
+test_all_four_relationship_types_are_represented (test_06_fixtures.TestFixtures.test_all_four_relationship_types_are_represented) ... ok
+test_ambiguous_scenario_lists_both_candidates_and_is_unmatched (test_06_fixtures.TestFixtures.test_ambiguous_scenario_lists_both_candidates_and_is_unmatched) ... ok
+test_committed_fixture_file_equals_a_fresh_build (test_06_fixtures.TestFixtures.test_committed_fixture_file_equals_a_fresh_build) ... ok
+test_cropped_duplicate_differs_in_file_but_is_close_in_phash (test_06_fixtures.TestFixtures.test_cropped_duplicate_differs_in_file_but_is_close_in_phash) ... ok
+test_cross_sender_duplicate_differs_only_in_sender (test_06_fixtures.TestFixtures.test_cross_sender_duplicate_differs_only_in_sender) ... ok
+test_decisions_record_what_the_coordinator_saw (test_06_fixtures.TestFixtures.test_decisions_record_what_the_coordinator_saw) ... ok
+test_each_scenario_loads_alone_into_a_fresh_store (test_06_fixtures.TestFixtures.test_each_scenario_loads_alone_into_a_fresh_store) ... ok
+test_every_interpretation_honours_the_contract (test_06_fixtures.TestFixtures.test_every_interpretation_honours_the_contract) ... ok
+test_exact_duplicate_has_identical_hashes_and_ticket (test_06_fixtures.TestFixtures.test_exact_duplicate_has_identical_hashes_and_ticket) ... ok
+test_expected_relationship_types_match_what_was_stored (test_06_fixtures.TestFixtures.test_expected_relationship_types_match_what_was_stored) ... ok
+test_inferred_link_has_no_shared_identifier (test_06_fixtures.TestFixtures.test_inferred_link_has_no_shared_identifier) ... ok
+test_kannada_text_survived (test_06_fixtures.TestFixtures.test_kannada_text_survived) ... ok
+test_loads_and_verifies (test_06_fixtures.TestFixtures.test_loads_and_verifies) ... ok
+test_manual_link_is_human_and_paired_with_a_decision (test_06_fixtures.TestFixtures.test_manual_link_is_human_and_paired_with_a_decision) ... ok
+test_marked_synthetic (test_06_fixtures.TestFixtures.test_marked_synthetic) ... ok
+test_unrelated_evidence_has_unrelated_hashes (test_06_fixtures.TestFixtures.test_unrelated_evidence_has_unrelated_hashes) ... ok
+test_demo_script_passes (test_07_scripts.TestScripts.test_demo_script_passes) ... ok
+test_load_refuses_to_overwrite_without_force (test_07_scripts.TestScripts.test_load_refuses_to_overwrite_without_force) ... ok
+test_tamper_delete_chain_row (test_07_scripts.TestScripts.test_tamper_delete_chain_row) ... ok
+test_tamper_edit_is_detected_at_the_right_record (test_07_scripts.TestScripts.test_tamper_edit_is_detected_at_the_right_record) ... ok
+test_tamper_json_column (test_07_scripts.TestScripts.test_tamper_json_column) ... ok
+test_tamper_rejects_bad_input (test_07_scripts.TestScripts.test_tamper_rejects_bad_input) ... ok
+test_tamper_rewrite_fools_verify_but_not_anchor (test_07_scripts.TestScripts.test_tamper_rewrite_fools_verify_but_not_anchor) ... ok
+test_verify_clean (test_07_scripts.TestScripts.test_verify_clean) ... ok
+test_verify_missing_db (test_07_scripts.TestScripts.test_verify_missing_db) ... ok
+
+----------------------------------------------------------------------
+Ran 96 tests in 2.682s
+
+OK
+
+### 2/3 End-to-end demo (seed, verify, append-only, correction, tamper, anchor)
+
+=== 1. Seed a fresh database with the 11 synthetic scenarios
+seeded /tmp/pratibimb_demo_3ge8j0t8/demo.db: {'evidence': 21, 'interpretations': 21, 'relationships': 9, 'decisions': 2}
+chain_length=53
+anchor (head hash)=ca404b6ac7c9917d47fed319f12a9787b928b6b7bcc7b8ba8e1d974555155455
+
+=== 2. Verify the untouched chain (with the external anchor)
+ok=True checked=53 head=ca404b6ac7c9917d...
+
+=== 3. Append-only: the store has no way to change history, and the database refuses raw UPDATE/DELETE
+refused: append-only: UPDATE is forbidden on interpretations
+refused: append-only: DELETE is forbidden on evidence
+
+=== 4. A correction is a NEW record that supersedes the old one
+in_5ab71514c0ce (superseded) -> in_509682c4491e (current)
+second correction of the same record refused: in_5ab71514c0ce is already superseded by in_509682c4491e
+
+=== 5. Tamper: edit one past row, bypassing the store
+[attacker] dropping append-only triggers (requires raw DB access)
+[attacker] interpretations.type_confidence: 0.99 -> '0.01'
+[attacker] done. Now run: python3 scripts/verify_chain.py --db /tmp/pratibimb_demo_3ge8j0t8/demo.db
+{
+ "seq": 17,
+ "record_id": "in_d086f0aa9d90",
+ "reason": "record_modified",
+ "detail": "record content no longer matches its hash"
+}
+
+=== 6. Honest limit: an attacker who rewrites the whole chain passes verify() but not the external anchor
+verify without anchor: ok = True  <- fooled
+verify with anchor:    ok = False head_mismatch
+
+DAY 1 DEMO: ALL CHECKS PASSED
+
+### 3/3 Mutation check (break the engine on purpose; tests must notice)
+CAUGHT    audit: stop recomputing record hashes
+CAUGHT    audit: stop checking chain continuity
+CAUGHT    audit: stop detecting gaps
+CAUGHT    audit: stop detecting orphans
+CAUGHT    audit: ignore the external anchor
+CAUGHT    audit: stop comparing chain hash to record hash
+CAUGHT    store: remove append-only triggers
+CAUGHT    store: allow branching supersedes
+CAUGHT    store: do not coerce confidence to float
+CAUGHT    store: write the chain row with a wrong prev hash
+CAUGHT    canon: unsorted keys
+CAUGHT    validate: allow null with confidence
+CAUGHT    validate: allow a machine-made MANUAL link
+CAUGHT    validate: allow non-human decisions
+CAUGHT    store: skip evidence-existence check on interpretations
+CAUGHT    store: do not roll back on failure
+CAUGHT    store: re-extraction may jump to other evidence
+
+17/17 mutations caught
+
+### DAY 1 VERIFICATION: ALL PASSED

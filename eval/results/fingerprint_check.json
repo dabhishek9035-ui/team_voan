@@ -1,0 +1,83 @@
+{
+  "files_checked": 30,
+  "hash_mismatches_vs_manifest": [],
+  "mismatch_note": "sha256 must match exactly. A 1-2 bit perceptual difference is expected across Pillow/OpenCV versions (resampling); that is why perceptual hashes are similarity signals, not identifiers.",
+  "variant_distance_mismatches": [],
+  "threshold_behaviour": {
+    "calibration": [
+      {
+        "threshold_both_le": 0,
+        "same_ticket_pairs_caught": "1/3",
+        "unrelated_pairs_flagged": "0/102"
+      },
+      {
+        "threshold_both_le": 2,
+        "same_ticket_pairs_caught": "1/3",
+        "unrelated_pairs_flagged": "7/102"
+      },
+      {
+        "threshold_both_le": 4,
+        "same_ticket_pairs_caught": "1/3",
+        "unrelated_pairs_flagged": "9/102"
+      },
+      {
+        "threshold_both_le": 6,
+        "same_ticket_pairs_caught": "3/3",
+        "unrelated_pairs_flagged": "20/102"
+      },
+      {
+        "threshold_both_le": 8,
+        "same_ticket_pairs_caught": "3/3",
+        "unrelated_pairs_flagged": "24/102"
+      },
+      {
+        "threshold_both_le": 10,
+        "same_ticket_pairs_caught": "3/3",
+        "unrelated_pairs_flagged": "31/102"
+      },
+      {
+        "threshold_both_le": 12,
+        "same_ticket_pairs_caught": "3/3",
+        "unrelated_pairs_flagged": "39/102"
+      }
+    ],
+    "heldout": [
+      {
+        "threshold_both_le": 0,
+        "same_ticket_pairs_caught": "0/3",
+        "unrelated_pairs_flagged": "0/102"
+      },
+      {
+        "threshold_both_le": 2,
+        "same_ticket_pairs_caught": "1/3",
+        "unrelated_pairs_flagged": "9/102"
+      },
+      {
+        "threshold_both_le": 4,
+        "same_ticket_pairs_caught": "1/3",
+        "unrelated_pairs_flagged": "18/102"
+      },
+      {
+        "threshold_both_le": 6,
+        "same_ticket_pairs_caught": "1/3",
+        "unrelated_pairs_flagged": "23/102"
+      },
+      {
+        "threshold_both_le": 8,
+        "same_ticket_pairs_caught": "1/3",
+        "unrelated_pairs_flagged": "27/102"
+      },
+      {
+        "threshold_both_le": 10,
+        "same_ticket_pairs_caught": "1/3",
+        "unrelated_pairs_flagged": "32/102"
+      },
+      {
+        "threshold_both_le": 12,
+        "same_ticket_pairs_caught": "1/3",
+        "unrelated_pairs_flagged": "40/102"
+      }
+    ]
+  },
+  "reading": "If unrelated pairs are flagged at the smallest threshold that catches the genuine variants, perceptual hashes cannot be used alone on this corpus: gate them behind a semantic ID match (as standin/config.json does). Corpus is small and screens share one template; this is a plumbing finding, not a production threshold."
+}

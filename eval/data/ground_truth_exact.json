@@ -1,0 +1,715 @@
+[
+  {
+    "item_id": "ev_001",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_SUCCESS",
+    "app": "PhonePe",
+    "language": "en",
+    "fields": {
+      "amount": 50,
+      "currency": "INR",
+      "timestamp": "2026-11-21T09:15:00+05:30",
+      "utr": "205380810795",
+      "order_id": "NMW97366946",
+      "payer_name_masked": "Me**a K.",
+      "payee_name": "BMRCL Namma Metro",
+      "status_text": "Payment Successful",
+      "app_name": "PhonePe",
+      "bank_name": "HDFC"
+    },
+    "journey_id": "tg_1001:clean_journey",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "clean",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_002",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Namma Metro WhatsApp",
+    "language": "en",
+    "fields": {
+      "currency": "INR",
+      "timestamp": "2026-11-21T09:15:42+05:30",
+      "order_id": "NMW97366946",
+      "ticket_id": "TKT151847156",
+      "qr_payload": "NMQR-3898d190f9ebdacc0cb1e29c",
+      "origin_station": "Cubbon Park",
+      "destination_station": "Indiranagar",
+      "fare": 50,
+      "status_text": "Valid till end of service today",
+      "app_name": "Namma Metro WhatsApp"
+    },
+    "journey_id": "tg_1001:clean_journey",
+    "true_relationship": {
+      "to": "ev_001",
+      "type": "EXACT"
+    },
+    "label": "clean",
+    "should_clear": true,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_003",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "BANK_SMS",
+    "app": "unknown",
+    "language": "en",
+    "fields": {
+      "amount": 50,
+      "currency": "INR",
+      "timestamp": "2026-11-21T09:15:20+05:30",
+      "utr": "205380810795",
+      "status_text": "debited",
+      "bank_name": "HDFC"
+    },
+    "journey_id": "tg_1001:clean_journey",
+    "true_relationship": {
+      "to": "ev_001",
+      "type": "EXACT"
+    },
+    "label": "clean",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_004",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_SUCCESS",
+    "app": "GPay",
+    "language": "en",
+    "fields": {
+      "amount": 40,
+      "currency": "INR",
+      "timestamp": "2026-11-21T09:22:00+05:30",
+      "utr": "865276271002",
+      "order_id": "NMW43343251",
+      "payer_name_masked": "Ar**n S.",
+      "payee_name": "BMRCL Namma Metro",
+      "status_text": "Payment Successful",
+      "app_name": "GPay",
+      "bank_name": "HDFC"
+    },
+    "journey_id": "tg_1002:clean_journey",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "clean",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_005",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Namma Metro WhatsApp",
+    "language": "en",
+    "fields": {
+      "currency": "INR",
+      "timestamp": "2026-11-21T09:22:42+05:30",
+      "order_id": "NMW43343251",
+      "ticket_id": "TKT952958473",
+      "qr_payload": "NMQR-f646e1f40a097c976bf46c69",
+      "origin_station": "Majestic",
+      "destination_station": "Halasuruvu",
+      "fare": 40,
+      "status_text": "Valid till end of service today",
+      "app_name": "Namma Metro WhatsApp"
+    },
+    "journey_id": "tg_1002:clean_journey",
+    "true_relationship": {
+      "to": "ev_004",
+      "type": "EXACT"
+    },
+    "label": "clean",
+    "should_clear": true,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_006",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_SUCCESS",
+    "app": "PhonePe",
+    "language": "en",
+    "fields": {
+      "amount": 40,
+      "currency": "INR",
+      "timestamp": "2026-11-21T09:29:00+05:30",
+      "utr": "851589624075",
+      "order_id": "NMW96856164",
+      "payer_name_masked": "Ka**a R.",
+      "payee_name": "BMRCL Namma Metro",
+      "status_text": "Payment Successful",
+      "app_name": "PhonePe",
+      "bank_name": "ICICI"
+    },
+    "journey_id": "tg_1003:clean_journey",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "clean",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_007",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Namma Metro WhatsApp",
+    "language": "en",
+    "fields": {
+      "currency": "INR",
+      "timestamp": "2026-11-21T09:29:42+05:30",
+      "order_id": "NMW96856164",
+      "ticket_id": "TKT720565036",
+      "qr_payload": "NMQR-7f1b103cdf1582b0eab477d2",
+      "origin_station": "Baiyappanahalli",
+      "destination_station": "Cubbon Park",
+      "fare": 40,
+      "status_text": "Valid till end of service today",
+      "app_name": "Namma Metro WhatsApp"
+    },
+    "journey_id": "tg_1003:clean_journey",
+    "true_relationship": {
+      "to": "ev_006",
+      "type": "EXACT"
+    },
+    "label": "clean",
+    "should_clear": true,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_008",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_SUCCESS",
+    "app": "GPay",
+    "language": "en",
+    "fields": {
+      "amount": 30,
+      "currency": "INR",
+      "timestamp": "2026-11-21T09:36:00+05:30",
+      "utr": "747814614062",
+      "order_id": "NMW11619076",
+      "payer_name_masked": "Ro**n M.",
+      "payee_name": "BMRCL Namma Metro",
+      "status_text": "Payment Successful",
+      "app_name": "GPay",
+      "bank_name": "ICICI"
+    },
+    "journey_id": "tg_1004:clean_journey",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "clean",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_009",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Namma Metro WhatsApp",
+    "language": "en",
+    "fields": {
+      "currency": "INR",
+      "timestamp": "2026-11-21T09:36:42+05:30",
+      "order_id": "NMW11619076",
+      "ticket_id": "TKT620724767",
+      "qr_payload": "NMQR-c7ac1491def88334e647cb8f",
+      "origin_station": "Halasuruvu",
+      "destination_station": "Indiranagar",
+      "fare": 30,
+      "status_text": "Valid till end of service today",
+      "app_name": "Namma Metro WhatsApp"
+    },
+    "journey_id": "tg_1004:clean_journey",
+    "true_relationship": {
+      "to": "ev_008",
+      "type": "EXACT"
+    },
+    "label": "clean",
+    "should_clear": true,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_010",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_SUCCESS",
+    "app": "Paytm",
+    "language": "en",
+    "fields": {
+      "amount": 40,
+      "currency": "INR",
+      "timestamp": "2026-11-21T09:55:00+05:30",
+      "utr": "503507662405",
+      "order_id": "NMW23618316",
+      "payer_name_masked": "Di**a P.",
+      "payee_name": "BMRCL Namma Metro",
+      "status_text": "Payment Successful",
+      "app_name": "Paytm",
+      "bank_name": "HDFC"
+    },
+    "journey_id": "tg_1005:payment_no_ticket",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "no_ticket",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_011",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "BOT_ERROR",
+    "app": "Namma Metro WhatsApp",
+    "language": "en",
+    "fields": {
+      "amount": 40,
+      "currency": "INR",
+      "timestamp": "2026-11-21T09:55:30+05:30",
+      "order_id": "NMW23618316",
+      "status_text": "Booking failed. Amount will be refunded within 7 working days",
+      "app_name": "Namma Metro WhatsApp"
+    },
+    "journey_id": "tg_1005:payment_no_ticket",
+    "true_relationship": {
+      "to": "ev_010",
+      "type": "EXACT"
+    },
+    "label": "no_ticket",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_012",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_SUCCESS",
+    "app": "Paytm",
+    "language": "en",
+    "fields": {
+      "amount": 30,
+      "currency": "INR",
+      "timestamp": "2026-11-21T10:10:00+05:30",
+      "utr": "260467504949",
+      "order_id": "NMW80901507",
+      "payer_name_masked": "Sa**r A.",
+      "payee_name": "BMRCL Namma Metro",
+      "status_text": "Payment Successful",
+      "app_name": "Paytm",
+      "bank_name": "HDFC"
+    },
+    "journey_id": "tg_1006:refund_seen",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "clean",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_013",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "BOT_ERROR",
+    "app": "unknown",
+    "language": "en",
+    "fields": {
+      "amount": 30,
+      "currency": "INR",
+      "timestamp": "2026-11-21T10:10:25+05:30",
+      "order_id": "NMW80901507",
+      "status_text": "Booking failed. Amount will be refunded within 7 working days"
+    },
+    "journey_id": "tg_1006:refund_seen",
+    "true_relationship": {
+      "to": "ev_012",
+      "type": "EXACT"
+    },
+    "label": "clean",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_014",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "REFUND_NOTICE",
+    "app": "unknown",
+    "language": "en",
+    "fields": {
+      "amount": 30,
+      "currency": "INR",
+      "timestamp": "2026-11-24T11:10:00+05:30",
+      "utr": "260467504949",
+      "status_text": "credited: refund",
+      "bank_name": "HDFC"
+    },
+    "journey_id": "tg_1006:refund_seen",
+    "true_relationship": {
+      "to": "ev_012",
+      "type": "EXACT"
+    },
+    "label": "clean",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_015",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Namma Metro WhatsApp",
+    "language": "en",
+    "fields": {
+      "currency": "INR",
+      "timestamp": "2026-11-21T10:15:00+05:30",
+      "order_id": "NMW43343251",
+      "ticket_id": "TKT952958473",
+      "qr_payload": "NMQR-f646e1f40a097c976bf46c69",
+      "origin_station": "Majestic",
+      "destination_station": "Halasuruvu",
+      "fare": 40,
+      "status_text": "Valid till end of service today",
+      "app_name": "Namma Metro WhatsApp"
+    },
+    "journey_id": "tg_1002:exact_resend_same_sender",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "duplicate",
+    "should_clear": true,
+    "dup_of": "ev_005"
+  },
+  {
+    "item_id": "ev_016",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "CLAIM_SUBMISSION",
+    "app": "unknown",
+    "language": "en",
+    "fields": {
+      "amount": 40,
+      "currency": "INR",
+      "timestamp": "2026-11-22T11:00:00+05:30",
+      "ticket_id": "TKT720565036",
+      "fare": 40,
+      "payer_name_masked": "Po**a N.",
+      "status_text": "Reimbursement claim"
+    },
+    "journey_id": "tg_1007:cross_sender_reuse",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "duplicate",
+    "should_clear": false,
+    "dup_of": "ev_007"
+  },
+  {
+    "item_id": "ev_017",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "unknown",
+    "language": "en",
+    "fields": {
+      "currency": "INR",
+      "timestamp": "2026-11-21T10:45:00+05:30",
+      "origin_station": "Halasuruvu",
+      "destination_station": "Indiranagar",
+      "fare": 30,
+      "status_text": "Valid till end of service today"
+    },
+    "journey_id": "tg_1008:cropped_duplicate",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "cropped",
+    "should_clear": false,
+    "dup_of": "ev_009"
+  },
+  {
+    "item_id": "ev_018",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_SUCCESS",
+    "app": "GPay",
+    "language": "en",
+    "fields": {
+      "amount": 40,
+      "currency": "INR",
+      "timestamp": "2026-11-14T10:00:00+05:30",
+      "utr": "241704338575",
+      "order_id": "NMW31321298",
+      "payer_name_masked": "Me**a K.",
+      "payee_name": "BMRCL Namma Metro",
+      "status_text": "Payment Successful",
+      "app_name": "GPay",
+      "bank_name": "SBI"
+    },
+    "journey_id": "tg_1001:out_of_window",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "out_of_window",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_019",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Namma Metro WhatsApp",
+    "language": "en",
+    "fields": {
+      "currency": "INR",
+      "timestamp": "2026-11-14T10:00:40+05:30",
+      "order_id": "NMW31321298",
+      "ticket_id": "TKT282540039",
+      "qr_payload": "NMQR-a6511445b9f3635cf88c422b",
+      "origin_station": "Indiranagar",
+      "destination_station": "MG Road",
+      "fare": 40,
+      "status_text": "Valid till end of service today",
+      "app_name": "Namma Metro WhatsApp"
+    },
+    "journey_id": "tg_1001:out_of_window",
+    "true_relationship": {
+      "to": "ev_018",
+      "type": "EXACT"
+    },
+    "label": "out_of_window",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_020",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_SUCCESS",
+    "app": "Paytm",
+    "language": "en",
+    "fields": {
+      "amount": 20,
+      "currency": "INR",
+      "timestamp": "2026-11-21T10:35:00+05:30",
+      "utr": "164987466619",
+      "payer_name_masked": "Ne**a V.",
+      "payee_name": "BMRCL Namma Metro",
+      "status_text": "Payment Successful",
+      "app_name": "Paytm",
+      "bank_name": "ICICI"
+    },
+    "journey_id": "tg_1009:inferred_only",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "clean",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_021",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Namma Metro WhatsApp",
+    "language": "en",
+    "fields": {
+      "currency": "INR",
+      "timestamp": "2026-11-21T10:35:55+05:30",
+      "ticket_id": "TKT753430573",
+      "qr_payload": "NMQR-cc966f46c6aa7d550101b811",
+      "origin_station": "Majestic",
+      "destination_station": "Cubbon Park",
+      "fare": 20,
+      "status_text": "Valid till end of service today",
+      "app_name": "Namma Metro WhatsApp"
+    },
+    "journey_id": "tg_1009:inferred_only",
+    "true_relationship": {
+      "to": "ev_020",
+      "type": "INFERRED"
+    },
+    "label": "clean",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_022",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "REFUND_NOTICE",
+    "app": "unknown",
+    "language": "en",
+    "fields": {
+      "amount": 60,
+      "currency": "INR",
+      "timestamp": "2026-11-21T11:15:00+05:30",
+      "utr": "307225705209",
+      "status_text": "credited: refund",
+      "bank_name": "SBI"
+    },
+    "journey_id": "tg_1010:unmatched_refund",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "unmatched",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_023",
+    "split": "heldout",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "SUSPECT_NOTICE",
+    "app": "unknown",
+    "language": "en",
+    "fields": {
+      "timestamp": "2026-11-21T12:15:00+05:30",
+      "status_text": "Your QR ticket refund has failed. Complete KYC at bmrcl-refund-kyc.example within 24h"
+    },
+    "journey_id": "tg_1005:suspect_notice",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "suspect_notice",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_024",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_SUCCESS",
+    "app": "Paytm",
+    "language": "en",
+    "fields": {
+      "amount": 40,
+      "currency": "INR",
+      "timestamp": "2026-11-21T13:15:00+05:30",
+      "utr": "660288558851",
+      "payer_name_masked": "Vi**m D.",
+      "payee_name": "BMRCL Namma Metro",
+      "status_text": "Payment Successful",
+      "app_name": "Paytm",
+      "bank_name": "Axis"
+    },
+    "journey_id": "tg_1010:ambiguous_two_candidates",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "ambiguous",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_025",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "UPI_SUCCESS",
+    "app": "GPay",
+    "language": "en",
+    "fields": {
+      "amount": 40,
+      "currency": "INR",
+      "timestamp": "2026-11-21T13:15:20+05:30",
+      "utr": "445496266419",
+      "payer_name_masked": "Vi**m D.",
+      "payee_name": "BMRCL Namma Metro",
+      "status_text": "Payment Successful",
+      "app_name": "GPay",
+      "bank_name": "SBI"
+    },
+    "journey_id": "tg_1010:ambiguous_two_candidates",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "ambiguous",
+    "should_clear": false,
+    "dup_of": null
+  },
+  {
+    "item_id": "ev_026",
+    "split": "calibration",
+    "source": "synthetic",
+    "context": "metro_group_trip",
+    "screenshot_type": "TICKET_QR",
+    "app": "Namma Metro WhatsApp",
+    "language": "kn",
+    "fields": {
+      "currency": "INR",
+      "timestamp": "2026-11-21T13:15:50+05:30",
+      "ticket_id": "TKT335780633",
+      "qr_payload": "NMQR-18189af4f3d74f82bf268ea0",
+      "origin_station": "Trinity",
+      "destination_station": "Halasuruvu",
+      "fare": 40,
+      "status_text": "Valid till end of service today",
+      "app_name": "Namma Metro WhatsApp"
+    },
+    "journey_id": "tg_1010:ambiguous_two_candidates",
+    "true_relationship": {
+      "to": null,
+      "type": "NONE"
+    },
+    "label": "ambiguous",
+    "should_clear": false,
+    "dup_of": null
+  }
+]

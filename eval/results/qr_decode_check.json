@@ -1,0 +1,77 @@
+{
+  "n": 10,
+  "matched": 10,
+  "rows": [
+    {
+      "item": "SYN-E-CAL-001",
+      "variant": "base",
+      "decoded": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-001",
+      "truth": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-001",
+      "match": true
+    },
+    {
+      "item": "SYN-E-CAL-005",
+      "variant": "exact_copy",
+      "decoded": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-001",
+      "truth": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-001",
+      "match": true
+    },
+    {
+      "item": "SYN-E-CAL-006",
+      "variant": "cropped",
+      "decoded": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-001",
+      "truth": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-001",
+      "match": true
+    },
+    {
+      "item": "SYN-E-CAL-011",
+      "variant": "base",
+      "decoded": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-003",
+      "truth": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-003",
+      "match": true
+    },
+    {
+      "item": "SYN-E-CAL-014",
+      "variant": "base",
+      "decoded": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-004",
+      "truth": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-CAL-004",
+      "match": true
+    },
+    {
+      "item": "SYN-E-TEST-016",
+      "variant": "base",
+      "decoded": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-101",
+      "truth": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-101",
+      "match": true
+    },
+    {
+      "item": "SYN-E-TEST-019",
+      "variant": "recompressed",
+      "decoded": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-101",
+      "truth": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-101",
+      "match": true
+    },
+    {
+      "item": "SYN-E-TEST-020",
+      "variant": "screenshot_of_screenshot",
+      "decoded": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-101",
+      "truth": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-101",
+      "match": true
+    },
+    {
+      "item": "SYN-E-TEST-025",
+      "variant": "base",
+      "decoded": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-303",
+      "truth": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-303",
+      "match": true
+    },
+    {
+      "item": "SYN-E-TEST-028",
+      "variant": "base",
+      "decoded": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-404",
+      "truth": "SYNTHETIC://PRATIBIMB/TICKET/SYN-TKT-TEST-404",
+      "match": true
+    }
+  ],
+  "caveat": "synthetic, clean QR codes; not a real-world QR accuracy figure"
+}

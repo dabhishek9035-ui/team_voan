@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BankSMSSchema",
+  "description": "Schema for extracting Bank Debit/Credit SMS alerts",
+  "type": "object",
+  "properties": {
+    "amount": {
+      "type": ["number", "null"],
+      "description": "Amount debited or credited"
+    },
+    "currency": {
+      "type": "string",
+      "default": "INR"
+    },
+    "timestamp": {
+      "type": ["string", "null"],
+      "description": "Transaction date/time from SMS"
+    },
+    "utr": {
+      "type": ["string", "null"],
+      "description": "UPI Ref/UTR in SMS if present"
+    },
+    "order_id": {
+      "type": ["string", "null"],
+      "description": "Reference or account ending digits"
+    },
+    "payee_name": {
+      "type": ["string", "null"],
+      "description": "Entity debited towards, e.g. BMRCL or VPA"
+    },
+    "bank_name": {
+      "type": ["string", "null"],
+      "description": "Sender bank name, e.g. HDFC, SBI, ICICI, Axis"
+    },
+    "status_text": {
+      "type": ["string", "null"],
+      "description": "Debit or credit notification text"
+    },
+    "language_detected": {
+      "type": ["string", "null"],
+      "description": "Language: en, kn, hi"
+    }
+  },
+  "required": []
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ClaimSubmissionSchema",
+  "description": "Schema for extracting reimbursement claim forms or submission screenshots",
+  "type": "object",
+  "properties": {
+    "amount": {
+      "type": ["number", "null"],
+      "description": "Claimed reimbursement amount"
+    },
+    "currency": {
+      "type": "string",
+      "default": "INR"
+    },
+    "timestamp": {
+      "type": ["string", "null"],
+      "description": "Claim date or journey date"
+    },
+    "ticket_id": {
+      "type": ["string", "null"],
+      "description": "Attached ticket number"
+    },
+    "order_id": {
+      "type": ["string", "null"],
+      "description": "Claim ID or booking ref"
+    },
+    "origin_station": {
+      "type": ["string", "null"],
+      "description": "Origin station"
+    },
+    "destination_station": {
+      "type": ["string", "null"],
+      "description": "Destination station"
+    },
+    "fare": {
+      "type": ["number", "null"],
+      "description": "Base fare"
+    },
+    "payer_name_masked": {
+      "type": ["string", "null"],
+      "description": "Employee / submitter name"
+    },
+    "payee_name": {
+      "type": ["string", "null"],
+      "description": "Reimbursement recipient or transit operator"
+    },
+    "app_name": {
+      "type": ["string", "null"],
+      "description": "Claim portal or app"
+    },
+    "status_text": {
+      "type": ["string", "null"],
+      "description": "Claim submission status"
+    },
+    "language_detected": {
+      "type": ["string", "null"],
+      "description": "Language of claim"
+    }
+  },
+  "required": []
+}

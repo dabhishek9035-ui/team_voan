@@ -1,0 +1,3 @@
+condition,participant,set_id,seconds,errors,missed_duplicates
+manual,p1,set_a,,,
+pratibimb,p2,set_a,,,

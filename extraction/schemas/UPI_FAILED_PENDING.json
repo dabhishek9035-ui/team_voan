@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UPIFailedPendingSchema",
+  "description": "Schema for extracting payment failed, pending or processing screens",
+  "type": "object",
+  "properties": {
+    "amount": {
+      "type": ["number", "null"],
+      "description": "Attempted payment amount"
+    },
+    "currency": {
+      "type": "string",
+      "default": "INR"
+    },
+    "timestamp": {
+      "type": ["string", "null"],
+      "description": "Transaction attempt timestamp"
+    },
+    "utr": {
+      "type": ["string", "null"],
+      "description": "12-digit UTR if generated, otherwise null"
+    },
+    "order_id": {
+      "type": ["string", "null"],
+      "description": "Transaction reference or merchant order ID"
+    },
+    "payee_name": {
+      "type": ["string", "null"],
+      "description": "Target payee name, e.g. BMRCL"
+    },
+    "payer_name_masked": {
+      "type": ["string", "null"],
+      "description": "Masked payer name"
+    },
+    "bank_name": {
+      "type": ["string", "null"],
+      "description": "Bank involved"
+    },
+    "app_name": {
+      "type": ["string", "null"],
+      "description": "App used: Google Pay, PhonePe, Paytm, etc."
+    },
+    "status_text": {
+      "type": ["string", "null"],
+      "description": "Status reason, e.g. 'Payment Processing', 'Payment Failed', 'Money debited'"
+    },
+    "language_detected": {
+      "type": ["string", "null"],
+      "description": "Language: en, kn, hi"
+    }
+  },
+  "required": []
+}

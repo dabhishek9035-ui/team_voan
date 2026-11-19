@@ -1,0 +1,13 @@
+Pillow
+numpy
+opencv-python
+pydantic
+httpx
+python-dotenv
+fastapi
+jsonschema
+streamlit>=1.30
+pandas
+openpyxl
+requests
+pytest

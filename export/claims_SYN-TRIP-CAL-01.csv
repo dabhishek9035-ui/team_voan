@@ -1,0 +1,8 @@
+traveller,date,route,fare,ticket_reference,payment_reference,relationship_type,evidence_level,flags_with_reasons,decision_support,coordinator_decision,decision_time
+Traveller 01,2026-10-21,Indiranagar -> MG Road,40.00,SYN-TKT-CAL-001,***********-001,EXACT,payment_debit: corroborated; ticket_issued: extracted,,clear,,
+Traveller 02,2026-10-21,,60.00,,,EXACT,payment_debit: extracted; ticket_issued: none,"Payment seen, no ticket evidence; case opened",needs_review,,
+Traveller 01,2026-10-21,Indiranagar -> MG Road,40.00,SYN-TKT-CAL-001,***********-001,EXACT,payment_debit: none; ticket_issued: extracted,,clear,,
+Traveller 01,2026-10-21,Indiranagar -> MG Road,40.00,SYN-TKT-CAL-001,,EXACT,payment_debit: none; ticket_issued: extracted,The exact same file was sent before | Same ticket ID already sent earlier by this person (resend),needs_review,,
+Traveller 01,2026-10-21,Indiranagar -> MG Road,40.00,SYN-TKT-CAL-001,,EXACT,payment_debit: none; ticket_issued: extracted,Same ticket ID already sent earlier by this person (resend) | Image looks similar to earlier evidence (similarity signal only),needs_review,,
+Traveller 03,2026-10-21,Indiranagar -> MG Road,50.00,SYN-TKT-CAL-003,***********-003,INFERRED,payment_debit: extracted; ticket_issued: extracted,Linked by context only (no shared identifier); never auto-cleared,needs_review,,
+Traveller 06,2026-10-04,Indiranagar -> MG Road,40.00,SYN-TKT-CAL-004,,UNMATCHED,payment_debit: none; ticket_issued: extracted,Date is outside the trip window,needs_review,,

@@ -1,0 +1,46 @@
+{
+  "method": {
+    "sha256": "SHA-256 of exact image bytes",
+    "phash": "8x8 low-frequency DCT hash after resizing grayscale image to 32x32; Hamming distance shown",
+    "ahash": "8x8 grayscale mean threshold hash; Hamming distance shown",
+    "implementation": {
+      "opencv": "5.0.0",
+      "pillow": "12.2.0"
+    }
+  },
+  "pairs": [
+    {
+      "variant_evidence_id": "SYN-E-CAL-005",
+      "parent_evidence_id": "SYN-E-CAL-001",
+      "variant_kind": "exact_copy",
+      "same_sha256": true,
+      "phash_hamming_distance": 0,
+      "ahash_hamming_distance": 0
+    },
+    {
+      "variant_evidence_id": "SYN-E-CAL-006",
+      "parent_evidence_id": "SYN-E-CAL-001",
+      "variant_kind": "cropped",
+      "same_sha256": false,
+      "phash_hamming_distance": 6,
+      "ahash_hamming_distance": 2
+    },
+    {
+      "variant_evidence_id": "SYN-E-TEST-019",
+      "parent_evidence_id": "SYN-E-TEST-016",
+      "variant_kind": "recompressed",
+      "same_sha256": false,
+      "phash_hamming_distance": 2,
+      "ahash_hamming_distance": 2
+    },
+    {
+      "variant_evidence_id": "SYN-E-TEST-020",
+      "parent_evidence_id": "SYN-E-TEST-016",
+      "variant_kind": "screenshot_of_screenshot",
+      "same_sha256": false,
+      "phash_hamming_distance": 24,
+      "ahash_hamming_distance": 14
+    }
+  ],
+  "note": "Observed fixture distances only. Choose thresholds on labelled data and report false positives; do not treat similarity as a conclusion."
+}

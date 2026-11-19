@@ -1,0 +1,311 @@
+{
+  "banner": "STAND-IN RUN: predictions come from a rule-based reference engine fed ORACLE (ground-truth) fields on a small hand-authored synthetic corpus. This checks the plumbing and the rules. It is NOT system accuracy, NOT a false-accept rate for the real system, and NOT a coordinator time result. The rules were written after reading both splits, so even the 'held-out' rows are not a blind test of them.",
+  "split": "heldout",
+  "n_items": 15,
+  "sources": [
+    "synthetic"
+  ],
+  "predictions_producer": "standin.engine (rules) + oracle fields",
+  "metric1_extraction_and_linking": {
+    "screenshot_type_accuracy": {
+      "k": 15,
+      "n": 15,
+      "rate": 1.0,
+      "ci95": [
+        0.796,
+        1.0
+      ]
+    },
+    "field_accuracy_by_type": {
+      "BANK_SMS": {
+        "k": 13,
+        "n": 13,
+        "rate": 1.0,
+        "ci95": [
+          0.772,
+          1.0
+        ]
+      },
+      "BOT_ERROR": {
+        "k": 6,
+        "n": 6,
+        "rate": 1.0,
+        "ci95": [
+          0.61,
+          1.0
+        ]
+      },
+      "CLAIM_SUBMISSION": {
+        "k": 9,
+        "n": 9,
+        "rate": 1.0,
+        "ci95": [
+          0.701,
+          1.0
+        ]
+      },
+      "OTHER": {
+        "k": 2,
+        "n": 2,
+        "rate": 1.0,
+        "ci95": [
+          0.342,
+          1.0
+        ]
+      },
+      "REFUND_NOTICE": {
+        "k": 7,
+        "n": 7,
+        "rate": 1.0,
+        "ci95": [
+          0.646,
+          1.0
+        ]
+      },
+      "SUSPECT_NOTICE": {
+        "k": 3,
+        "n": 3,
+        "rate": 1.0,
+        "ci95": [
+          0.438,
+          1.0
+        ]
+      },
+      "TICKET_QR": {
+        "k": 59,
+        "n": 59,
+        "rate": 1.0,
+        "ci95": [
+          0.939,
+          1.0
+        ]
+      },
+      "UPI_FAILED_PENDING": {
+        "k": 7,
+        "n": 7,
+        "rate": 1.0,
+        "ci95": [
+          0.646,
+          1.0
+        ]
+      },
+      "UPI_SUCCESS": {
+        "k": 15,
+        "n": 15,
+        "rate": 1.0,
+        "ci95": [
+          0.796,
+          1.0
+        ]
+      }
+    },
+    "field_accuracy_by_app": {
+      "Claim Desk Demo": {
+        "k": 9,
+        "n": 9,
+        "rate": 1.0,
+        "ci95": [
+          0.701,
+          1.0
+        ]
+      },
+      "Gallery Demo": {
+        "k": 2,
+        "n": 2,
+        "rate": 1.0,
+        "ci95": [
+          0.342,
+          1.0
+        ]
+      },
+      "Message Demo": {
+        "k": 3,
+        "n": 3,
+        "rate": 1.0,
+        "ci95": [
+          0.438,
+          1.0
+        ]
+      },
+      "Metro Demo": {
+        "k": 72,
+        "n": 72,
+        "rate": 1.0,
+        "ci95": [
+          0.949,
+          1.0
+        ]
+      },
+      "Pay Demo": {
+        "k": 22,
+        "n": 22,
+        "rate": 1.0,
+        "ci95": [
+          0.851,
+          1.0
+        ]
+      },
+      "Sample Bank SMS": {
+        "k": 13,
+        "n": 13,
+        "rate": 1.0,
+        "ci95": [
+          0.772,
+          1.0
+        ]
+      }
+    },
+    "field_accuracy_by_language": {
+      "en": {
+        "k": 103,
+        "n": 103,
+        "rate": 1.0,
+        "ci95": [
+          0.964,
+          1.0
+        ]
+      },
+      "kn": {
+        "k": 18,
+        "n": 18,
+        "rate": 1.0,
+        "ci95": [
+          0.824,
+          1.0
+        ]
+      }
+    },
+    "linking_accuracy_by_true_type": {
+      "EXACT": {
+        "k": 6,
+        "n": 6,
+        "rate": 1.0,
+        "ci95": [
+          0.61,
+          1.0
+        ]
+      },
+      "INFERRED": {
+        "k": 1,
+        "n": 1,
+        "rate": 1.0,
+        "ci95": [
+          0.207,
+          1.0
+        ]
+      },
+      "NONE": {
+        "k": 7,
+        "n": 7,
+        "rate": 1.0,
+        "ci95": [
+          0.646,
+          1.0
+        ]
+      }
+    },
+    "manual_links_not_machine_scorable": [
+      "SYN-E-TEST-026"
+    ]
+  },
+  "metric2_false_accept_with_coverage": {
+    "false_accept": {
+      "k": 0,
+      "n": 12,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.243
+      ]
+    },
+    "false_accept_by_label": {
+      "duplicate": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.658
+        ]
+      },
+      "fake": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.658
+        ]
+      },
+      "inferred": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.658
+        ]
+      },
+      "no_ticket": {
+        "k": 0,
+        "n": 3,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.562
+        ]
+      },
+      "other": {
+        "k": 0,
+        "n": 1,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.793
+        ]
+      },
+      "suspect_notice": {
+        "k": 0,
+        "n": 1,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.793
+        ]
+      },
+      "unmatched": {
+        "k": 0,
+        "n": 1,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.793
+        ]
+      }
+    },
+    "coverage_auto_cleared": {
+      "k": 3,
+      "n": 15,
+      "rate": 0.2,
+      "ci95": [
+        0.07,
+        0.452
+      ]
+    },
+    "good_items_cleared": {
+      "k": 3,
+      "n": 3,
+      "rate": 1.0,
+      "ci95": [
+        0.438,
+        1.0
+      ]
+    },
+    "items_without_prediction": 0,
+    "note": "Report false-accept and coverage together. Holds only if new cases resemble calibration data."
+  },
+  "metric3_coordinator_time": {
+    "status": "not measured (no eval/data/timing.csv)"
+  },
+  "drift_check": "not provided by Member B yet"
+}

@@ -1,0 +1,23 @@
+Pratibimb Member B verification
+Verified on 2026-11-19 on Windows with Python 3.13.7.
+
+Passed:
+- Python compilation for pratibimb/ and scripts/
+- 112 Member B unit and API tests (tests/test_01..10)
+- B1/B2 append-only ledger, SQLite mutation triggers, and tamper-evident audit chain
+- B3 three-layer duplicate detection (semantic, exact_file, perceptual)
+- B4 deterministic relationship linking (EXACT, INFERRED, MANUAL, UNMATCHED)
+- B5 claim/case state logic and stale-case tracking
+- B6 structured trust assessment, per-attribute evidence levels, and abstention
+- B7 adaptive evidence challenge request, response, and no-response paths (docs/B7_CHALLENGE.md)
+- B8 field masking, coordinator access logging, and retention sweep
+- B9 dependency-free WSGI API including Member A ingest (/records/evidence, /records/interpretation, /trips/lookup) and Member C dashboard/export (/trips, /trips/{id}/summary, /trips/{id}/inbox, /records/{id}/trail, /decisions, /export/claims) with updated openapi.json
+- B10 calibration utility and drift-report tests (scripts/calibrate.py)
+- Day 1 end-to-end demo and mutation checks
+
+Honest limitation:
+- B10 has no real labelled evaluation dataset committed in this repository. The calibration
+  utility is executable and tested, and defaults to synthetic fixture smoke runs when no labelled
+  file is passed, so no production false-accept guarantee can be claimed until real labelled data is supplied.
+- The API uses the project's standard-library WSGI adapter rather than FastAPI,
+  so no third-party server dependency is required.

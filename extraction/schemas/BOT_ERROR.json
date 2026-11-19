@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BotErrorSchema",
+  "description": "Schema for extracting Metro bot booking error/failure messages",
+  "type": "object",
+  "properties": {
+    "order_id": {
+      "type": ["string", "null"],
+      "description": "Order or session identifier if mentioned"
+    },
+    "amount": {
+      "type": ["number", "null"],
+      "description": "Attempted transaction amount"
+    },
+    "currency": {
+      "type": "string",
+      "default": "INR"
+    },
+    "timestamp": {
+      "type": ["string", "null"],
+      "description": "Message timestamp"
+    },
+    "status_text": {
+      "type": ["string", "null"],
+      "description": "Bot error explanation, e.g. 'Booking failed. Refund will be processed within 7 working days.'"
+    },
+    "app_name": {
+      "type": ["string", "null"],
+      "description": "Chat app, e.g. WhatsApp"
+    },
+    "language_detected": {
+      "type": ["string", "null"],
+      "description": "Language: en, kn, hi"
+    }
+  },
+  "required": []
+}

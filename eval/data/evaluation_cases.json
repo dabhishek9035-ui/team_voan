@@ -1,0 +1,212 @@
+[
+  {
+    "item_id": "SYN-E-CAL-001",
+    "split": "calibration",
+    "label": "clean",
+    "should_clear": true,
+    "why": "clean item whose links are all EXACT and auto-clear eligible"
+  },
+  {
+    "item_id": "SYN-E-CAL-002",
+    "split": "calibration",
+    "label": "clean",
+    "should_clear": true,
+    "why": "clean item whose links are all EXACT and auto-clear eligible"
+  },
+  {
+    "item_id": "SYN-E-CAL-003",
+    "split": "calibration",
+    "label": "clean",
+    "should_clear": true,
+    "why": "clean item whose links are all EXACT and auto-clear eligible"
+  },
+  {
+    "item_id": "SYN-E-CAL-004",
+    "split": "calibration",
+    "label": "clean",
+    "should_clear": true,
+    "why": "clean item whose links are all EXACT and auto-clear eligible"
+  },
+  {
+    "item_id": "SYN-E-CAL-005",
+    "split": "calibration",
+    "label": "duplicate",
+    "should_clear": false,
+    "why": "must not auto-clear (duplicate, exact_duplicate)"
+  },
+  {
+    "item_id": "SYN-E-CAL-006",
+    "split": "calibration",
+    "label": "cropped",
+    "should_clear": false,
+    "why": "must not auto-clear (duplicate, cropped)"
+  },
+  {
+    "item_id": "SYN-E-CAL-007",
+    "split": "calibration",
+    "label": "no_ticket",
+    "should_clear": false,
+    "why": "must not auto-clear (no_ticket, pending)"
+  },
+  {
+    "item_id": "SYN-E-CAL-008",
+    "split": "calibration",
+    "label": "no_ticket",
+    "should_clear": false,
+    "why": "must not auto-clear (no_ticket)"
+  },
+  {
+    "item_id": "SYN-E-CAL-009",
+    "split": "calibration",
+    "label": "no_ticket",
+    "should_clear": false,
+    "why": "must not auto-clear (refund_notice, no_ticket)"
+  },
+  {
+    "item_id": "SYN-E-CAL-010",
+    "split": "calibration",
+    "label": "inferred",
+    "should_clear": false,
+    "why": "must not auto-clear (clean, inferred_pair)"
+  },
+  {
+    "item_id": "SYN-E-CAL-011",
+    "split": "calibration",
+    "label": "inferred",
+    "should_clear": false,
+    "why": "must not auto-clear (clean, inferred_pair)"
+  },
+  {
+    "item_id": "SYN-E-CAL-012",
+    "split": "calibration",
+    "label": "suspect_notice",
+    "should_clear": false,
+    "why": "must not auto-clear (suspect_notice)"
+  },
+  {
+    "item_id": "SYN-E-CAL-013",
+    "split": "calibration",
+    "label": "other",
+    "should_clear": false,
+    "why": "must not auto-clear (other)"
+  },
+  {
+    "item_id": "SYN-E-CAL-014",
+    "split": "calibration",
+    "label": "out_of_window",
+    "should_clear": false,
+    "why": "must not auto-clear (out_of_window)"
+  },
+  {
+    "item_id": "SYN-E-CAL-015",
+    "split": "calibration",
+    "label": "unmatched",
+    "should_clear": false,
+    "why": "must not auto-clear (unmatched)"
+  },
+  {
+    "item_id": "SYN-E-TEST-016",
+    "split": "heldout",
+    "label": "clean",
+    "should_clear": true,
+    "why": "clean item whose links are all EXACT and auto-clear eligible"
+  },
+  {
+    "item_id": "SYN-E-TEST-017",
+    "split": "heldout",
+    "label": "clean",
+    "should_clear": true,
+    "why": "clean item whose links are all EXACT and auto-clear eligible"
+  },
+  {
+    "item_id": "SYN-E-TEST-018",
+    "split": "heldout",
+    "label": "clean",
+    "should_clear": true,
+    "why": "clean item whose links are all EXACT and auto-clear eligible"
+  },
+  {
+    "item_id": "SYN-E-TEST-019",
+    "split": "heldout",
+    "label": "duplicate",
+    "should_clear": false,
+    "why": "must not auto-clear (duplicate, recompressed)"
+  },
+  {
+    "item_id": "SYN-E-TEST-020",
+    "split": "heldout",
+    "label": "duplicate",
+    "should_clear": false,
+    "why": "must not auto-clear (duplicate, screenshot_of_screenshot)"
+  },
+  {
+    "item_id": "SYN-E-TEST-021",
+    "split": "heldout",
+    "label": "no_ticket",
+    "should_clear": false,
+    "why": "must not auto-clear (no_ticket, pending)"
+  },
+  {
+    "item_id": "SYN-E-TEST-022",
+    "split": "heldout",
+    "label": "no_ticket",
+    "should_clear": false,
+    "why": "must not auto-clear (no_ticket)"
+  },
+  {
+    "item_id": "SYN-E-TEST-023",
+    "split": "heldout",
+    "label": "no_ticket",
+    "should_clear": false,
+    "why": "must not auto-clear (refund_notice, no_ticket)"
+  },
+  {
+    "item_id": "SYN-E-TEST-024",
+    "split": "heldout",
+    "label": "inferred",
+    "should_clear": false,
+    "why": "must not auto-clear (clean, inferred_pair)"
+  },
+  {
+    "item_id": "SYN-E-TEST-025",
+    "split": "heldout",
+    "label": "inferred",
+    "should_clear": false,
+    "why": "must not auto-clear (clean, inferred_pair)"
+  },
+  {
+    "item_id": "SYN-E-TEST-026",
+    "split": "heldout",
+    "label": "fake",
+    "should_clear": false,
+    "why": "must not auto-clear (fake, claim_mismatch, manual_review)"
+  },
+  {
+    "item_id": "SYN-E-TEST-027",
+    "split": "heldout",
+    "label": "suspect_notice",
+    "should_clear": false,
+    "why": "must not auto-clear (suspect_notice)"
+  },
+  {
+    "item_id": "SYN-E-TEST-028",
+    "split": "heldout",
+    "label": "fake",
+    "should_clear": false,
+    "why": "must not auto-clear (fake, out_of_window, fabricated_sample)"
+  },
+  {
+    "item_id": "SYN-E-TEST-029",
+    "split": "heldout",
+    "label": "unmatched",
+    "should_clear": false,
+    "why": "must not auto-clear (unmatched, ambiguous_candidate)"
+  },
+  {
+    "item_id": "SYN-E-TEST-030",
+    "split": "heldout",
+    "label": "other",
+    "should_clear": false,
+    "why": "must not auto-clear (other)"
+  }
+]

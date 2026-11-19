@@ -1,0 +1,6 @@
+{
+  "inferred_time_window_minutes": 10,
+  "perceptual": {"phash_max": 8, "ahash_max": 6, "use_standalone": false,
+                 "note": "Perceptual similarity is only a supporting signal next to a semantic ID match. On the calibration split, unrelated screens sit at phash<=2 while the one cropped duplicate sits at 6, so no threshold separates them; standalone use is OFF."},
+  "source": "hand-set for the synthetic corpus; see eval/fingerprint_check.py. Not a validated production setting."
+}

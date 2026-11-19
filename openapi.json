@@ -1,0 +1,49 @@
+{
+  "openapi": "3.0.3",
+  "info": {"title": "Pratibimb Member B API", "version": "0.3.0"},
+  "paths": {
+    "/trips": {
+      "get": {"responses": {"200": {"description": "List all trips"}}},
+      "post": {"responses": {"201": {"description": "Trip created"}}}
+    },
+    "/trips/lookup": {
+      "get": {"parameters": [{"name": "join_code", "in": "query", "required": true, "schema": {"type": "string"}}], "responses": {"200": {"description": "Trip matched by join code"}, "404": {"description": "Join code not found"}}}
+    },
+    "/trips/{trip_id}/join-code": {
+      "post": {"parameters": [{"name": "trip_id", "in": "path", "required": true, "schema": {"type": "string"}}], "responses": {"201": {"description": "Join code created"}}}
+    },
+    "/records/evidence": {
+      "post": {"responses": {"200": {"description": "Append-only Evidence recorded"}}}
+    },
+    "/records/interpretation": {
+      "post": {"responses": {"200": {"description": "Append-only Interpretation recorded and linked"}}}
+    },
+    "/audit/verify": {
+      "get": {"responses": {"200": {"description": "Hash-chain verification result"}}}
+    },
+    "/trips/{trip_id}/summary": {
+      "get": {"parameters": [{"name": "trip_id", "in": "path", "required": true, "schema": {"type": "string"}}], "responses": {"200": {"description": "Trip roster, counts, and assessed claims"}}}
+    },
+    "/trips/{trip_id}/inbox": {
+      "get": {"parameters": [{"name": "trip_id", "in": "path", "required": true, "schema": {"type": "string"}}], "responses": {"200": {"description": "Exceptions requiring review with structured reasons"}}}
+    },
+    "/records/{record_id}/trail": {
+      "get": {"parameters": [{"name": "record_id", "in": "path", "required": true, "schema": {"type": "string"}}], "responses": {"200": {"description": "Masked Evidence, Interpretations, Relationships, and Decisions trail"}}}
+    },
+    "/decisions": {
+      "post": {"responses": {"201": {"description": "Human Decision (or manual link) recorded"}}}
+    },
+    "/challenge/{claim_ref}": {
+      "post": {"parameters": [{"name": "claim_ref", "in": "path", "required": true, "schema": {"type": "string"}}], "responses": {"201": {"description": "Adaptive evidence challenge issued"}}}
+    },
+    "/challenge-response/{challenge_id}": {
+      "post": {"parameters": [{"name": "challenge_id", "in": "path", "required": true, "schema": {"type": "string"}}], "responses": {"200": {"description": "Challenge response recorded"}}}
+    },
+    "/raw-image/{evidence_id}": {
+      "post": {"parameters": [{"name": "evidence_id", "in": "path", "required": true, "schema": {"type": "string"}}], "responses": {"200": {"description": "Explicitly logged raw-image access"}}}
+    },
+    "/export/claims": {
+      "get": {"parameters": [{"name": "trip_id", "in": "query", "schema": {"type": "string"}}], "responses": {"200": {"description": "Masked claim sheet export (claims and C4 rows)"}}}
+    }
+  }
+}
